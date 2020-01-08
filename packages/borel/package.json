@@ -59,5 +59,6 @@
   "bugs": {
     "url": "https://github.com/hoyeungw/borel"
   },
-  "homepage": "https://github.com/hoyeungw/borel#readme"
+  "homepage": "https://github.com/hoyeungw/borel#readme",
+  "gitHead": "dbffd2d5008bcfc3870655125ae07e0a377ab35f"
 }

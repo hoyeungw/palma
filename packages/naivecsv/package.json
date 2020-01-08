@@ -61,5 +61,6 @@
   "bugs": {
     "url": "https://github.com/hoyeungw/naivecsv"
   },
-  "homepage": "https://github.com/hoyeungw/naivecsv#readme"
+  "homepage": "https://github.com/hoyeungw/naivecsv#readme",
+  "gitHead": "dbffd2d5008bcfc3870655125ae07e0a377ab35f"
 }

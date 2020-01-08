@@ -11,7 +11,7 @@ import visualizer from 'rollup-plugin-visualizer'
 
 const input = 'index.js'
 
-const externalDependencies = Object.keys(pkg.dependencies)
+// const externalDependencies = Object.keys(pkg.dependencies)
 
 export default [
   // {
@@ -34,7 +34,7 @@ export default [
   // },
   {
     input,
-    external: externalDependencies,
+    // external: externalDependencies,
     output: [
       { file: pkg.main, format: 'cjs' },  // CommonJS (for Node) build.
       { file: pkg.module, format: 'esm' }  // ES module (for bundlers) build.
