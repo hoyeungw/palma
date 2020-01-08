@@ -1,0 +1,69 @@
+{
+  "name": "xbrief",
+  "version": "0.2.16",
+  "description": "A light and simple console debug tool.",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build-babel": "babel src -d lib",
+    "build-rollup": "rollup -c",
+    "prepare": "npm run build-rollup",
+    "gulp-uglify": "gulp script",
+    "pub": "npm publish",
+    "test": "node -r @babel/register test/test.index.js",
+    "mocha": "mocha -r @babel/register"
+  },
+  "dependencies": {
+    "ansi-regex": "^5.0.0",
+    "borel": "^0.1.15",
+    "chalk": "^3.0.0",
+    "has-ansi": "^4.0.0",
+    "spettro": "^0.0.20",
+    "string-length": "^3.1.0",
+    "typen": "^0.0.7",
+    "veho": "^0.1.58"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-optional-chaining": "^7.6.0",
+    "@babel/plugin-proposal-pipeline-operator": "^7.5.0",
+    "@babel/plugin-syntax-partial-application": "^7.4.4",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/register": "^7.7.0",
+    "@babel/runtime": "^7.7.2",
+    "@rollup/plugin-commonjs": "^11.0.1",
+    "@rollup/plugin-json": "^4.0.1",
+    "@rollup/plugin-node-resolve": "^7.0.0",
+    "axios": "^0.19.0",
+    "crostab": "^0.2.8",
+    "elprimero": "^0.1.13",
+    "funfact": "^0.0.3",
+    "mocha": "^6.2.2",
+    "rollup": "^1.21.4",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-terser": "^5.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoyeungw/xbrief.git"
+  },
+  "keywords": [
+    "test",
+    "console",
+    "debug",
+    "print"
+  ],
+  "author": "Hoyeung Wong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hoyeungw/xbrief"
+  },
+  "homepage": "https://github.com/hoyeungw/xbrief#readme"
+}

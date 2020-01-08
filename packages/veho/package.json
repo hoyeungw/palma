@@ -1,0 +1,71 @@
+{
+  "name": "veho",
+  "version": "0.1.58",
+  "description": "An array extension (grammatical sugar) to create, iterate and query 1d, 2d array and JSON object.",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build-babel": "babel src -d lib",
+    "build-rollup": "rollup -c",
+    "prepare": "npm run build-rollup",
+    "pub": "npm publish",
+    "test": "node test/utils/test-main.js",
+    "alpha.test": "node -r @babel/register test/alpha.test/alpha.test.js",
+    "test-strategies": "node test/utils/test-strategies.js",
+    "mocha": "mocha"
+  },
+  "dependencies": {
+    "typen": "^0.0.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-optional-chaining": "^7.6.0",
+    "@babel/plugin-proposal-pipeline-operator": "^7.5.0",
+    "@babel/plugin-proposal-private-methods": "^7.6.0",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/register": "^7.6.2",
+    "@babel/runtime": "^7.6.3",
+    "@rollup/plugin-commonjs": "^11.0.1",
+    "@rollup/plugin-json": "^4.0.1",
+    "@rollup/plugin-node-resolve": "^7.0.0",
+    "axios": "^0.19.0",
+    "borel": "^0.1.15",
+    "crawler": "^1.2.1",
+    "crostab": "^0.1.50",
+    "elprimero": "^0.1.13",
+    "funfact": "^0.0.3",
+    "mocha": "^6.2.2",
+    "rollup": "^1.28.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-terser": "^5.1.2",
+    "stocks.js": "^0.0.17",
+    "xbrief": "^0.2.16"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoyeungw/veho.git"
+  },
+  "keywords": [
+    "matrix",
+    "array",
+    "vector",
+    "extension",
+    "prototype"
+  ],
+  "author": {
+    "name": "Hoyeung Wong",
+    "email": "hoyeungw@outlook.com",
+    "url": "https://github.com/hoyeungw"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hoyeungw/veho"
+  },
+  "homepage": "https://github.com/hoyeungw/veho#readme"
+}

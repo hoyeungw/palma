@@ -1,0 +1,63 @@
+{
+  "name": "elprimero",
+  "version": "0.1.13",
+  "description": "A light and simple chronograph tool for test with countdown in js development.",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build-rollup": "rollup -c",
+    "prepare": "npm run build-rollup",
+    "pub": "npm publish",
+    "test": "node -r @babel/register test/test.index.js",
+    "mocha": "mocha"
+  },
+  "dependencies": {
+    "borel": "^0.1.15",
+    "crostab": "^0.2.8",
+    "spettro": "^0.0.24",
+    "veho": "^0.1.58",
+    "xbrief": "^0.2.16"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-external-helpers": "^7.2.0",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-optional-chaining": "^7.6.0",
+    "@babel/plugin-proposal-pipeline-operator": "^7.5.0",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/register": "^7.5.5",
+    "@babel/runtime": "^7.6.2",
+    "@rollup/plugin-commonjs": "^11.0.1",
+    "@rollup/plugin-json": "^4.0.1",
+    "@rollup/plugin-node-resolve": "^7.0.0",
+    "cron": "^1.7.2",
+    "date-fns": "^2.7.0",
+    "mocha": "^6.2.1",
+    "moment": "^2.24.0",
+    "rollup": "^1.28.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-terser": "^5.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoyeungw/elprimero.git"
+  },
+  "keywords": [
+    "insight"
+  ],
+  "author": {
+    "name": "Hoyeung Wong",
+    "email": "hoyeungw@outlook.com",
+    "url": "https://github.com/hoyeungw"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hoyeungw/elprimero"
+  },
+  "homepage": "https://github.com/hoyeungw/elprimero#readme"
+}
