@@ -1,6 +1,6 @@
 {
   "name": "xbrief",
-  "version": "0.2.18",
+  "version": "0.2.19",
   "description": "A light and simple console debug tool.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -18,13 +18,13 @@
   },
   "dependencies": {
     "ansi-regex": "^5.0.0",
-    "borel": "^0.1.17",
+    "borel": "^0.1.18",
     "chalk": "^3.0.0",
     "has-ansi": "^4.0.0",
     "spettro": "^0.0.20",
     "string-length": "^3.1.0",
-    "typen": "^0.0.9",
-    "veho": "^0.1.60"
+    "typen": "^0.0.10",
+    "veho": "^0.1.61"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.0",
@@ -41,8 +41,8 @@
     "@rollup/plugin-json": "^4.0.1",
     "@rollup/plugin-node-resolve": "^7.0.0",
     "axios": "^0.19.0",
-    "crostab": "^0.2.10",
-    "elprimero": "^0.1.15",
+    "crostab": "^0.2.11",
+    "elprimero": "^0.1.16",
     "funfact": "^0.0.3",
     "mocha": "^6.2.2",
     "rollup": "^1.21.4",
