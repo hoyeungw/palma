@@ -1,6 +1,6 @@
 {
   "name": "dequote",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A debug tool",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -16,11 +16,11 @@
   },
   "dependencies": {
     "chalk": "^3.0.0",
-    "crostab": "^0.2.9",
+    "crostab": "^0.2.10",
     "rollup": "^1.28.0",
     "spettro": "^0.0.20",
-    "veho": "^0.1.59",
-    "xbrief": "^0.2.17"
+    "veho": "^0.1.60",
+    "xbrief": "^0.2.18"
   },
   "devDependencies": {
     "@babel/core": "^7.7.7",
@@ -36,7 +36,7 @@
     "@rollup/plugin-commonjs": "^11.0.1",
     "@rollup/plugin-json": "^4.0.1",
     "@rollup/plugin-node-resolve": "^7.0.0",
-    "borel": "^0.1.16",
+    "borel": "^0.1.17",
     "chai": "^4.2.0",
     "mocha": "^6.2.2",
     "ora": "^4.0.3",
