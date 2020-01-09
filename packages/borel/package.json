@@ -14,7 +14,7 @@
     "gulp-uglify": "gulp script",
     "pub": "npm publish",
     "test-strategies": "node test/misc/test-strategies.js",
-    "test": "node test/misc/test-main.js",
+    "test": "node -r @babel/register test/test-index.js",
     "mocha": "mocha"
   },
   "dependencies": {

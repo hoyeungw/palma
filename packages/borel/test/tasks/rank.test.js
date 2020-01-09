@@ -3,7 +3,8 @@ import { Comparer } from '../../dist/index.esm'
 import { Rank } from '../../dist/index.esm'
 import { Table } from 'crostab'
 import { Mx } from 'veho'
-import { deco, Typ } from 'xbrief'
+import { Typ } from 'typen'
+import { deco } from 'xbrief'
 
 function _test (arr, comparer) {
   const
@@ -43,7 +44,7 @@ class RankTest {
       -16
     ]
     _test(arr.map(it => {
-      const t = Typ.inferData(it)
+      const t = Typ.infer(it)
       let r
       switch (t) {
         case 'numstr':
