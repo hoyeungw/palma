@@ -2,6 +2,7 @@ import chalk from 'chalk'
 import { greys, palette } from 'spettro'
 
 const _hex = chalk.hex.bind(chalk)
+
 /**
  *
  * @type {{str: Chalk, brc: Chalk, udf: Chalk, num: Chalk, brk: Chalk, idx: Chalk}}

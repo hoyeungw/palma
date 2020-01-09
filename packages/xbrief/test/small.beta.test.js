@@ -1,4 +1,4 @@
-import { StrX } from '../src/brief/StrX'
+import { StrX } from '../dist/index.cjs'
 
 StrX.jv2py('billShakes') |> console.log
 

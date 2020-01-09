@@ -11,7 +11,7 @@
     "build-rollup": "rollup -c",
     "prepare": "npm run build-rollup",
     "pub": "npm publish",
-    "test": "node test/util/test-main.js",
+    "test": "node -r @babel/register test/test.index.js",
     "test-jest": "jest"
   },
   "dependencies": {

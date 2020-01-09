@@ -1,7 +1,5 @@
 import { StatFuncs } from '../tableSpec/StatFuncs'
 import { Stat } from 'borel'
-import { Ar, Ob } from 'veho'
-import { Xr } from 'xbrief'
 
 export const restoreCell = (cell) => {
   // const cellSet = Ar.clone(cell)

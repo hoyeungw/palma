@@ -1,7 +1,6 @@
 import { Ar, Mx } from 'veho'
 import { JoinT } from './JoinT'
 import { Comparer } from 'borel'
-import { Xr } from 'xbrief'
 
 const { spliceCols, size } = Mx
 const { select, ini: ar } = Ar
