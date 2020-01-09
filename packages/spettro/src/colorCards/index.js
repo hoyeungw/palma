@@ -1,5 +1,4 @@
 import chalk from 'chalk'
-import { CrosTab } from 'crostab'
 import { Ar, Mx } from 'veho'
 import { greys, palette } from '../themes/palette'
 
@@ -26,7 +25,7 @@ const
 export class ColorCards {
   static get palette () {
     const side = [...accents.reverse(), ...lightens.reverse(), 'base', ...darkens,]
-    return CrosTab.from({
+    return {
       side,
       banner: Object.entries(palette)
         .map(([name, { base }]) => name |> readify |> hex(base)),
@@ -35,12 +34,12 @@ export class ColorCards {
           side.map(el => tube[el].toUpperCase() |> hex(tube[el]).inverse)
         )
         |> Mx.transpose
-    })
+    }
   }
 
   static get greys () {
     const side = [...lightens.reverse(), 'base', ...darkens,]
-    return CrosTab.from({
+    return {
       side,
       banner: Object.entries(greys)
         .map(([name, { base }]) => name |> readify |> chalk.hex(base)),
@@ -49,6 +48,6 @@ export class ColorCards {
           side.map(el => tube[el].toUpperCase() |> hex(tube[el]).inverse)
         )
         |> Mx.transpose
-    })
+    }
   }
 }
