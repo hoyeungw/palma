@@ -23,16 +23,22 @@ export class Rgb {
     return [h, s * 100, l * 100]
   }
 
+  /**
+   *
+   * @param {number} r
+   * @param {number} g
+   * @param {number} b
+   * @returns {string}
+   */
   static toHex ([r, g, b]) {
-    [r, g, b] = [Math.round(r), Math.round(g), Math.round(b)]
-    const n = ((r & 0xFF) << 16) + ((g & 0xFF) << 8) + (b & 0xFF)
-    return '#' + n.toString(16).toUpperCase().padStart(6, '0')
+    // [r, g, b] = [Math.round(r), Math.round(g), Math.round(b)]
+    return '#' + (((r & 0xFF) << 16) + ((g & 0xFF) << 8) + (b & 0xFF)).toString(16).toUpperCase().padStart(6, '0')
   }
 
   static fromHex (hex) {
     if (hex.charAt(0) === '#') hex = hex.substring(1)
     if (!hex[3]) hex = _expand(hex)
     const n = parseInt(hex, 16)
-    return [n >> 16, (n >> 8) & 0xFF, n & 0xFF]
+    return [n >> 16 & 0xFF, n >> 8 & 0xFF, n & 0xFF]
   }
 }

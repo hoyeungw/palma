@@ -75,6 +75,8 @@ export class HexToRgbPrep {
   }
 }
 
+const decoder = new TextDecoder('utf-8')
+
 export class RgbToHexPrep {
   static toHex1 (rgb) {
     const
@@ -85,9 +87,27 @@ export class RgbToHexPrep {
   }
 
   static toHex2 ([r, g, b]) {
-    [r, g, b] = [round(r), round(g), round(b)]
-    const n = ((r & 0xFF) << 16) + ((g & 0xFF) << 8) + (b & 0xFF)
-    return '#' + n.toString(16).toUpperCase().padStart(6, '0')
+    // [r, g, b] = [round(r), round(g), round(b)]
+    return '#' + (((r & 0xFF) << 16) + ((g & 0xFF) << 8) + (b & 0xFF))
+      .toString(16).toUpperCase().padStart(6, '0')
+  }
+
+  /**
+   *
+   * @param {number[]} rgb
+   * @returns {string}
+   */
+  static toHex3 (rgb) {
+    return '#' + rgb.map(c => c.toString(16).padStart(2, '0')).join('').toUpperCase()
+  }
+
+  /**
+   *
+   * @param {number[]} rgb
+   * @returns {string}
+   */
+  static toHex4 (rgb) {
+    return '#' + Buffer.from(rgb).toString('hex').toUpperCase()
   }
 }
 
@@ -116,18 +136,17 @@ export class CompareHexTransRgb {
 
   static testRgbToHex () {
     const { lapse, result } = Chrono.strategies({
-      repeat: 500000,
+      repeat: 500000, // 500000,
       paramsList: Object.entries(colors).map(([name, { rgb }]) => [name, [rgb]])
         |> Ob.fromEntries,
       funcList: {
         rgbToHex1: RgbToHexPrep.toHex1,
         rgbToHex2: RgbToHexPrep.toHex2,
-        // rgbToHex3: RgbToHexPrep.toRgb3,
-        // rgbToHex4: RgbToHexPrep.toRgb4
+        rgbToHex3: RgbToHexPrep.toHex3,
+        rgbToHex4: RgbToHexPrep.toHex4
       }
     })
     lapse
-      .unshiftRow('[average]', lapse.columns.map(Stat.avg).map(n => n.toFixed(0)))
       .brief() |> console.log
     '' |> console.log
     result
