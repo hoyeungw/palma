@@ -1,6 +1,6 @@
 {
   "name": "borel",
-  "version": "0.1.21",
+  "version": "0.1.22",
   "description": "A light and simple math library",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -18,7 +18,7 @@
     "mocha": "mocha"
   },
   "dependencies": {
-    "typen": "^0.0.13"
+    "typen": "^0.0.14"
   },
   "devDependencies": {
     "@babel/core": "^7.7.7",
@@ -30,8 +30,8 @@
     "@rollup/plugin-commonjs": "^11.0.1",
     "@rollup/plugin-json": "^4.0.1",
     "@rollup/plugin-node-resolve": "^7.0.0",
-    "crostab": "^0.2.14",
-    "elprimero": "^0.1.19",
+    "crostab": "^0.2.15",
+    "elprimero": "^0.1.20",
     "funfact": "^0.0.3",
     "mocha": "^7.0.0",
     "rollup": "^1.28.0",
@@ -39,7 +39,7 @@
     "rollup-plugin-terser": "^5.1.1",
     "timsort": "^0.3.0",
     "veho": "^0.1.64",
-    "xbrief": "^0.2.22"
+    "xbrief": "^0.2.23"
   },
   "repository": {
     "type": "git",
