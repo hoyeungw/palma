@@ -3,6 +3,9 @@
   "version": "0.0.7",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "build-rollup": "node index.js"
+  },
   "devDependencies": {
     "@babel/core": "^7.7.7",
     "@babel/plugin-proposal-pipeline-operator": "^7.7.7",
@@ -10,5 +13,6 @@
     "@babel/register": "^7.7.7",
     "@rollup/plugin-commonjs": "^11.0.1",
     "mocha": "^7.0.0"
-  }
+  },
+  "gitHead": "a4bdac4a5b1df826a1d749283abba11bed13bf0d"
 }

@@ -22,14 +22,14 @@
   },
   "devDependencies": {
     "@babel/core": "^7.7.7",
-    "@babel/plugin-proposal-class-properties": "^7.5.5",
-    "@babel/plugin-proposal-optional-chaining": "^7.6.0",
-    "@babel/plugin-proposal-pipeline-operator": "^7.5.0",
-    "@babel/plugin-proposal-private-methods": "^7.6.0",
-    "@babel/plugin-transform-runtime": "^7.6.2",
-    "@babel/preset-env": "^7.6.3",
-    "@babel/register": "^7.6.2",
-    "@babel/runtime": "^7.6.3",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.7.5",
+    "@babel/plugin-proposal-pipeline-operator": "^7.7.7",
+    "@babel/plugin-proposal-private-methods": "^7.7.4",
+    "@babel/plugin-transform-runtime": "^7.7.6",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/register": "^7.7.7",
+    "@babel/runtime": "^7.7.7",
     "@rollup/plugin-commonjs": "^11.0.1",
     "@rollup/plugin-json": "^4.0.1",
     "@rollup/plugin-node-resolve": "^7.0.0",
@@ -68,5 +68,5 @@
     "url": "https://github.com/hoyeungw/veho"
   },
   "homepage": "https://github.com/hoyeungw/veho#readme",
-  "gitHead": "dbffd2d5008bcfc3870655125ae07e0a377ab35f"
+  "gitHead": "a4bdac4a5b1df826a1d749283abba11bed13bf0d"
 }
