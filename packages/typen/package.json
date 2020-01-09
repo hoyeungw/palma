@@ -1,6 +1,6 @@
 {
   "name": "typen",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "A data type checker and converter",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -24,10 +24,10 @@
     "@rollup/plugin-commonjs": "^11.0.1",
     "@rollup/plugin-json": "^4.0.1",
     "@rollup/plugin-node-resolve": "^7.0.0",
-    "borel": "^0.1.18",
+    "borel": "^0.1.19",
     "chalk": "^3.0.0",
-    "crostab": "^0.2.11",
-    "elprimero": "^0.1.16",
+    "crostab": "^0.2.12",
+    "elprimero": "^0.1.17",
     "mocha": "^7.0.0",
     "rollup": "^1.28.0",
     "rollup-plugin-babel": "^4.3.3",
@@ -38,8 +38,8 @@
     "rollup-plugin-progress": "^1.1.1",
     "rollup-plugin-terser": "^5.1.2",
     "rollup-plugin-visualizer": "^2.6.0",
-    "spettro": "^0.0.27",
-    "veho": "^0.1.61"
+    "spettro": "^0.0.28",
+    "veho": "^0.1.62"
   },
   "repository": {
     "type": "git",
