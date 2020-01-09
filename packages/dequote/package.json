@@ -38,7 +38,7 @@
     "@rollup/plugin-node-resolve": "^7.0.0",
     "borel": "^0.1.18",
     "chai": "^4.2.0",
-    "mocha": "^6.2.2",
+    "mocha": "^7.0.0",
     "ora": "^4.0.3",
     "rollup": "^1.27.14",
     "rollup-plugin-babel": "^4.3.3",

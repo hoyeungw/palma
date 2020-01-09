@@ -1,3 +1,5 @@
+import { StrX } from '../../../..'
+
 export class StringTest {
   static test () {
     '1-1'.deco({ a: 1 })  |> console.log

@@ -2,11 +2,11 @@ import { palette } from '../../src/themes/palette'
 import ck from 'chalk'
 import { Rgb } from '../../src'
 import { trimColor } from '../util/colorValueHelper'
-import { VecX } from 'xbrief'
-// const ck = new chalk({level: 3});
+import { ArrX } from 'xbrief'
+
 const
-  nameLen = Object.keys(palette) |> VecX.maxLength,
-  indexLen = Object.keys(palette.red) |> VecX.maxLength
+  nameLen = Object.keys(palette) |> ArrX.maxLength,
+  indexLen = Object.keys(palette.red) |> ArrX.maxLength
 
 export class PaletteTest {
   static testRgbToHsl () {

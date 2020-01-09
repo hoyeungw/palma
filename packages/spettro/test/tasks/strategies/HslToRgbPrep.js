@@ -92,7 +92,7 @@ export class CompareHslToRgb {
     const paramsList = Object.entries(colors)
       .map(([name, { hsl }]) => [name, [hsl]])
       |> Jso.fromEntries
-    const { lapse, result } = Chrono.crossByParamAndFuncs({
+    const { lapse, result } = Chrono.strategies({
       repeat: 1000000,
       paramsList,
       funcList: {
@@ -126,7 +126,7 @@ export class CompareHslToRgb {
       num_480_640: [Zu.randBetween(480, 640)],
     }
     paramsList |> console.log
-    const { lapse, result } = Chrono.crossByParamAndFuncs({
+    const { lapse, result } = Chrono.strategies({
       repeat: 8000000,
       paramsList,
       funcList: {

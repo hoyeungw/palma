@@ -1,5 +1,5 @@
 import { colors } from '../../asset/colors'
-import { Jso } from 'veho'
+import { Ob } from 'veho'
 import { Chrono } from 'elprimero'
 import { Stat } from 'borel'
 
@@ -93,10 +93,10 @@ export class RgbToHexPrep {
 
 export class CompareHexTransRgb {
   static testHexToRgb () {
-    const { lapse, result } = Chrono.crossByParamAndFuncs({
+    const { lapse, result } = Chrono.strategies({
       repeat: 500000,
       paramsList: Object.entries(colors).map(([name, { hex }]) => [name, [hex]])
-        |> Jso.fromEntries,
+        |> Ob.fromEntries,
       funcList: {
         hexToRgb1: HexToRgbPrep.toRgb1,
         hexToRgb2: HexToRgbPrep.toRgb2,
@@ -115,10 +115,10 @@ export class CompareHexTransRgb {
   }
 
   static testRgbToHex () {
-    const { lapse, result } = Chrono.crossByParamAndFuncs({
+    const { lapse, result } = Chrono.strategies({
       repeat: 500000,
       paramsList: Object.entries(colors).map(([name, { rgb }]) => [name, [rgb]])
-        |> Jso.fromEntries,
+        |> Ob.fromEntries,
       funcList: {
         rgbToHex1: RgbToHexPrep.toHex1,
         rgbToHex2: RgbToHexPrep.toHex2,

@@ -2,5 +2,12 @@
   "name": "palma",
   "version": "0.0.5",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-proposal-pipeline-operator": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/register": "^7.7.7",
+    "mocha": "^7.0.0"
+  }
 }

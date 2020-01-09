@@ -1,10 +1,13 @@
 import chalk from 'chalk'
 import { CrosTab } from 'crostab'
 import { Ar, Mx } from 'veho'
-import { StrX } from 'xbrief'
 import { greys, palette } from '../themes/palette'
 
-const { jv2py: sepWords } = StrX
+const expReg = /[A-Z]+|[0-9]+/g
+
+const sepWords = (jvExp) =>
+  jvExp.replace(expReg, it => ' ' + it.toLowerCase()).trim()
+
 const hex = chalk.hex.bind(chalk)
 /**
  *

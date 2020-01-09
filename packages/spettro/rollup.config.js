@@ -1,14 +1,10 @@
 import pkg from './package.json'
 import { BabelLocal } from './build/BabelLocal'
 import babel from 'rollup-plugin-babel'
-import resolve from '@rollup/plugin-node-resolve'
-import commonjs from '@rollup/plugin-commonjs'
 import progress from 'rollup-plugin-progress'
 import { terser } from 'rollup-plugin-terser'
 import filesize from 'rollup-plugin-filesize'
-import builtins from 'rollup-plugin-node-builtins'
 import visualizer from 'rollup-plugin-visualizer'
-// import clear from 'rollup-plugin-clear'
 
 const input = 'src/index.js'
 

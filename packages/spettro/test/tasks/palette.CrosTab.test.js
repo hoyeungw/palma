@@ -14,3 +14,5 @@ export class PaletteCrosTabTest {
     '' |> console.log
   }
 }
+
+// PaletteCrosTabTest.showPalette()
