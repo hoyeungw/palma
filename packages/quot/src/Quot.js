@@ -2,7 +2,7 @@ import { Ob } from 'veho'
 import { greys } from 'spettro'
 import { paint, ind } from './helpers'
 
-export class Dequote {
+export class Quot {
   /**
    *
    * @param {Object<string,string>} roles
@@ -18,7 +18,7 @@ export class Dequote {
   }
 
   static build (actors, { logger, defaultColor } = {}) {
-    return new Dequote(actors, { logger, defaultColor })
+    return new Quot(actors, { logger, defaultColor })
   }
 
   actor (actor) {

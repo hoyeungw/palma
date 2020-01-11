@@ -1,10 +1,10 @@
-## dequote
+## quot
 ### A light and simple debug tool.
 
 <p align="center">
-  <a href="https://npmcharts.com/compare/dequote?minimal=true"><img src="https://img.shields.io/npm/dm/dequote.svg" alt="Downloads"></a>
-  <a href="https://www.npmjs.com/package/dequote"><img src="https://img.shields.io/npm/v/dequote.svg" alt="Version"></a>
-  <a href="https://www.npmjs.com/package/dequote"><img src="https://img.shields.io/npm/l/dequote.svg" alt="License"></a>
+  <a href="https://npmcharts.com/compare/quot?minimal=true"><img src="https://img.shields.io/npm/dm/quot.svg" alt="Downloads"></a>
+  <a href="https://www.npmjs.com/package/quot"><img src="https://img.shields.io/npm/v/quot.svg" alt="Version"></a>
+  <a href="https://www.npmjs.com/package/quot"><img src="https://img.shields.io/npm/l/quot.svg" alt="License"></a>
 </p>
 
 ## Highlights
@@ -14,14 +14,14 @@
 ## Install
 
 ```console
-$ npm install dequote
+$ npm install quot
 ```
 
 ## Usage
 
 ### Simple
 ```js
-import { Dequote } from 'dequote'
+import { Quot } from 'quot'
 import { greys, palette } from 'spettro'
 
 const castList = {
@@ -30,7 +30,7 @@ const castList = {
   stranger: greys.grey.base
 }
 
-const debug = Dequote.build(castList)
+const debug = Quot.build(castList)
 
 debug.says('client', '\'Shakespeare\'')
 debug.says('server', '\'Dickens\'')
@@ -38,7 +38,7 @@ debug.says('server', '\'Dickens\'')
 
 ### Factorial with pipeline operator
 ```js
-import { Dequote } from 'dequote'
+import { Quot } from 'quot'
 import { greys, palette } from 'spettro'
 
 const castList = {
@@ -47,7 +47,7 @@ const castList = {
   stranger: greys.grey.base
 }
 
-const debug = Dequote.build(castList)
+const debug = Quot.build(castList)
 const says = {
   client: debug.credit('chef'),
   server: debug.credit('aboyeur')
