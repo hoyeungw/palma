@@ -1,6 +1,6 @@
 {
   "name": "palma",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "files": [
@@ -9,8 +9,6 @@
   "license": "MIT",
   "scripts": {
     "build-rollup": "node index.js"
-  },
-  "devDependencies": {
   },
   "gitHead": "a4bdac4a5b1df826a1d749283abba11bed13bf0d"
 }
