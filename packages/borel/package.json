@@ -8,9 +8,6 @@
     "dist"
   ],
   "scripts": {
-    "build-rollup": "rollup -c",
-    "prepare": "npm run build-rollup",
-    "gulp-uglify": "gulp script",
     "pub": "npm publish",
     "test-strategies": "node test/misc/test-strategies.js",
     "test": "node -r @babel/register test/test-index.js",
@@ -45,5 +42,5 @@
     "url": "https://github.com/hoyeungw/borel"
   },
   "homepage": "https://github.com/hoyeungw/borel#readme",
-  "gitHead": "a4bdac4a5b1df826a1d749283abba11bed13bf0d"
+  "gitHead": "bd95cbe6a6edbbf522d89122fdb7d390a7b24496"
 }

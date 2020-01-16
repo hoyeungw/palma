@@ -8,8 +8,6 @@
     "dist"
   ],
   "scripts": {
-    "build-rollup": "rollup -c",
-    "prepare": "npm run build-rollup",
     "pub": "npm publish",
     "test": "babel-node test/test.index.js",
     "mocha": "mocha"
@@ -45,5 +43,5 @@
     "url": "https://github.com/hoyeungw/quot"
   },
   "homepage": "https://github.com/hoyeungw/quot#readme",
-  "gitHead": "a4bdac4a5b1df826a1d749283abba11bed13bf0d"
+  "gitHead": "bd95cbe6a6edbbf522d89122fdb7d390a7b24496"
 }

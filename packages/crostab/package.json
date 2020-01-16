@@ -8,8 +8,6 @@
     "dist"
   ],
   "scripts": {
-    "build-rollup": "rollup -c",
-    "prepare": "npm run build-rollup",
     "pub": "npm publish",
     "test": "node -r @babel/register test/test.index.js",
     "alpha.test": "node -r @babel/register test/tasks/alpha.test/alpha.test.js",
@@ -49,5 +47,5 @@
     "url": "https://github.com/hoyeungw/crostab"
   },
   "homepage": "https://github.com/hoyeungw/crostab#readme",
-  "gitHead": "a4bdac4a5b1df826a1d749283abba11bed13bf0d"
+  "gitHead": "bd95cbe6a6edbbf522d89122fdb7d390a7b24496"
 }
