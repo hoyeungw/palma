@@ -1,12 +1,12 @@
 export class Dawdle {
-  static async linger (ms, asyncFunc, ...args) {
-    return await Promise
+  static linger (ms, asyncFunc, ...args) {
+    return Promise
       .all([
         asyncFunc.apply(null, args),
         Dawdle.timeout(ms)
-      ]).then(([it]) => {
-          return it
-        }
+      ])
+      .then(([it]) =>
+        it
       )
   }
 

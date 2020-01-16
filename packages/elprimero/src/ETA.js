@@ -1,4 +1,4 @@
-import { Fm } from './GP'
+import { Fm } from '../utils/Fm'
 
 const { Time } = Fm
 const format = Time.format.bind(Time)

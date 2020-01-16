@@ -1,6 +1,6 @@
 import { Chrono } from 'elprimero'
 import { Ob } from 'veho'
-import { Typ } from '../../index'
+import { Typ } from '../../src'
 import { printChronoCross } from '../util/printChronoCross'
 import { otype, oc } from '../../src/utils/typen'
 

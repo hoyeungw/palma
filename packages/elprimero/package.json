@@ -17,31 +17,15 @@
   "dependencies": {
     "borel": "^0.1.23",
     "crostab": "^0.2.16",
-    "spettro": "^0.0.32",
+    "spettro": "^0.0.33",
     "veho": "^0.1.65",
     "xbrief": "^0.2.24"
   },
   "devDependencies": {
-    "@babel/core": "^7.7.7",
-    "@babel/plugin-external-helpers": "^7.7.4",
-    "@babel/plugin-proposal-class-properties": "^7.7.4",
-    "@babel/plugin-proposal-optional-chaining": "^7.7.5",
-    "@babel/plugin-proposal-pipeline-operator": "^7.7.7",
-    "@babel/plugin-transform-runtime": "^7.7.6",
-    "@babel/preset-env": "^7.7.7",
-    "@babel/register": "^7.7.7",
-    "@babel/runtime": "^7.7.7",
-    "@rollup/plugin-commonjs": "^11.0.1",
-    "@rollup/plugin-json": "^4.0.1",
-    "@rollup/plugin-node-resolve": "^7.0.0",
     "cron": "^1.7.2",
     "date-fns": "^2.7.0",
     "mocha": "^7.0.0",
-    "moment": "^2.24.0",
-    "rollup": "^1.28.0",
-    "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-terser": "^5.1.1"
+    "moment": "^2.24.0"
   },
   "repository": {
     "type": "git",
