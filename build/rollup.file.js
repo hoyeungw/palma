@@ -2,7 +2,6 @@ import nodeResolve from '@rollup/plugin-node-resolve'
 import babel from 'rollup-plugin-babel'
 import progress from 'rollup-plugin-progress'
 import filesize from 'rollup-plugin-filesize'
-// import visualizer from 'rollup-plugin-visualizer'
 
 const babelPluginOptions = {
   babelrc: false,
@@ -22,6 +21,5 @@ export const plugins = [
   nodeResolve(),
   babel(babelPluginOptions),
   progress(),
-  filesize(),
-  // visualizer()
+  filesize()
 ]

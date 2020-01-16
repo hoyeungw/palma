@@ -2,8 +2,7 @@ const { name, dependencies, main, module } = require(process.cwd() + '/package.j
 
 import { plugins } from './build/rollup.file'
 
-console.log('EXECUTING', name)
-console.log(process.cwd())
+console.log('EXECUTING', name, process.cwd())
 
 export default [
   {
