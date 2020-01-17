@@ -1,4 +1,4 @@
-import { Table } from '../../../src/index'
+import { Table } from '../../../src'
 import { ArrX, EntX } from 'xbrief'
 
 export class TableDistinctTest {

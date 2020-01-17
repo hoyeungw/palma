@@ -1,5 +1,5 @@
 import { Chrono } from 'elprimero'
-import { Stat } from '../../src/index'
+import { Stat } from '../../src'
 import { asceNumArr } from '../asset/asce.num.arr'
 import { descNumArr } from '../asset/desc.num.arr'
 import { randNumArrLarge } from '../asset/rand.num.arr.large'
