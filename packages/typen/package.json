@@ -1,6 +1,6 @@
 {
   "name": "typen",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A data type checker and converter",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -13,10 +13,10 @@
     "test-jest": "jest"
   },
   "devDependencies": {
-    "borel": "^0.1.27",
-    "crostab": "^0.2.20",
-    "elprimero": "^0.1.24",
-    "veho": "^0.2.2"
+    "borel": "^0.1.28",
+    "crostab": "^0.2.21",
+    "elprimero": "^0.1.25",
+    "veho": "^0.2.3"
   },
   "repository": {
     "type": "git",
