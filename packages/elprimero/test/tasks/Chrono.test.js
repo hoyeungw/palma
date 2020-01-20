@@ -1,4 +1,4 @@
-import { Chrono } from '../../src/index'
+import { Chrono } from '../../index'
 
 class ChronoTest {
   static testCrossFuncsAndRepeats () {

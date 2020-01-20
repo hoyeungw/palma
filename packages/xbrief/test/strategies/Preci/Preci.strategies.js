@@ -1,5 +1,5 @@
 import { Chrono } from 'elprimero'
-import { PreciStable } from '../../../src/utils/Preci/Preci'
+import { PreciStable } from '../../../utils/Preci/Preci'
 import { PreciDev } from './src/Preci.dev'
 
 export class PreciStrategies {

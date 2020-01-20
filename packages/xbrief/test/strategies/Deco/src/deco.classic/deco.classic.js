@@ -1,4 +1,4 @@
-import { rn, tb } from '../../../../../src/utils/str'
+import { rn, tb } from '../../../../../utils/str'
 import { deList } from '../deco.stable/utils/deList'
 import { deEntries } from '../deco.stable/utils/deEntries'
 

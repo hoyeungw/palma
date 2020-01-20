@@ -1,6 +1,6 @@
-import { rn, tb } from '../../../../../../src/utils/str'
+import { rn, tb } from '../../../../../../utils/str'
 import { initial } from '../../../../../../src/deco/utils/typeCheck'
-import { brace, bracket } from '../../../../../../src/deco/utils/palette'
+import { brace, bracket } from '../../../../../../src/deco/utils/pal'
 import { deList } from './deList'
 import { deEntries } from './deEntries'
 

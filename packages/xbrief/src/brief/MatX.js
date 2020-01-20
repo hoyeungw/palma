@@ -1,11 +1,11 @@
-import { rn, aeu } from '../utils/str'
-import { palette, greys } from 'spettro'
+import { rn, aeu } from '../../utils/str'
+import { Palett, Greys } from 'palett'
 import { Mx } from 'veho'
-import { isVisual } from '../utils/isVisual'
-import { destructPreX } from '../utils/Preci/functions/destructPreX'
-import { padMx } from '../utils/Preci/functions/padMx'
-import { readCrop } from '../utils/readCrop'
-import { maxLen } from '../utils/arr'
+import { isVisual } from '../../utils/isVisual'
+import { destructPreX } from '../../utils/Preci/functions/destructPreX'
+import { padMx } from '../../utils/Preci/functions/padMx'
+import { readCrop } from '../../utils/readCrop'
+import { maxLen } from '../../utils/arr'
 
 class MatX {
   /**
@@ -37,9 +37,9 @@ class MatX {
       visual = {
         on: true,
         mark: {
-          max: palette.lightGreen.accent_3,
-          min: palette.orange.accent_2,
-          na: greys.blueGrey.lighten_3,
+          max: Palett.lightGreen.accent_3,
+          min: Palett.orange.accent_2,
+          na: Greys.blueGrey.lighten_3,
         },
         direct: 1
       },

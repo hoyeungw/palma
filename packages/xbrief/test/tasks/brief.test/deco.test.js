@@ -1,4 +1,4 @@
-import { deco } from '../../../src'
+import { deco } from '../../../index'
 import { superlativeTrees } from '../../asset/superlativTrees.json'
 
 class DecoTest {

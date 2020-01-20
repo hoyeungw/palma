@@ -1,5 +1,5 @@
 import isAnsi from 'ansi-regex'
-import { Xr } from '../../../src'
+import { Xr } from '../../../index'
 
 // Removes the `g` flag
 const regex = new RegExp(isAnsi())

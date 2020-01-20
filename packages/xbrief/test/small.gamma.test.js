@@ -1,3 +1,3 @@
-import { greys } from 'spettro'
+import { Greys } from 'palett'
 
-greys |> console.log
+Greys |> console.log

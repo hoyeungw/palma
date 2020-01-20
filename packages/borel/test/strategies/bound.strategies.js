@@ -1,5 +1,5 @@
 import { Chrono } from 'elprimero'
-import { Stat } from '../../src'
+import { Stat } from '../../index'
 import { asceNumArr } from '../asset/asce.num.arr'
 import { descNumArr } from '../asset/desc.num.arr'
 import { boundDev } from './bound.funcs/boundDev'

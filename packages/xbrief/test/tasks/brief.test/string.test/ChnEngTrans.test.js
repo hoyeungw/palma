@@ -1,7 +1,7 @@
 import { StrX } from '../../../../src/brief/StrX'
 import { Dic } from 'veho'
 import { TableX } from '../../../../src/brief/TableX'
-import { transpose } from '../../../../src/utils/algebra'
+import { transpose } from '../../../../utils/algebra'
 
 class ChnEngTransTest {
   static test () {

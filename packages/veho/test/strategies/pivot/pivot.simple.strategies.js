@@ -2,7 +2,7 @@ import { Chrono } from 'elprimero'
 import { deco, MatX, Xr } from 'xbrief'
 import { CrosTab, CrosX, Table } from 'crostab'
 import { nba_players_performance } from '../../asset/cax/nba.players.perfrormance'
-import { Ar } from '../../../src'
+import { Ar } from '../../../index'
 
 const samples = [
   { x: 'USA', y: '2000', v: 200 },

@@ -1,4 +1,4 @@
-import { indexNaTab, rn, tabify, totx } from '../utils/str'
+import { indexNaTab, rn, tabify, totx } from '../../utils/str'
 
 export const Xr = (label, ...items) => new Ink(label, ...items)
 

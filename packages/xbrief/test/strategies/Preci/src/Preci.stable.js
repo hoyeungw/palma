@@ -1,4 +1,4 @@
-import { totx } from '../../../../src/utils/str'
+import { totx } from '../../../../utils/str'
 
 export class PreciStable {
   /**

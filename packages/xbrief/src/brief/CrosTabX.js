@@ -1,12 +1,12 @@
-import { greys, palette } from 'spettro'
+import { Greys, Palett } from 'palett'
 import { Ar, Mx } from 'veho'
-import { aeu, lpad, rn, rpad, zhChars } from '../utils/str'
-import { mapAr, maxLen } from '../utils/arr'
-import { Preci } from '../utils/Preci/Preci'
-import { padTable } from '../utils/Preci/functions/padTable'
-import { destructPreX } from '../utils/Preci/functions/destructPreX'
-import { isVisual } from '../utils/isVisual'
-import { readCrop } from '../utils/readCrop'
+import { aeu, lpad, rn, rpad, zhChars } from '../../utils/str'
+import { mapAr, maxLen } from '../../utils/arr'
+import { Preci } from '../../utils/Preci/Preci'
+import { padTable } from '../../utils/Preci/functions/padTable'
+import { destructPreX } from '../../utils/Preci/functions/destructPreX'
+import { isVisual } from '../../utils/isVisual'
+import { readCrop } from '../../utils/readCrop'
 import { StrX } from './StrX'
 
 const { hasChn, toFullAngle } = StrX
@@ -47,9 +47,9 @@ class CrosTabX {
       visual = {
         on: true,
         mark: {
-          max: greys.grey.lighten_5,
-          min: greys.grey.darken_1,
-          na: palette.indigo.lighten_2
+          max: Greys.grey.lighten_5,
+          min: Greys.grey.darken_1,
+          na: Palett.indigo.lighten_2
         },
         direct: 2
       },

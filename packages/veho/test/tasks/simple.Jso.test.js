@@ -1,7 +1,7 @@
 import { boxoffice } from '../asset/map/boxoffice.180817'
 import { deco, ArrX } from 'xbrief'
 import { Typ } from 'typen'
-import { Ob, Samples } from '../../src'
+import { Ob, Samples } from '../../index'
 import { highestGrossingFilmsInChina } from '../asset/highestGrossingFilmsInChina'
 
 const macrotable = [

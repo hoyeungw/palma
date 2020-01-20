@@ -3,7 +3,7 @@ import { StrX } from './StrX'
 import { Preci } from '../functions/Preci/Preci'
 import { lpad, rpad, totx, zhChars, rn } from '../functions/str'
 import { transpose, zip } from '../functions/algebra'
-import { greys, palette, Visual } from 'spettro'
+import { Greys, Palett, Visual } from 'palett'
 
 const { hasChn, toFullAngle } = StrX
 const { maxLen, padStarts } = ArrX
@@ -14,7 +14,7 @@ const { maxLen, padStarts } = ArrX
  * @param {?function(*):string} [abstract]
  * @param {{[abstract]:?function(*):string,[head]:?number,[tail]:?number}} [_head]
  * @param {{[head]:?number,[tail]:?number}} [rows]
- * @param {{[max]:string|number[],[min]:string|number[],[direction]:?number}} [palette]
+ * @param {{[max]:string|number[],[min]:string|number[],[direction]:?number}} [Palett]
  * @return {{head:string[],rows:string[][]}}
  */
 function _preci (table,
@@ -86,9 +86,9 @@ class TableX {
       visual = {
         on: true,
         mark: {
-          max: palette.lightGreen.accent_3,
-          min: palette.orange.accent_2,
-          na: greys.blueGrey.lighten_3,
+          max: Palett.lightGreen.accent_3,
+          min: Palett.orange.accent_2,
+          na: Greys.blueGrey.lighten_3,
         },
         direct: 2
       },

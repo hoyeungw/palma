@@ -1,4 +1,4 @@
-import { Table } from '../../../src'
+import { Table } from '../../../index'
 import { Dic } from 'veho'
 import { Str } from 'xbrief'
 

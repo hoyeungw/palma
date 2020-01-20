@@ -1,4 +1,4 @@
-import { Mx } from '../../src/ext/Mx'
+import { Mx } from '../../src/Mx'
 import { MatX } from 'xbrief'
 import { Chrono } from 'elprimero'
 

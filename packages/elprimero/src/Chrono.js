@@ -4,7 +4,7 @@ import { ETA } from './ETA'
 import { GP } from './GP'
 import { CrosTab } from 'crostab'
 import { Stat } from 'borel'
-import { Visual } from 'spettro'
+import { Visual } from 'hatsu-matrix'
 
 const _reh = (r, func, params) => {
   for (--r; r > 0; r--) func.apply(null, params)

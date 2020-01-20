@@ -1,7 +1,7 @@
 import stringLength from 'string-length'
-import { Pal } from '../../../../../../src/deco/utils/palette'
-import { lpad, tb } from '../../../../../../src/utils/str'
-import { Visual } from 'spettro'
+import { Pal } from '../../../../../../src/deco/utils/pal'
+import { lpad, tb } from '../../../../../../utils/str'
+import { Visual } from 'hatsu-matrix'
 import { deNode } from './deNode'
 
 export let deEntries = (entries, l, rn) => {

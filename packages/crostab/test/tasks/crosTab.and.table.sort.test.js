@@ -1,4 +1,4 @@
-import { CrosTab, Table, TabX, CrosX } from '../../src'
+import { CrosTab, Table, TabX, CrosX } from '../../index'
 import { Comparer } from 'borel'
 
 const table = Table.from({

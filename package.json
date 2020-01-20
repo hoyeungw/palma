@@ -2,19 +2,22 @@
   "name": "root",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "spettro/*"
   ],
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "prewatch": "npm run bootstrap",
-    "build-specific": "lerna exec --scope=spettro -- rollup -c ../../rollup.config.js",
     "build": "lerna exec --parallel -- rollup -c ../../rollup.config.js",
-    "watch-beta": "lerna exec --parallel -- rollup -f cjs -i src/index.js -o dist/index.js -w"
+    "build-specific": "lerna exec --scope=hatsu -- rollup -c ../../rollup.config.js",
+    "watch": "lerna exec --parallel -- rollup -c ../../rollup.config.js -w",
+    "watch-specific": "lerna exec --scope=hatsu -- rollup -c ../../rollup.config.js -w"
   },
   "devDependencies": {
     "@babel/core": "^7.8.3",
     "@babel/plugin-external-helpers": "^7.8.3",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.8.3",
     "@babel/plugin-proposal-optional-chaining": "^7.8.3",
     "@babel/plugin-proposal-pipeline-operator": "^7.8.3",
     "@babel/plugin-proposal-private-methods": "^7.8.3",

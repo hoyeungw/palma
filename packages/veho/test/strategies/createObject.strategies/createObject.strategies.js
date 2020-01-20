@@ -1,5 +1,5 @@
 import { Chrono } from 'elprimero'
-import { Ob } from '../../../src/ext/Ob'
+import { Ob } from '../../../src/Ob'
 import { CrosX } from 'crostab'
 
 class CreateObjectStrategies {

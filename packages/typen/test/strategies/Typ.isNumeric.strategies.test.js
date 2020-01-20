@@ -1,12 +1,12 @@
 import { Chrono } from 'elprimero'
 import { printChronoCross } from '../util/printChronoCross'
-import chalk from 'chalk'
-import { palette } from 'spettro'
+import { Hatsu } from 'hatsu'
+import { Palett } from 'palett'
 
 const
   repeat = 300000,
   getPipeline = (paramsList) => result => result
-    .map(it => it || chalk.hex(palette.red.base)(it))
+    .map(it => it || (it |> Hatsu.hex(Palett.red.base)))
     .unshiftCol('[p.Float]', Object.values(paramsList).map(([x]) => parseFloat(x)))
     .unshiftCol('[+x]', Object.values(paramsList).map(([x]) => +x))
     .unshiftCol('[Num]', Object.values(paramsList).map(([x]) => Number(x)))
@@ -44,7 +44,7 @@ export class TypInferNumStrStrategiesTest {
       angular,
       hamzeen,
     }
-    const { lapse, result } = Chrono.crossByParamsAndFuncs({ repeat, paramsList, funcList })
+    const { lapse, result } = Chrono.strategies({ repeat, paramsList, funcList })
     printChronoCross({ lapse, result, pipeline: getPipeline(paramsList) })
   }
 
@@ -67,7 +67,7 @@ export class TypInferNumStrStrategiesTest {
       hamzeen_dev: x => !isNaN(x) && isFinite(x),
       angular_dev: dev
     }
-    const { lapse, result } = Chrono.crossByParamsAndFuncs({ repeat, paramsList, funcList })
+    const { lapse, result } = Chrono.strategies({ repeat, paramsList, funcList })
     printChronoCross({ lapse, result, pipeline: getPipeline(paramsList) })
   }
 
@@ -122,7 +122,9 @@ export class TypInferNumStrStrategiesTest {
             // if (x.trim() === '') return NaN
             x = +x
             if (x === 0) return x
-            if (!(x)) { return NaN }
+            if (!(x)) {
+              return NaN
+            }
             x = parseFloat(x)
           case 'number':
             return !isNaN(x - x) ? x : NaN
@@ -140,7 +142,7 @@ export class TypInferNumStrStrategiesTest {
       angular,
       hamzeen,
     }
-    const { lapse, result } = Chrono.crossByParamsAndFuncs({ repeat, paramsList, funcList })
+    const { lapse, result } = Chrono.strategies({ repeat, paramsList, funcList })
     printChronoCross({ lapse, result, pipeline: getPipeline(paramsList) })
   }
 
@@ -160,16 +162,12 @@ export class TypInferNumStrStrategiesTest {
       angular,
       hamzeen,
     }
-    const { lapse, result } = Chrono.crossByParamsAndFuncs({ repeat, paramsList, funcList })
+    const { lapse, result } = Chrono.strategies({ repeat, paramsList, funcList })
     printChronoCross({ lapse, result, pipeline: getPipeline(paramsList) })
   }
 }
 
-describe(
-  'Typ Infer Num Str Strategies Test'
-  ,
-
-  function () {
+describe('Typ Infer Num Str Strategies Test', function () {
     this.timeout(1000 * 60)
     it('Typ Infer Num Str Strategies Test: test Misc ', () => {
       TypInferNumStrStrategiesTest.testMisc()

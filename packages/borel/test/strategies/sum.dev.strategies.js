@@ -1,4 +1,4 @@
-import { Zu } from '../../src'
+import { Zu } from '../../index'
 import { Chrono } from 'elprimero'
 import { Ar } from 'veho'
 

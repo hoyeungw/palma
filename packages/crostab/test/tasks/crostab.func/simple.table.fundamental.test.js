@@ -1,4 +1,4 @@
-import { Table } from '../../../src'
+import { Table } from '../../../index'
 import { Str } from 'xbrief'
 
 export class SimpleTableFundamentalTest {

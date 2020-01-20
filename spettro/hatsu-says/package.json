@@ -1,0 +1,46 @@
+{
+  "name": "hatsu-says",
+  "version": "0.0.0",
+  "description": "A debug tool",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "pub": "npm publish",
+    "test": "babel-node test/test.index.js",
+    "mocha": "mocha"
+  },
+  "dependencies": {
+    "hatsu": "^0.0.0",
+    "crostab": "^0.2.20",
+    "palett": "^0.0.0",
+    "veho": "^0.2.2",
+    "xbrief": "^0.2.28"
+  },
+  "devDependencies": {
+    "borel": "^0.1.27",
+    "chai": "^4.2.0",
+    "ora": "^4.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoyeungw/says.git"
+  },
+  "keywords": [
+    "debug",
+    "chalk"
+  ],
+  "author": {
+    "name": "Hoyeung Wong",
+    "email": "hoyeungw@outlook.com",
+    "url": "https://github.com/hoyeungw"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hoyeungw/says"
+  },
+  "homepage": "https://github.com/hoyeungw/says#readme",
+  "gitHead": "83ecf391bbd64c8979e08e8ba32f988aaf0d4633"
+}

@@ -1,6 +1,6 @@
 import { deco, ArrX, Typ } from 'xbrief'
 import { nbaScoreLeaders } from '../asset/map/nba.score.leaders'
-import { Ar } from '../../src/ext/Ar'
+import { Ar } from '../../src/Ar'
 
 function take (arr, len) {
   return arr.slice(0, len)
@@ -68,15 +68,15 @@ class SimpleVectorTest {
   }
 }
 
-describe('Simple Vector Test', function () {
+describe('Simple Presets Test', function () {
   this.timeout(1000 * 60)
-  it('Simple Vector Test: test ini ', () => {
+  it('Simple Presets Test: test ini ', () => {
     SimpleVectorTest.test_ini()
   })
-  it('Simple Vector Test: zip test ', () => {
+  it('Simple Presets Test: zip test ', () => {
     SimpleVectorTest.zip_test()
   })
-  it('Simple Vector Test: test one ', () => {
+  it('Simple Presets Test: test one ', () => {
     SimpleVectorTest.test_one()
   })
 })

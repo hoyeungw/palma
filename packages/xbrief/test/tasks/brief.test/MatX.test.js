@@ -1,7 +1,7 @@
 import { boxoffice } from '../../asset/boxoffice.190227.json.rows'
-import { MatX } from '../../../src'
+import { MatX } from '../../../index'
 import { Chrono } from 'elprimero'
-import { greys, palette } from 'spettro'
+import { Greys, Palett } from 'palett'
 
 const paramsList = {
   empty_matrix: [[[]]],
@@ -40,9 +40,9 @@ export class MatXTest {
           visual: {
             on: true,
             mark: {
-              max: palette.lightGreen.accent_3,
-              min: palette.orange.accent_2,
-              na: greys.blueGrey.lighten_3,
+              max: Palett.lightGreen.accent_3,
+              min: Palett.orange.accent_2,
+              na: Greys.blueGrey.lighten_3,
             },
             direct: 2
           }

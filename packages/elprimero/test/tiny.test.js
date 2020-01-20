@@ -1,4 +1,4 @@
-import { GP } from '../src'
+import { GP } from '../index'
 
 describe('Class', function () {
   this.timeout(1000 * 60)

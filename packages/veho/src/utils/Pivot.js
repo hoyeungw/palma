@@ -1,6 +1,6 @@
 import { PivotModes } from './PivotModes'
-import { Ar } from '../ext/Ar'
-import { Mx } from '../ext/Mx'
+import { Ar } from '../Ar'
+import { Mx } from '../Mx'
 import { PivotUtils } from './PivotUtils'
 
 const { select, map: mapAr } = Ar

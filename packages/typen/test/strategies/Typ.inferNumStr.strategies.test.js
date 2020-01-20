@@ -1,8 +1,8 @@
 import { Chrono } from 'elprimero'
 import { Ob } from 'veho'
-import { Typ } from '../../src'
+import { Typ } from '../../index'
 import { printChronoCross } from '../util/printChronoCross'
-import { otype, oc } from '../../src/utils/typen'
+import { otype, oc } from '../../utils/typen'
 
 const _entries = [
   ['foo', 12],

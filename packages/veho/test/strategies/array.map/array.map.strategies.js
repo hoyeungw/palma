@@ -1,5 +1,5 @@
 import { Chrono } from 'elprimero'
-import { Ar } from '../../../src/ext/Ar'
+import { Ar } from '../../../src/Ar'
 import { totx } from 'xbrief'
 
 const { map: map1 } = Ar

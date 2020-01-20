@@ -1,6 +1,6 @@
 import { GP } from 'elprimero'
 import { Stat } from 'borel'
-import { Table, TableSpec, TabX, CrosX } from '../../../src'
+import { Table, TableSpec, TabX, CrosX } from '../../../index'
 import { Samples } from 'veho'
 import { ArrX, deco } from 'xbrief'
 import rawData from '../../asset/json/gdp.rows.json'

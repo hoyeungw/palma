@@ -1,4 +1,4 @@
-import { Fn } from '../../src'
+import { Fn } from '../../index'
 import { deco, StrX } from 'xbrief'
 import { Typ } from 'typen'
 

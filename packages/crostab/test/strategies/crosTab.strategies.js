@@ -1,6 +1,6 @@
 import rawData from '../asset/json/gdp.rows.json'
 import { nba_players_performance } from '../asset/json/nba.players.performance'
-import { Table, TableSpec } from '../../src'
+import { Table, TableSpec } from '../../index'
 import { Chrono } from 'elprimero'
 import { CrosTabX as CrosX } from 'xbrief'
 import { _crosTabShort } from '../../src/temp/_crosTabShort'

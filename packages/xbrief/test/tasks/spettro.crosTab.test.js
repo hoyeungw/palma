@@ -1,8 +1,8 @@
 import { CrosTab, CrosX } from 'crostab'
-import chalk from 'chalk'
-import { palette } from 'spettro'
+import { Hatsu } from 'hatsu'
+import { Palett } from 'palett'
 import { Mx } from 'veho'
-import {StrX} from '../../src'
+import { StrX } from '../../index'
 
 const repl = x => x.replace('light ', 'l.').replace('deep ', 'd.')
 const { jv2py: sep } = StrX
@@ -11,15 +11,15 @@ export class PaletteCrosTabTest {
   static test () {
     const crosTab = CrosTab.from({
       side: Object
-        .keys(palette.red),
+        .keys(Palett.red),
       banner: Object
-        .entries(palette)
-        .map(([name, { base }]) => name |> sep |>repl |> chalk.hex(base)),
+        .entries(Palett)
+        .map(([name, { base }]) => name |> sep |>repl |> Hatsu.hex(base)),
       matrix: Object
-        .values(palette)
+        .values(Palett)
         .map(tube => Object
           .values(tube)
-          .map(x => x.toUpperCase() |> chalk.hex(x).inverse)
+          .map(x => x.toUpperCase() |> Hatsu.hex(x).inverse)
         )
         |> Mx.transpose
     })

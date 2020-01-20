@@ -1,6 +1,6 @@
 import { Chrono } from 'elprimero'
 import { toraja } from 'funfact'
-import { Samples } from '../../../src/ext/Samples'
+import { Samples } from '../../../src/Samples'
 import { Table } from 'crostab'
 import { ArrX, TableX } from 'xbrief'
 

@@ -1,4 +1,4 @@
-import { deco, StrX, ArrX } from '../../../../src'
+import { deco, StrX, ArrX } from '../../../../index'
 import { GP } from 'elprimero'
 
 export class RegexTest {

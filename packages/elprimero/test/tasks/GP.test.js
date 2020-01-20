@@ -1,4 +1,4 @@
-import { GP } from '../../src'
+import { GP } from '../../index'
 import { Fn, Ar } from 'veho'
 import { Dawdle } from '../../src/Dawdle'
 import { ArrX } from 'xbrief'

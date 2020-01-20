@@ -1,4 +1,4 @@
-import { otype } from './utils/typen'
+import { otype } from '../utils/typen'
 
 /**
  * validate

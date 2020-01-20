@@ -1,6 +1,6 @@
 import { Chrono } from 'elprimero'
 import { nba_players_performance } from '../asset/cax/nba.players.perfrormance'
-import { Mx, Dc, clone as clone_tersed } from '../../src/index'
+import { Mx, Dc, clone as clone_tersed } from '../../index'
 import { MagnitudeForm, MatX, ArrX } from 'xbrief'
 import { clone as clone_beta, dpArr as cloneArray_beta } from '../../src/misc/clone'
 import { clone as clone_alpha } from '../../src/misc/clone_alpha'

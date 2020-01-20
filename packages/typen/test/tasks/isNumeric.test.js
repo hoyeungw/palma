@@ -1,8 +1,7 @@
 import { Chrono } from 'elprimero'
 import { printChronoCross } from '../util/printChronoCross'
-import chalk from 'chalk'
-import { palette } from 'spettro'
-import { Typ } from '../../src/Typ'
+import { Hatsu } from 'hatsu'
+import { Palett } from 'palett'
 import { Num } from '../../src/Num'
 import { NumLoose } from '../../src/NumLoose'
 import { arrays, miscs, numerics, strings } from '../assets/samples.list'
@@ -10,7 +9,7 @@ import { arrays, miscs, numerics, strings } from '../assets/samples.list'
 const
   repeat = 1E+6,
   getPipeline = (paramsList) => result => result
-    .map(it => it || chalk.hex(palette.red.base)(it))
+    .map(it => it || Hatsu.hex(Palett.red.base)(it))
 
 const { isNumeric: isNumS, inferData: inferS } = Num
 const { isNumeric: isNumL, inferData: inferL } = NumLoose
@@ -23,7 +22,7 @@ export class IsNumericTest {
       ...strings,
       ...arrays
     }
-    const { lapse, result } = Chrono.crossByParamsAndFuncs({
+    const { lapse, result } = Chrono.strategies({
       repeat: 1E+6,
       paramsList: {
         ...miscs,

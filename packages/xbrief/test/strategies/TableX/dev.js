@@ -1,9 +1,9 @@
-import { ArrX, StrX } from '../../../src'
-import { PreciStable } from '../../../src'
-import { lpad, rpad, totx, zhChars, rn } from '../../../src/utils/str'
-import { transpose, zip } from '../../../src/utils/algebra'
-import { greys, palette, Visual } from 'spettro'
-import { isVisual } from '../../../src/utils/isVisual'
+import { ArrX, StrX } from '../../../index'
+import { PreciStable } from '../Preci/src/Preci.stable'
+import { lpad, rpad, totx, zhChars, rn } from '../../../utils/str'
+import { transpose, zip } from '../../../utils/algebra'
+import { Greys, Palett, Visual } from 'palett'
+import { isVisual } from '../../../utils/isVisual'
 
 const { hasChn, toFullAngle } = StrX
 const { maxLen, padStarts } = ArrX
@@ -47,9 +47,9 @@ class TableXDev {
       visual = {
         on: true,
         mark: {
-          max: palette.lightGreen.accent_3,
-          min: palette.orange.accent_2,
-          na: greys.blueGrey.lighten_3,
+          max: Palett.lightGreen.accent_3,
+          min: Palett.orange.accent_2,
+          na: Greys.blueGrey.lighten_3,
         },
         direct: 2
       },

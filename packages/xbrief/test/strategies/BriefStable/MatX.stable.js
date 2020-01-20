@@ -1,7 +1,7 @@
 import { ArrX } from './ArrX'
 import { rn, totx, aeu, numPad } from '../functions/str'
 import { PreciStable as Preci } from '../../test/strategies/Preci/functions/Preci.stable'
-import { Visual, palette, greys } from 'spettro'
+import { Visual, Palett, Greys } from 'palett'
 import { Ar, Mx } from 'veho'
 import { isVisual } from '../functions/isVisual'
 
@@ -38,9 +38,9 @@ class MatX {
       visual = {
         on: true,
         mark: {
-          max: palette.lightGreen.accent_3,
-          min: palette.orange.accent_2,
-          na: greys.blueGrey.lighten_3,
+          max: Palett.lightGreen.accent_3,
+          min: Palett.orange.accent_2,
+          na: Greys.blueGrey.lighten_3,
         },
         direct: 1
       },

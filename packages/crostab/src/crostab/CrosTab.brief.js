@@ -1,6 +1,6 @@
 import { CrosTabX } from 'xbrief'
 import { CrosTab } from './CrosTab'
-import { greys, palette } from 'spettro'
+import { Greys, Palett } from 'palett'
 
 class CrosX {
   /**
@@ -37,9 +37,9 @@ class CrosX {
     visual = {
       on: true,
       mark: {
-        max: greys.grey.lighten_5,
-        min: greys.grey.darken_1,
-        na: palette.indigo.lighten_2,
+        max: Greys.grey.lighten_5,
+        min: Greys.grey.darken_1,
+        na: Palett.indigo.lighten_2,
       },
       direct: 2
     },
@@ -84,9 +84,9 @@ CrosTab.prototype.brief = function ({
     visual = {
       on: true,
       mark: {
-        max: greys.grey.lighten_5,
-        min: greys.grey.darken_1,
-        na: palette.indigo.lighten_2,
+        max: Greys.grey.lighten_5,
+        min: Greys.grey.darken_1,
+        na: Palett.indigo.lighten_2,
       },
       direct: 2
     },

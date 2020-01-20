@@ -1,5 +1,5 @@
 import { GP } from 'elprimero'
-import { deco } from '../../src'
+import { deco } from '../../index'
 
 function getStaticMethodNames (cls) {
   return Object

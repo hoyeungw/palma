@@ -3,7 +3,7 @@
 import {} from 'veho'
 
 const rank4ost = (arr, n) => {
-  // Rank Vector
+  // Rank Presets
   const ranks = []
   for (let i = 0; i < n; i++) {
     let r = 1, s = 1

@@ -1,6 +1,7 @@
 {
   "packages": [
-    "packages/*"
+    "packages/*",
+    "spettro/*"
   ],
   "version": "independent",
   "useWorkspaces": true,

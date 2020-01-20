@@ -1,4 +1,4 @@
-import { Mx } from '../../../src/ext/Mx'
+import { Mx } from '../../../src/Mx'
 import { Chrono } from 'elprimero'
 
 const { map: mapx, mutateMap, copy } = Mx

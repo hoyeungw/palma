@@ -1,6 +1,6 @@
 import 'xbrief'
 import { nbaScoreLeaders } from '../asset/map/nba.score.leaders'
-import '../../src'
+import '../../index'
 
 function main () {
   let names = [...nbaScoreLeaders.keys()]

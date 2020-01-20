@@ -1,5 +1,5 @@
 import { EntX } from './EntX'
-import { greys, palette } from 'spettro'
+import { Greys, Palett } from 'palett'
 
 class MapX {
   /**
@@ -31,9 +31,9 @@ class MapX {
       visual = {
         on: true,
         mark: {
-          max: palette.lightGreen.accent_3,
-          min: palette.orange.accent_2,
-          na: greys.blueGrey.lighten_3,
+          max: Palett.lightGreen.accent_3,
+          min: Palett.orange.accent_2,
+          na: Greys.blueGrey.lighten_3,
         }
       }
     } = {}
@@ -87,9 +87,9 @@ class MapX {
     visual = {
       on: true,
       mark: {
-        max: palette.lightGreen.accent_3,
-        min: palette.orange.accent_2,
-        na: greys.blueGrey.lighten_3,
+        max: Palett.lightGreen.accent_3,
+        min: Palett.orange.accent_2,
+        na: Greys.blueGrey.lighten_3,
       }
     },
     ansi = false

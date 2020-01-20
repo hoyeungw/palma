@@ -1,5 +1,5 @@
 import nbaPlayers from 'funfact/dist/data/nba/players'
-import { CrosTabX, MagFm, TableX} from '../../../src'
+import { CrosTabX, MagFm, TableX} from '../../../index'
 import { Chrono } from 'elprimero'
 
 class TabXTest {
@@ -79,7 +79,7 @@ class TabXTest {
       banner: ['Shake', '词缀', 'Drake', 'Drack'],
       matrix: [['沉鱼', 2, 3, 4], [2, '落雁', 4, 5], [3, 4, '闭月', 6], [5, 6, 7, '羞花']]
     }
-    // matrix = matrix.map(row => row.map(x => chalk.hex(palette.orange.base)(x)))
+    // matrix = matrix.map(row => row.map(x => Hatsu.hex(Palett.orange.base)(x)))
 
     TableX.brief(
       { banner, matrix },

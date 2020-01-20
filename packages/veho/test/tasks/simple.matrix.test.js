@@ -1,4 +1,4 @@
-import { Mx } from '../../src/ext/Mx'
+import { Mx } from '../../src/Mx'
 import { deco, MatX } from 'xbrief'
 import { GP } from 'elprimero'
 import { Typ, check } from 'typen'

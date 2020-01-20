@@ -1,5 +1,5 @@
-import { Table, TabX } from '../../../src'
-import { JoinT } from '../../../src'
+import { Table, TabX } from '../../../index'
+import { JoinT } from '../../../index'
 import { TabQ } from '../../../src/table/TabQ'
 
 export class TableJoinTest {

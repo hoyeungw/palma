@@ -1,4 +1,4 @@
-import { totx } from '../../../../src'
+import { totx } from '../../../../index'
 
 export class PreciDev {
   constructor (ar, head, tail, dash) {

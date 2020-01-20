@@ -32,18 +32,18 @@ DecoTest.decoTest()
 //
 // PreciTest.test()
 
-// import { ArrXTest } from './tasks/brief.test/ArrX.test'
-//
-// ArrXTest.test()
+import { ArrXTest } from './tasks/brief.test/ArrX.test'
 
-// import { MapXTest } from './tasks/brief.test/MapX.test'
-//
-// MapXTest.vTest()
+ArrXTest.test()
 
-// import { EntXTest } from './tasks/brief.test/EntX.test'
-//
-// EntXTest.test()
+import { MapXTest } from './tasks/brief.test/MapX.test'
 
-// import { MatXTest } from './tasks/brief.test/MatX.test'
-//
-// MatXTest.xTest()
+MapXTest.vTest()
+
+import { EntXTest } from './tasks/brief.test/EntX.test'
+
+EntXTest.test()
+
+import { MatXTest } from './tasks/brief.test/MatX.test'
+
+MatXTest.xTest()

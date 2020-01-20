@@ -14,9 +14,10 @@
   "dependencies": {
     "ansi-regex": "^5.0.0",
     "borel": "^0.1.27",
-    "chalk": "^3.0.0",
+    "hatsu": "^0.0.0",
+    "hatsu-matrix": "^0.0.0",
     "has-ansi": "^4.0.0",
-    "spettro": "^0.1.2",
+    "palett": "^0.0.0",
     "string-length": "^3.1.0",
     "typen": "^0.1.2",
     "veho": "^0.2.2"

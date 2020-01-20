@@ -1,5 +1,5 @@
 import { superlativeTrees } from '../../asset/superlativTrees.json'
-import { CrosTabX, MagFm, MapX } from '../../../src/index'
+import { CrosTabX, MagFm, MapX } from '../../../index'
 import { Chrono } from 'elprimero'
 
 class MapXTest {

@@ -1,6 +1,6 @@
-import '../../src'
+import '../../index'
 import { nowTM } from './elprimero'
-import { deco } from '../../src'
+import { deco } from '../../index'
 
 class Xio {
 

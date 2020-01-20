@@ -1,4 +1,4 @@
-import * as chalk from 'chalk'
+import { Hatsu } from 'hatsu'
 import stringLength from 'string-length'
 import { ArrX } from '../../../src/brief/ArrX'
 import { StrX } from '../../../src/brief/StrX'
@@ -10,11 +10,11 @@ describe('Test padStart concerning Ansi', function () {
     }
     const { log } = console
     const candidates = {
-      style_normal: (chalk.blue('Hello') + ' World' + chalk.red('!')),
-      chainable: (chalk.blue.bgRed.bold('Hello world!')),
-      multiple_arg: (chalk.blue('Hello', 'World!', 'Foo', 'bar')),
-      nest_style: (chalk.red('Hello', chalk.underline.bgBlue('world') + '!')),
-      nest_even: (chalk.green(`A green ${chalk.blue.underline.bold('Shakespare')} emerged.`))
+      style_normal: (Hatsu.blue('Hello') + ' World' + Hatsu.red('!')),
+      chainable: (Hatsu.blue.bgRed.bold('Hello world!')),
+      multiple_arg: (Hatsu.blue('Hello', 'World!', 'Foo', 'bar')),
+      nest_style: (Hatsu.red('Hello', Hatsu.underline.bgBlue('world') + '!')),
+      nest_even: (Hatsu.green(`A green ${Hatsu.blue.underline.bold('Shakespare')} emerged.`))
     }
     const maxLen = ArrX.maxLen(Object.values(candidates))
     'maxLen'.tag(maxLen) |> console.log

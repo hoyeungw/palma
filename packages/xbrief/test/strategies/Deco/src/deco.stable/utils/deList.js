@@ -1,6 +1,6 @@
-import { tb } from '../../../../../../src/utils/str'
+import { tb } from '../../../../../../utils/str'
 import stringLength from 'string-length'
-import { Visual } from 'spettro'
+import { Visual } from 'hatsu-matrix'
 import { deNode } from './deNode'
 
 export let deList = (arr, l, rn) => {

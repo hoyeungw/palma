@@ -1,4 +1,4 @@
-import { otype, oc } from './utils/typen'
+import { otype, oc } from '../utils/typen'
 
 class Typ {
   static protoType (o) { return oc.call(o) }

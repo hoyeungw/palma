@@ -1,4 +1,4 @@
-import { afterNaTab, endsBracs, indexNaTab, isTab, rn, tb } from '../utils/str'
+import { afterNaTab, endsBracs, indexNaTab, isTab, rn, tb } from '../../utils/str'
 import hasAnsi from 'has-ansi'
 import stringLength from 'string-length'
 

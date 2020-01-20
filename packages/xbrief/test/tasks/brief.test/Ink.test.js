@@ -1,4 +1,4 @@
-import { Xr } from '../../../src'
+import { Xr } from '../../../index'
 
 it('X: ini Fun ', () => {
   Xr('Fun', 1, 2, 3)

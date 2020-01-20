@@ -1,7 +1,7 @@
 // 判断是否数组
 import { Comparer} from '../../dist/index.esm'
 import { Chrono } from 'elprimero'
-import { Rank } from '../../src'
+import { Rank } from '../../index'
 import { Mx, Samples } from 'veho'
 import { TableX, ArrX } from 'xbrief'
 import { TenSorts } from './tenSorts.resources'

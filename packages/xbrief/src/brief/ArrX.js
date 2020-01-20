@@ -1,17 +1,11 @@
-import { rn, aeu, rpad} from '../utils/str'
-import { Preci } from '../utils/Preci/Preci'
-import { Visual, palette, greys } from 'spettro'
-import { isVisual } from '../utils/isVisual'
+import { rn, aeu, rpad, lpad } from '../../utils/str'
+import { Preci } from '../../utils/Preci/Preci'
+import { Palett, Greys } from 'palett'
+import { Visual } from 'hatsu-matrix'
+import { isVisual } from '../../utils/isVisual'
+import { maxLen } from '../../utils/arr'
 
 export const indexPad = (arr, base = 0) => ~~(Math.log10(arr.length + base)) + 1
-
-const entriefy = (arr, base = 1) => {
-  //maxPad = intExponent(arr.length) + 1
-  const maxPad = ~~(Math.log10(arr.length + base)) + 1
-  return arr.map(
-    (x, i) => `[${String(i + base).padStart(maxPad)}] ${x}`
-  )
-}
 
 class ArrX {
 
@@ -22,7 +16,7 @@ class ArrX {
    * @param {function(*):string} [abstract]
    * @param {number} [head]
    * @param {number} [tail]
-   * @param {{[max]:string|number[],[min]:string|number[],[na]:string|number[]}} [palette]
+   * @param {{[max]:string|number[],[min]:string|number[],[na]:string|number[]}} [Palett]
    * @return {string}
    */
   static hBrief (arr, {
@@ -33,9 +27,9 @@ class ArrX {
       visual = {
         on: true,
         mark: {
-          max: palette.lightGreen.accent_3,
-          min: palette.orange.accent_2,
-          na: greys.blueGrey.lighten_3,
+          max: Palett.lightGreen.accent_3,
+          min: Palett.orange.accent_2,
+          na: Greys.blueGrey.lighten_3,
         }
       }
     } = {}
@@ -44,9 +38,8 @@ class ArrX {
       .map(abstract)
       .stringify()
     let elements = preci.toList('...')
-    if (visual.on !== false) {
+    if (visual.on !== false)
       elements = Visual.vector(elements, visual)
-    }
     return elements.length ? elements.join(delimiter) : aeu
   }
 
@@ -56,7 +49,7 @@ class ArrX {
    * @param {function(*):string} [abstract]
    * @param {number} [h]
    * @param {number} [t]
-   * @param {{[max]:string|number[],[min]:string|number[],[na]:string|number[]}} [palette]
+   * @param {{[max]:string|number[],[min]:string|number[],[na]:string|number[]}} [Palett]
    * @return {*}
    */
   static vBrief (arr, {
@@ -67,9 +60,9 @@ class ArrX {
       visual = {
         on: true,
         mark: {
-          max: palette.lightGreen.accent_3,
-          min: palette.orange.accent_2,
-          na: greys.blueGrey.lighten_3,
+          max: Palett.lightGreen.accent_3,
+          min: Palett.orange.accent_2,
+          na: Greys.blueGrey.lighten_3,
         }
       }
     } = {}
@@ -102,10 +95,10 @@ class ArrX {
    * @param {boolean=false} [ansi]
    * @return {string[]}
    */
-  static padEnds (arr, { pads, fill, ansi = false }) {
+  static padEnds (arr, { pads, fill, ansi = false } = {}) {
     switch (true) {
       case !pads:
-        const pad = arr |> ArrX.maxLen
+        const pad = maxLen(arr, ansi)
         return arr.map(x => rpad(x, pad, ansi, fill))
       case typeof pads === 'number':
         return arr.map(x => rpad(x, pads, ansi, fill))
@@ -114,6 +107,32 @@ class ArrX {
       default:
         return arr
     }
+  }
+
+  /**
+   *
+   * @param {string[]} arr
+   * @param {?number[]|?number} [pads]
+   * @param {?string} [fill]
+   * @param {boolean=false} [ansi]
+   * @return {string[]}
+   */
+  static padStarts (arr, { pads, fill, ansi = false } = {}) {
+    switch (true) {
+      case !pads:
+        const pad = maxLen(arr, ansi)
+        return arr.map(x => lpad(x, pad, ansi, fill))
+      case typeof pads === 'number':
+        return arr.map(x => lpad(x, pads, ansi, fill))
+      case Array.isArray(pads):
+        return arr.map((x, i) => lpad(x, pads[i], ansi, fill))
+      default:
+        return arr
+    }
+  }
+
+  static maxLen (arr, ansi = false) {
+    return maxLen(arr, ansi)
   }
 }
 

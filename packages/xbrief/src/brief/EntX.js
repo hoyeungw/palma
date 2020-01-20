@@ -1,9 +1,9 @@
-import { Preci } from '../utils/Preci/Preci'
-import { totx, aeu, rn, lpad, numPad } from '../utils/str'
-import { greys, palette, Visual } from 'spettro'
+import { Preci } from '../../utils/Preci/Preci'
+import { totx, aeu, rn, lpad, numPad } from '../../utils/str'
+import { Greys, Palett } from 'palett'
+import { Visual } from 'hatsu-matrix'
 import stringLength from 'string-length'
-import { isVisual } from '../utils/isVisual'
-
+import { isVisual } from '../../utils/isVisual'
 
 class EntX {
   /***
@@ -34,9 +34,9 @@ class EntX {
     visual = {
       on: true,
       mark: {
-        max: palette.lightGreen.accent_3,
-        min: palette.orange.accent_2,
-        na: greys.blueGrey.lighten_3,
+        max: Palett.lightGreen.accent_3,
+        min: Palett.orange.accent_2,
+        na: Greys.blueGrey.lighten_3,
       }
     }
   } = {}) {
@@ -82,9 +82,9 @@ class EntX {
     visual = {
       on: true,
       mark: {
-        max: palette.lightGreen.accent_3,
-        min: palette.orange.accent_2,
-        na: greys.blueGrey.lighten_3,
+        max: Palett.lightGreen.accent_3,
+        min: Palett.orange.accent_2,
+        na: Greys.blueGrey.lighten_3,
       }
     },
     ansi = false

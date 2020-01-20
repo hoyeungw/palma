@@ -4,7 +4,7 @@ import { descNumArr } from '../../asset/desc.num.arr'
 import { asceNumArr } from '../../asset/asce.num.arr'
 import { randNumArr } from '../../asset/rand.num.arr'
 import { ArrX } from 'xbrief'
-import { Comparer } from '../../../src'
+import { Comparer } from '../../../index'
 import { shell } from '../../principles/shell.sort'
 import { binLoc } from '../binLoc'
 

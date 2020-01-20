@@ -31,8 +31,22 @@ class Zu {
     return Math.abs(x - Math.round(x)) < epsilon
   }
 
+  /**
+   *
+   * @param {number} x
+   * @returns {number}
+   */
   static intExponent (x) {
     return ~~(Math.log10(x))
+  }
+
+  /**
+   *
+   * @param {number} x
+   * @returns {number}
+   */
+  static round (x) {
+    return (x + (x > 0 ? 0.5 : -0.5)) << 0
   }
 }
 

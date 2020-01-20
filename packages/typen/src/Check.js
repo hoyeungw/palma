@@ -1,4 +1,4 @@
-import { oc } from './utils/typen'
+import { oc } from '../utils/typen'
 
 /**
  *

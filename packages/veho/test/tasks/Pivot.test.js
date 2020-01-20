@@ -1,10 +1,10 @@
 import { toraja } from 'funfact'
-import { Samples } from '../../src/ext/Samples'
+import { Samples } from '../../src/Samples'
 import { Pivot } from '../../src/utils/Pivot'
 import { Chrono } from 'elprimero'
 import { CrosTabX } from 'xbrief'
 import { PivotModes } from '../../src/utils/PivotModes'
-import { Mx } from '../../src/ext/Mx'
+import { Mx } from '../../src/Mx'
 import { Num } from 'typen'
 import { Stat } from 'borel'
 

@@ -1,4 +1,4 @@
-import { Fn } from '../../src/ext/Fn'
+import { Fn } from '../../src/Fn'
 import { GP } from 'elprimero'
 import { deco } from 'xbrief'
 

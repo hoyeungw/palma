@@ -1,11 +1,11 @@
-import { Preci } from '../utils/Preci/Preci'
-import { aeu, rn } from '../utils/str'
-import { greys, palette } from 'spettro'
+import { Preci } from '../../utils/Preci/Preci'
+import { aeu, rn } from '../../utils/str'
+import { Greys, Palett } from 'palett'
 import { Mx } from 'veho'
-import { isVisual } from '../utils/isVisual'
-import { destructPreX } from '../utils/Preci/functions/destructPreX'
-import { readCrop } from '../utils/readCrop'
-import { padTable } from '../utils/Preci/functions/padTable'
+import { isVisual } from '../../utils/isVisual'
+import { destructPreX } from '../../utils/Preci/functions/destructPreX'
+import { readCrop } from '../../utils/readCrop'
+import { padTable } from '../../utils/Preci/functions/padTable'
 
 class TableX {
   /**
@@ -46,9 +46,9 @@ class TableX {
       visual = {
         on: true,
         mark: {
-          max: palette.lightGreen.accent_3,
-          min: palette.orange.accent_2,
-          na: greys.blueGrey.lighten_3,
+          max: Palett.lightGreen.accent_3,
+          min: Palett.orange.accent_2,
+          na: Greys.blueGrey.lighten_3,
         },
         direct: 2
       },

@@ -1,5 +1,5 @@
 import { isNumeric } from '../../../../../../src/deco/utils/typeCheck'
-import { Pal } from '../../../../../../src/deco/utils/palette'
+import { Pal } from '../../../../../../src/deco/utils/pal'
 import { deJson } from './deJson'
 
 /**

@@ -3,10 +3,11 @@ const { name, dependencies, main, module } = require(process.cwd() + '/package.j
 import { plugins } from './build/rollup.file'
 
 console.log('EXECUTING', name, process.cwd())
+console.log('Dependencies', dependencies)
 
 export default [
   {
-    input: 'src/index.js',
+    input: 'index.js',
     external: Object.keys(dependencies || {}),
     output: [
       { file: main, format: 'cjs' },  // CommonJS (for Node) build.

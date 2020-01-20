@@ -1,4 +1,4 @@
-import { isNumeric } from '../utils/isNumeric'
+import { isNumeric } from '../../utils/isNumeric'
 
 export class MagFm {
   constructor (digit = 2, sep = 3) {

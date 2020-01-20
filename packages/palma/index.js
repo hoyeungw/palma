@@ -1,1 +1,3 @@
-console.log('palma')
+import { logger } from './src/someLib'
+
+'billShakes' |> logger

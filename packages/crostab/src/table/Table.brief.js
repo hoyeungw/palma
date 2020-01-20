@@ -1,6 +1,6 @@
 import { Table } from './Table'
 import { TableX as TX } from 'xbrief'
-import { greys, palette } from 'spettro'
+import { Greys, Palett } from 'palett'
 
 class TabX {
 
@@ -37,9 +37,9 @@ class TabX {
     visual = {
       on: true,
       mark: {
-        max: palette.lightGreen.accent_3,
-        min: palette.orange.accent_2,
-        na: greys.blueGrey.lighten_3,
+        max: Palett.lightGreen.accent_3,
+        min: Palett.orange.accent_2,
+        na: Greys.blueGrey.lighten_3,
       },
       direct: 2
     },
@@ -83,9 +83,9 @@ Table.prototype.brief = function ({
     visual = {
       on: true,
       mark: {
-        max: palette.lightGreen.accent_3,
-        min: palette.orange.accent_2,
-        na: greys.blueGrey.lighten_3,
+        max: Palett.lightGreen.accent_3,
+        min: Palett.orange.accent_2,
+        na: Greys.blueGrey.lighten_3,
       },
       direct: 2
     },

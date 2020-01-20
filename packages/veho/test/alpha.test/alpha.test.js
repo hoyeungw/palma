@@ -1,3 +1,3 @@
-import { Mx } from '../../src/ext/Mx'
+import { Mx } from '../../src/Mx'
 
 Mx.ini(undefined, undefined, () => undefined) |> console.log
