@@ -1,6 +1,6 @@
 import { ConsoleColors, Effects } from '../assets/codes'
 
-export class HatsuProxyFactory {
+export class HatsuProxyFab {
   static build (hatsuInstance) {
     return new Proxy(hatsuInstance, {
       /**

@@ -50,7 +50,7 @@ export class SimpleFunTest {
     //   b: x => x * 2,
     //   c: x => x + 1
     // }
-    // const fun = Fn.chain(...Object.values(funcSet))
+    // const fun = ClassMeta.chainDeprec(...Object.values(funcSet))
     // Str.tag('JSON.stringify(fun)', deco(fun)).wL()
     // Typ.check(fun).wL()
     // const arr = [1, 2, 3, 5, 7]

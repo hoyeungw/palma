@@ -1,7 +1,7 @@
 import { Callable } from '../util/callable'
 import { Rgb, Hsl } from 'farbe'
 import { renderText } from './renderText'
-import { HatsuProxyFactory } from './HatsuProxyFactory'
+import { HatsuProxyFab } from './HatsuProxyFab'
 
 export class Hatsu extends Callable {
   constructor (rgb) {
@@ -18,7 +18,7 @@ export class Hatsu extends Callable {
    */
   static rgb (arr) {
     // return new Hatsu(str)
-    return HatsuProxyFactory.build(new Hatsu(arr))
+    return HatsuProxyFab.build(new Hatsu(arr))
   }
 
   /**

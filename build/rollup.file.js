@@ -1,4 +1,5 @@
 import nodeResolve from '@rollup/plugin-node-resolve'
+import commonjs from '@rollup/plugin-commonjs'
 import babel from 'rollup-plugin-babel'
 import filesize from 'rollup-plugin-filesize'
 
@@ -18,6 +19,9 @@ const babelPluginOptions = {
 
 export const plugins = [
   nodeResolve(),
+  commonjs({
+    include: /node_modules/,
+  }),
   babel(babelPluginOptions),
   filesize()
 ]

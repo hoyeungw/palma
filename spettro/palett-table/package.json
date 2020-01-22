@@ -14,7 +14,9 @@
   "dependencies": {
     "farbe": "^0.0.1",
     "palett": "^0.0.1",
-    "palett-table": "^0.0.1"
+    "borel": "^0.1.28"
+  },
+  "devDependencies": {
   },
   "repository": {
     "type": "git",

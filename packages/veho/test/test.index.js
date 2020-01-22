@@ -29,11 +29,11 @@ JsoSamplesTest.crosTabToSamples()
 //
 // SimpleVectorTest.test_ini()
 
-// import { SimpleFunTest } from './simple.fun.test'
+// import { ClassMetaTest } from './simple.fun.test'
 //
-// // SimpleFunTest.testGetStaticNames()
-// // SimpleFunTest.testGetFuncMethods()
-// SimpleFunTest.testFuncChains()
+// // ClassMetaTest.testGetStaticNames()
+// // ClassMetaTest.testGetFuncMethods()
+// ClassMetaTest.testFuncChains()
 
 // import { CloneTest } from './tasks/clone.test'
 //

@@ -9,20 +9,15 @@
   ],
   "scripts": {
     "pub": "npm publish",
-    "test": "babel-node test/test.index.js",
-    "mocha": "mocha"
+    "test": "babel-node test/test.index.js"
   },
   "dependencies": {
-    "crostab": "^0.2.21",
-    "hatsu": "^0.0.1",
-    "palett": "^0.0.1",
+    "kalorie": "^0.0.0",
+    "palett-table": "^0.0.1",
     "veho": "^0.2.3",
-    "xbrief": "^0.2.29"
+    "hatsu": "^0.0.1"
   },
   "devDependencies": {
-    "borel": "^0.1.28",
-    "chai": "^4.2.0",
-    "ora": "^4.0.3"
   },
   "repository": {
     "type": "git",

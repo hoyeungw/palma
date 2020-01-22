@@ -17,8 +17,14 @@ import { deepOrange } from './src/colors/deepOrange'
 import { brown } from './src/greys/brown'
 import { blueGrey } from './src/greys/blueGrey'
 import { grey } from './src/greys/grey'
+import { addProps } from './src/addProps'
 
-export const Palett = {
+/**
+ * @type {Object.<string,Object<string,Object>>}
+ * @property {string[]} colors
+ * @property {string[]} degrees
+ */
+const Palett = {
   red,
   pink,
   purple,
@@ -34,15 +40,26 @@ export const Palett = {
   yellow,
   amber,
   orange,
-  deepOrange
-}
-export const Shades = {
+  deepOrange,
+  brown,
+  blueGrey,
+  grey
+} |> addProps
+
+const Shades = {
   black: '#000000',
   white: '#FFFFFF',
 }
-export const Greys = {
+
+const Greys = {
   brown,
   blueGrey,
   grey,
+}
+
+export {
+  Palett,
+  Shades,
+  Greys
 }
 

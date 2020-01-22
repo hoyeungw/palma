@@ -9,7 +9,7 @@ module.exports = function (api) {
     ['@babel/plugin-proposal-private-methods'],
     ['@babel/transform-runtime', { helpers: false }]
   ]
-  const ignore = ['node_modules']
+  const ignore = ['node_modules/**']
   return {
     presets,
     plugins,

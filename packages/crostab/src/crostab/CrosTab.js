@@ -1,4 +1,4 @@
-import { clone, Mx, Ob, Samples } from 'veho'
+import { Ar, clone, Mx, Ob, Samples } from 'veho'
 import { sortAlong } from '../misc/sortAlong'
 
 export class CrosTab {
@@ -234,6 +234,24 @@ export class CrosTab {
     this.banner.unshift(field)
     this.matrix.forEach((row, i) => row.unshift(col[i]))
     return this
+  }
+
+  select ({
+    side: s,
+    banner: b
+  } = {}, { mutate = true } = {}) {
+    let { matrix, side, banner } = this
+    if (s && s.length) {
+      const roins = s.map(x => this.roin(x))
+      matrix = Ar.select(matrix, roins)
+      side = s
+    }
+    if (b && b.length) {
+      const coins = b.map(x => this.coin(x))
+      matrix = Mx.select(matrix, coins)
+      banner = b
+    }
+    return mutate ? this.reboot(matrix, side, banner) : this.clone(matrix, side, banner)
   }
 
   slice ({

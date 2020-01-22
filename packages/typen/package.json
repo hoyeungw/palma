@@ -14,9 +14,7 @@
   },
   "devDependencies": {
     "borel": "^0.1.28",
-    "crostab": "^0.2.21",
-    "elprimero": "^0.1.25",
-    "veho": "^0.2.3"
+    "crostab": "^0.2.21"
   },
   "repository": {
     "type": "git",
