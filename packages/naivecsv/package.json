@@ -1,6 +1,6 @@
 {
   "name": "naivecsv",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "A light & simple parser of csv text",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -13,15 +13,15 @@
     "mocha": "mocha"
   },
   "dependencies": {
-    "crostab": "^0.2.21",
+    "crostab": "^0.2.22",
     "iconv-lite": "^0.5.1",
-    "veho": "^0.2.3"
+    "veho": "^0.2.4"
   },
   "devDependencies": {
-    "borel": "^0.1.28",
+    "borel": "^0.1.29",
     "chai": "^4.2.0",
     "ora": "^4.0.3",
-    "xbrief": "^0.2.29"
+    "xbrief": "^0.2.30"
   },
   "repository": {
     "type": "git",

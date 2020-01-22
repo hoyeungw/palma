@@ -1,6 +1,6 @@
 {
   "name": "palett-presets",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A color converter",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -13,16 +13,16 @@
     "test-jest": "jest"
   },
   "dependencies": {
-    "borel": "^0.1.28",
-    "farbe": "^0.0.1",
-    "hatsu": "^0.0.1",
-    "palett": "^0.0.1",
-    "typen": "^0.1.3",
-    "veho": "^0.2.3"
+    "borel": "^0.1.29",
+    "farbe": "^0.0.2",
+    "hatsu": "^0.0.2",
+    "palett": "^0.0.2",
+    "typen": "^0.1.4",
+    "veho": "^0.2.4"
   },
   "devDependencies": {
-    "elprimero": "^0.1.25",
-    "xbrief": "^0.2.29"
+    "elprimero": "^0.1.26",
+    "xbrief": "^0.2.30"
   },
   "repository": {
     "type": "git",

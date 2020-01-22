@@ -1,6 +1,6 @@
 {
   "name": "palett",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A color converter",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -12,8 +12,8 @@
     "test": "node -r @babel/register test/test.index.js"
   },
   "devDependencies": {
-    "elprimero": "^0.1.25",
-    "xbrief": "^0.2.29"
+    "elprimero": "^0.1.26",
+    "xbrief": "^0.2.30"
   },
   "repository": {
     "type": "git",

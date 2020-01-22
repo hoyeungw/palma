@@ -1,6 +1,6 @@
 {
   "name": "kalorie",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A tool set related to function",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -13,10 +13,6 @@
     "alpha.test": "node -r @babel/register test/alpha.test/alpha.test.js",
     "test-strategies": "node test/utils/test-strategies.js",
     "mocha": "mocha"
-  },
-  "dependencies": {
-  },
-  "devDependencies": {
   },
   "repository": {
     "type": "git",
