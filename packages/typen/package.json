@@ -13,8 +13,6 @@
     "test-jest": "jest"
   },
   "devDependencies": {
-    "borel": "^0.1.30",
-    "crostab": "^0.2.23"
   },
   "repository": {
     "type": "git",
