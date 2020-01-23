@@ -1,6 +1,6 @@
 {
   "name": "typen",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "A data type checker and converter",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -11,8 +11,6 @@
     "pub": "npm publish",
     "test": "node test/util/test-main.js",
     "test-jest": "jest"
-  },
-  "devDependencies": {
   },
   "repository": {
     "type": "git",

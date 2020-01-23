@@ -1,6 +1,6 @@
 {
   "name": "borel",
-  "version": "0.1.30",
+  "version": "0.1.31",
   "description": "A light and simple math library",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -14,13 +14,13 @@
     "mocha": "mocha"
   },
   "dependencies": {
-    "typen": "^0.1.5"
+    "typen": "^0.1.6"
   },
   "devDependencies": {
     "funfact": "^0.0.3",
     "timsort": "^0.3.0",
-    "veho": "^0.2.5",
-    "xbrief": "^0.2.31"
+    "veho": "^0.2.6",
+    "xbrief": "^0.2.32"
   },
   "repository": {
     "type": "git",
