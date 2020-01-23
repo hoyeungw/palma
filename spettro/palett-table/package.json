@@ -1,6 +1,6 @@
 {
   "name": "palett-table",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A color converter",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -12,9 +12,9 @@
     "test": "node -r @babel/register test/test.index.js"
   },
   "dependencies": {
-    "borel": "^0.1.29",
+    "borel": "^0.1.30",
     "farbe": "^0.0.2",
-    "palett": "^0.0.2"
+    "palett": "^0.0.3"
   },
   "repository": {
     "type": "git",
