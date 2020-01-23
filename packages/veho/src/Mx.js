@@ -91,7 +91,7 @@ export class Mx {
    * @param {number[]} indexes
    * @returns {*}
    */
-  static select (mx, ...indexes) {
+  static select (mx, indexes) {
     const hi = indexes.length
     switch (hi) {
       case 0:
