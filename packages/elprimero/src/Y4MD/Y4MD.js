@@ -3,6 +3,7 @@ import { leapYear } from './utils/leapYear'
 import { daysBack, daysForth, yearBack, yearForth } from './utils/backAndForth'
 import { calibre, endOfMonth } from './utils/calibre'
 import { joinY4MD } from './utils/parseY4MD'
+import { ymdToInt } from './utils/ymdToInt'
 
 export class Y4MD {
   static now () {
@@ -26,9 +27,8 @@ export class Y4MD {
   }
 
   static belongTo (ymd, lo, hi) {
-    let i = -1, b = true
-    while (b && i++ < 2) b = lo[i] <= ymd[i] && ymd[i] <= hi[i]
-    return b
+    const int = ymdToInt(ymd)
+    return ymdToInt(lo) <= int && int <= ymdToInt(hi)
   }
 
   static addD ([y, m, d], days) {

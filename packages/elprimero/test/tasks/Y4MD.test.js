@@ -32,11 +32,22 @@ export class Y4MDTest {
     'Y4MD.seasonBeginAndEnd' |> console.log
     seasonLoHi(ymd)  |> console.log
   }
+
+  static belongToTest () {
+
+    const lo = [2019, 12, 31]
+    const dt = [2020, 5, 1]
+    const hi = [2021, 1, 1]
+    const result = Y4MD.belongTo(dt, lo, hi)
+    result |> console.log
+  }
 }
 
-describe('Y 4 MD Test', function () {
-  this.timeout(1000 * 60)
-  it('Y 4 MD Test: test ', () => {
-    Y4MDTest.test()
-  })
-})
+Y4MDTest.belongToTest()
+
+// describe('Y 4 MD Test', function () {
+//   this.timeout(1000 * 60)
+//   it('Y 4 MD Test: test ', () => {
+//     Y4MDTest.test()
+//   })
+// })
