@@ -1,6 +1,6 @@
 {
   "name": "hatsu-matrix",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A color converter",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -13,17 +13,17 @@
     "test-jest": "jest"
   },
   "dependencies": {
-    "borel": "^0.1.31",
-    "farbe": "^0.0.4",
-    "hatsu": "^0.0.4",
-    "palett": "^0.0.5",
-    "palett-presets": "^0.0.5",
+    "borel": "^0.1.32",
+    "farbe": "^0.0.5",
+    "hatsu": "^0.0.5",
+    "palett": "^0.0.6",
+    "palett-presets": "^0.0.6",
     "typen": "^0.1.6",
-    "veho": "^0.2.7"
+    "veho": "^0.2.8"
   },
   "devDependencies": {
-    "elprimero": "^0.1.29",
-    "xbrief": "^0.2.33"
+    "elprimero": "^0.1.30",
+    "xbrief": "^0.2.34"
   },
   "repository": {
     "type": "git",
