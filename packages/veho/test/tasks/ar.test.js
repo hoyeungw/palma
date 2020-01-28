@@ -8,7 +8,7 @@ function take (arr, len) {
 
 const localHBrief = (arr) => `[ ${ArrX.hBrief(arr, { head: 3, tail: 2 })} ]`
 
-class SimpleVectorTest {
+class ArTest {
 
   static test_ini () {
     'Ar.ini(5, i => i * 2)' |> console.log
@@ -64,23 +64,29 @@ class SimpleVectorTest {
       Typ.check(iterInstance).wL()
       ArrX.vBrief(iterInstance).wL()
     }
+  }
 
+  static testRange () {
+    Ar.range(65, 90, i => String.fromCharCode(i)) |> deco |> console.log
   }
 }
 
 describe('Simple Presets Test', function () {
   this.timeout(1000 * 60)
   it('Simple Presets Test: test ini ', () => {
-    SimpleVectorTest.test_ini()
+    ArTest.test_ini()
   })
   it('Simple Presets Test: zip test ', () => {
-    SimpleVectorTest.zip_test()
+    ArTest.zip_test()
   })
   it('Simple Presets Test: test one ', () => {
-    SimpleVectorTest.test_one()
+    ArTest.test_one()
+  })
+  it('Ar Test: test Range ', () => {
+    ArTest.testRange()
   })
 })
 
 export {
-  SimpleVectorTest
+  ArTest
 }

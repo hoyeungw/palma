@@ -101,10 +101,10 @@ class PivotBatchStrategies {
           ject: (x, y) => toCell(fields)
         })
         // for (const row of rows) {
-        //   let ob = crosTab.queryCell(row[x], row[y])
+        //   let zigguratObject = crosTab.queryCell(row[x], row[y])
         //   for (let k = 0, f, i; k < fis.length; k++) {
         //     [f, i] = fiEntries[k]
-        //     ob[f].push(row[i])
+        //     zigguratObject[f].push(row[i])
         //   }
         // }
         for (let i = 0, row; i < length; i++) {

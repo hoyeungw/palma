@@ -10,9 +10,9 @@ export class DistinctStrategies {
     const { lapse, result } = Chrono.strategies({
       repeat: 2E+4,
       paramsList: {
-        // el_512_l: [Ar.ini(512, () => Zu.rand(0, 512))],
-        // el_512_m: [Ar.ini(512, () => Zu.rand(0, 256))],
-        // el_512_s: [Ar.ini(512, () => Zu.rand(0, 32))],
+        // el_512_l: [Ar.ini(512, () => Roulett.rand(0, 512))],
+        // el_512_m: [Ar.ini(512, () => Roulett.rand(0, 256))],
+        // el_512_s: [Ar.ini(512, () => Roulett.rand(0, 32))],
         el_256_l: [Ar.ini(256, () => Zu.rand(0, 256))],
         el_256_m: [Ar.ini(256, () => Zu.rand(0, 128))],
         el_256_s: [Ar.ini(256, () => Zu.rand(0, 32))],

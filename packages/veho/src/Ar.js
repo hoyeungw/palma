@@ -134,6 +134,16 @@ class Ar {
     }
   }
 
+  static range (min, max, fn) {
+    const len = max - min + 1, arr = new Array(len)
+    if (fn && typeof fn === 'function') {
+      for (let i = 0; i < len; i++) arr[i] = fn(min + i)
+    } else {
+      for (let i = 0; i < len; i++) arr[i] = min + i
+    }
+    return arr
+  }
+
   /**
    * Create an arithmetic progression
    * @param {number} size
@@ -185,7 +195,7 @@ class Ar {
     //   case 1:
     //     return arr[0]
     //   default:
-    //     const idx = Zu.rand(0, len)
+    //     const idx = Roulett.rand(0, len)
     //     return arr[idx]
     // }
     return arr[~~(Math.random() * arr.length)]

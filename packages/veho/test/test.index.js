@@ -25,9 +25,9 @@ JsoSamplesTest.samplesToTable()
 JsoSamplesTest.tableToSample()
 JsoSamplesTest.crosTabToSamples()
 
-// import { SimpleVectorTest } from './tasks/simple.vector.test'
+// import { ArTest } from './tasks/simple.vector.test'
 //
-// SimpleVectorTest.test_ini()
+// ArTest.test_ini()
 
 // import { ClassMetaTest } from './simple.fun.test'
 //

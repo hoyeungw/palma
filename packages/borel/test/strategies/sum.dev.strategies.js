@@ -52,7 +52,7 @@ export class SumDevStrategies {
         arithmetic: [Ar.arithmetic(64, 0, 1000)],
         E_032: [Ar.ini(32, () => Zu.rand(0, 100))],
         E_128: [Ar.ini(128, () => Zu.rand(0, 100))],
-        // E_1024: [Ar.ini(1024, () => Zu.rand(0, 100))],
+        // E_1024: [Ar.ini(1024, () => Roulett.rand(0, 100))],
       },
       funcList: {
         by_forIndexed,
