@@ -5,6 +5,7 @@ class Zu {
    * @param {Number} min  Int
    * @param {Number} max  Int
    * @returns {Number}  Int
+   * @deprecated Prefer Roulett.between in npm package Roulett
    */
   static randBetween (min, max) {
     return ~~(Math.random() * (max - min + 1)) + min
@@ -16,6 +17,7 @@ class Zu {
    * @param {Number} min  Int
    * @param {Number} max(exclusive)  Int
    * @returns {Number}  Int
+   * @deprecated Prefer Roulett.rand in npm package Roulett
    */
   static rand (min, max) {
     return ~~(Math.random() * (max - min)) + min
