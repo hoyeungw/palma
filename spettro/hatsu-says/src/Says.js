@@ -21,7 +21,7 @@ export class Says {
         let hex, count = 0
         do {
           ({ hex } = PalettSelector.random())
-        } while (++count <= PalettSelector.poolSize && target.#colorPool.has(hex))
+        } while (++count <= PalettSelector.pool && target.#colorPool.has(hex))
         target.#colorPool.add(hex)
         target.#roster[p] = Pal.build(p |> Hatsu.hex(hex), { keywords })
         return target.#roster[p]

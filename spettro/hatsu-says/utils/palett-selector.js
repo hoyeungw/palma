@@ -1,20 +1,18 @@
 import { ColorGroups, Degrees, PalettTable } from 'palett-table'
-import { Ar } from 'veho/src/Ar'
+import { Roulett } from 'roulett'
 
-const palCrosTab = PalettTable.crosTab({
+const xPalett = PalettTable.crosTab({
   degrees: Degrees.readable,
   colors: ColorGroups.rainbow
 })
 
-const poolSize = palCrosTab.ht * palCrosTab.wd
-
 export class PalettSelector {
-  static poolSize = poolSize
+  static pool = xPalett.ht * xPalett.wd
 
   static random () {
-    const sideTag = Ar.randSample(palCrosTab.side)
-    const banrTag = Ar.randSample(palCrosTab.banner)
-    const color = palCrosTab.queryCell(sideTag, banrTag)
-    return { color: banrTag, degree: sideTag, hex: color }
+    const color = Roulett.element(xPalett.banner)
+    const degree = Roulett.element(xPalett.side)
+    const hex = xPalett.queryCell(degree, color)
+    return { color, degree, hex }
   }
 }
