@@ -29,6 +29,11 @@ export class Point {
   }
 }
 
+Point.prototype.toString = function () {
+  // return `(${this.#x},${this.#y})`
+  return 'some'
+}
+
 export class MovablePoint extends Point {
   #x
   #y

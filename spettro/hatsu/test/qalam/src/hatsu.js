@@ -36,7 +36,7 @@ class Hatsu extends Callable {
    * @returns {Hatsu|function}
    */
   static rgb (arr) {
-    // return new Hatsu(arr)
+    // return new ink(arr)
     return HatsuProxyFactory.build(new Hatsu(arr))
   }
 
@@ -46,7 +46,7 @@ class Hatsu extends Callable {
    * @returns {Hatsu|function}
    */
   static hex (str) {
-    // return new Hatsu(str)
+    // return new ink(str)
     return HatsuProxyFactory.build(new Hatsu(str))
   }
 

@@ -1,5 +1,7 @@
-import { ColorGroups, Degrees, PalettTable } from 'palett-table'
 import { Roulett } from 'roulett'
+import { Degrees } from './Degrees'
+import { ColorGroups } from './ColorGroups'
+import { PalettTable } from './PalettTable'
 
 const xPalett = PalettTable.crosTab({
   degrees: Degrees.readable,

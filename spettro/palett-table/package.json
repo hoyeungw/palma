@@ -14,6 +14,10 @@
   "dependencies": {
     "borel": "^0.1.32",
     "farbe": "^0.0.5",
+    "veho": "^0.2.8",
+    "hatsu": "^0.0.5",
+    "roulett": "^0.0.1",
+    "crostab": "^0.2.26",
     "palett": "^0.0.6"
   },
   "repository": {

@@ -1,15 +1,12 @@
 import { Callable } from 'kalorie'
-
-const TAB = ' '.repeat(2)
-const renderText = (message, { title, indent, keywords }) =>
-  `${TAB.repeat(indent)}[${title}] ${message}` |> console.log
+import { render } from './helpers'
 
 /**
  * @type {class|function}
  */
 export class Pal extends Callable {
   constructor (title, { indent = 0, keywords } = {}) {
-    super(tx => renderText(tx, this))
+    super(tx => render(tx, this))
     this.title = title
     this.indent = indent
     this.keywords = keywords
@@ -22,10 +19,11 @@ export class Pal extends Callable {
    *
    * @param title
    * @param indent
+   * @param keywords
    * @returns {Pal|function}
    */
-  static build (title, indent) {
-    return new Pal(title, indent)
+  static build (title, { indent = 0, keywords } = {}) {
+    return new Pal(title, { indent, keywords })
   }
 
   get asc () {

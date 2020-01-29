@@ -1,7 +1,7 @@
 import { Rgb } from 'farbe'
-import { Stat, Zu } from 'borel'
+import { Zu } from 'borel'
 import { Hatsu } from 'hatsu'
-import { Ar } from 'veho/src/Ar'
+import { Ar } from 'veho'
 
 export const toDataPicker = (space) => {
   switch (space) {

@@ -52,9 +52,9 @@ export function test () {
         o2 = stack.peek() // next round
       }
       stack.push(o1) // push o1 onto the stack
-    } else if (token === '(') { // if token is left parenthesis
+    } else if (token === '(') { // if token is left pr
       stack.push(token) // then push it onto the stack
-    } else if (token === ')') { // if token is right parenthesis
+    } else if (token === ')') { // if token is right pr
       while (stack.peek() !== '(') { // until token at top is (
         postfix += stack.pop() + ' '
       }

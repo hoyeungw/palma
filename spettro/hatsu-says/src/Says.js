@@ -1,14 +1,11 @@
 import { Hatsu } from 'hatsu'
-import { PalettSelector } from '../utils/palett-selector'
+import { PalettSelector } from 'palett-table'
 import { Pal } from './Pal'
 
 export class Says {
-  /** @type {Object<string,Pal|function>} */
-  #roster
-  /** @type {Set<string>} */
-  #colorPool
-  /** @type {Object<string,string>} */
-  #keywords
+  /** @type {Object<string,Pal|function>} */ #roster
+  /** @type {Set<string>} */ #colorPool
+  /** @type {Object<string,string>} */ #keywords
 
   constructor (roster, keywords) {
     this.#roster = roster || {}
@@ -23,7 +20,7 @@ export class Says {
           ({ hex } = PalettSelector.random())
         } while (++count <= PalettSelector.pool && target.#colorPool.has(hex))
         target.#colorPool.add(hex)
-        target.#roster[p] = Pal.build(p |> Hatsu.hex(hex), { keywords })
+        target.#roster[p] = Pal.build(p |> Hatsu.hex(hex), { keywords: target.#keywords })
         return target.#roster[p]
       }
     })

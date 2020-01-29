@@ -1,11 +1,11 @@
-import { Callable } from '../util/callable'
+import { Callable } from 'kalorie'
 import { Rgb, Hsl } from 'farbe'
-import { renderText } from './renderText'
-import { HatsuProxyFab } from './HatsuProxyFab'
+import { render } from './render'
+import { ProxyFactory } from './ProxyFactory'
 
 export class Hatsu extends Callable {
   constructor (rgb) {
-    super(msg => renderText(msg, this))
+    super(msg => render(msg, this))
     this.color = rgb
     this.head = {}
     this.tail = {}
@@ -17,8 +17,8 @@ export class Hatsu extends Callable {
    * @returns {Hatsu|function}
    */
   static rgb (arr) {
-    // return new Hatsu(str)
-    return HatsuProxyFab.build(new Hatsu(arr))
+    // return new ink(str)
+    return ProxyFactory.build(new Hatsu(arr))
   }
 
   /**

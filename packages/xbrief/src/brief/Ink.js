@@ -1,12 +1,12 @@
-import { indexNaTab, rn, tabify, totx } from '../../utils/str'
+import { deNaTab, rn, tabify, totx } from '../../utils/str'
 
 export const Xr = (label, ...items) => new Ink(label, ...items)
 
 export class Ink {
   constructor (label, ...items) {
     label = (label || '')|> totx
-    const i = label |> indexNaTab
-    if (!!i) {
+    const i = label |> deNaTab
+    if (i) {
       const block = label.substring(0, i)
       this.blocks = [block]
       this.list = [block + (i < label.length ? `[${label.substring(i)}]` : '')]
@@ -79,6 +79,5 @@ export class Ink {
     console.log(msg)
     console.log('')
   }
-
 }
 

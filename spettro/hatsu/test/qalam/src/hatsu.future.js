@@ -44,7 +44,7 @@ class Hatsu extends Callable {
    * @returns {Hatsu|function}
    */
   static rgb (arr) {
-    // return HatsuProxyFab.build(new Hatsu(arr))
+    // return ProxyFactory.build(new ink(arr))
     return new Hatsu(arr)
   }
 

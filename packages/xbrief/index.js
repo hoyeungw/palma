@@ -14,7 +14,7 @@ Number.prototype.tag = function (val) {
 
 export { StrX }
 export { totx } from './utils/str'
-export { Xr, Ink } from './src/brief/Ink'
+// export { Xr, ink } from './src/brief/ink'
 export { ArrX } from './src/brief/ArrX'
 export { MatX } from './src/brief/MatX'
 export { MapX } from './src/brief/MapX'
@@ -25,3 +25,5 @@ export { deco } from './src/deco/deco'
 export { FinFm, RatioFm, MagFm, toPercent } from './src/formos'
 export { noop } from './utils/str'
 export { Preci } from './utils/Preci/Preci'
+export { logger, logNeL } from './src/logger/logger'
+export { Xr } from './src/ink/Xr'

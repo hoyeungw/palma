@@ -1,4 +1,4 @@
-import { afterNaTab, endsBracs, indexNaTab, isTab, rn, tb } from '../../utils/str'
+import { afterNaTab, endsBracs, deNaTab, isTab, rn, tb } from '../../utils/str'
 import hasAnsi from 'has-ansi'
 import stringLength from 'string-length'
 
@@ -39,7 +39,7 @@ class StrX {
   }
 
   static tag (label, item) {
-    const i = indexNaTab(label)
+    const i = deNaTab(label)
     let [key, text] = [
       endsBracs(label)
         ? label
@@ -138,7 +138,7 @@ class StrX {
   }
 
   static afterNonTab (tx) {
-    return tx.substring(indexNaTab(tx))
+    return tx.substring(deNaTab(tx))
   }
 }
 

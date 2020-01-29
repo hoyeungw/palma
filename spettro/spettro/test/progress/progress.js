@@ -93,7 +93,7 @@ ProgressBar.prototype.tick = function(len, tokens){
 
   this.curr += len
 
-  // try to renderText
+  // try to render
   this.render();
 
   // progress complete
@@ -107,7 +107,7 @@ ProgressBar.prototype.tick = function(len, tokens){
 };
 
 /**
- * Method to renderText the progress bar with optional `tokens` to place in the
+ * Method to render the progress bar with optional `tokens` to place in the
  * progress bar's `fmt` field.
  *
  * @param {object} tokens
