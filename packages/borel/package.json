@@ -18,9 +18,7 @@
   },
   "devDependencies": {
     "funfact": "^0.0.3",
-    "timsort": "^0.3.0",
-    "veho": "^0.2.9",
-    "xbrief": "^0.3.0"
+    "timsort": "^0.3.0"
   },
   "repository": {
     "type": "git",
