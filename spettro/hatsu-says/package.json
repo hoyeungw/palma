@@ -1,6 +1,6 @@
 {
   "name": "hatsu-says",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A debug tool",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "hatsu": "^0.0.3",
-    "kalorie": "^0.0.1",
+    "kalorie": "^0.0.2",
     "palett-table": "^0.0.4",
     "roulett": "^0.0.1"
   },
