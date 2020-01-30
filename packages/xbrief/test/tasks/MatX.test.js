@@ -1,5 +1,5 @@
-import { boxoffice } from '../../asset/boxoffice.190227.json.rows'
-import { MatX } from '../../../index'
+import { boxoffice } from '../asset/boxoffice.190227.json.rows'
+import { MatX } from '../../index'
 import { Chrono } from 'elprimero'
 import { Greys, Palett } from 'palett'
 

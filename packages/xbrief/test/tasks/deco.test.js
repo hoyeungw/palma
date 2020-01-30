@@ -1,5 +1,5 @@
-import { deco } from '../../../index'
-import { superlativeTrees } from '../../asset/superlativTrees.json'
+import { deco } from '../../index'
+import { superlativeTrees } from '../asset/superlativTrees.json.js'
 
 class DecoTest {
   static decoTest () {

@@ -17,14 +17,14 @@ const insert_classic = arr => {
     // 依次把当前元素和前面的元素进行比较
     while (pr >= 0 && el < arr[pr]) {
       // Xr().p('      move')
-      //   .tag(pr, arr[pr]).p('=> to').tag(pr + 1, arr[pr + 1])
-      //   .p('|').tag(arr).p('|').tag('pr', pr).tx |> console.log
+      //   .tag(parenthesis, arr[parenthesis]).p('=> to').tag(parenthesis + 1, arr[parenthesis + 1])
+      //   .p('|').tag(arr).p('|').tag('parenthesis', parenthesis).tx |> console.log
       // 比当前的元素大，向后移一位
       arr[pr + 1] = arr[pr]
       pr--
     }
-    // Xr('  done while').p('now pr + 1 =').tag(pr + 1).tx |> console.log
-    // Xr(' ').tag('-').p('move').tag(i, el).p('=> to').tag(pr + 1, arr[pr + 1]).p('|').tag(arr).tx |> console.log
+    // Xr('  done while').p('now parenthesis + 1 =').tag(parenthesis + 1).tx |> console.log
+    // Xr(' ').tag('-').p('move').tag(i, el).p('=> to').tag(parenthesis + 1, arr[parenthesis + 1]).p('|').tag(arr).tx |> console.log
     // 插入当前元素到合适的位置
     arr[pr + 1] = el
   }
@@ -73,14 +73,14 @@ const rank_classic = arr => {
     // 依次把当前元素和前面的元素进行比较
     while (pr >= 0 && el < arr[pr]) {
       // Xr().p('      move')
-      //   .tag(pr, arr[pr]).p('=> to').tag(pr + 1, arr[pr + 1])
-      //   .p('|').tag(arr).p('|').tag('pr', pr).tx |> console.log
+      //   .tag(parenthesis, arr[parenthesis]).p('=> to').tag(parenthesis + 1, arr[parenthesis + 1])
+      //   .p('|').tag(arr).p('|').tag('parenthesis', parenthesis).tx |> console.log
       // 比当前的元素大，向后移一位
       arr[pr + 1] = arr[pr]
       pr--
     }
-    // Xr('  done while').p('now pr + 1 =').tag(pr + 1).tx |> console.log
-    // Xr(' ').tag('-').p('move').tag(i, el).p('=> to').tag(pr + 1, arr[pr + 1]).p('|').tag(arr).tx |> console.log
+    // Xr('  done while').p('now parenthesis + 1 =').tag(parenthesis + 1).tx |> console.log
+    // Xr(' ').tag('-').p('move').tag(i, el).p('=> to').tag(parenthesis + 1, arr[parenthesis + 1]).p('|').tag(arr).tx |> console.log
     // 插入当前元素到合适的位置
     arr[pr + 1] = el
   }

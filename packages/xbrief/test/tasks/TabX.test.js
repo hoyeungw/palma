@@ -1,5 +1,5 @@
 import nbaPlayers from 'funfact/dist/data/nba/players'
-import { CrosTabX, MagFm, TableX} from '../../../index'
+import { CrosTabX, MagFm, TableX} from '../../index'
 import { Chrono } from 'elprimero'
 
 class TabXTest {

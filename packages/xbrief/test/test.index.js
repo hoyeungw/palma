@@ -1,4 +1,4 @@
-import { DecoTest } from './tasks/brief.test/deco.test'
+import { DecoTest } from './tasks/deco.test'
 
 DecoTest.decoTest()
 
@@ -32,18 +32,18 @@ DecoTest.decoTest()
 //
 // PreciTest.test()
 
-import { ArrXTest } from './tasks/brief.test/ArrX.test'
+import { ArrXTest } from './tasks/ArrX.test'
 
 ArrXTest.test()
 
-import { MapXTest } from './tasks/brief.test/MapX.test'
+import { MapXTest } from './tasks/MapX.test'
 
 MapXTest.vTest()
 
-import { EntXTest } from './tasks/brief.test/EntX.test'
+import { EntXTest } from './tasks/EntX.test'
 
 EntXTest.test()
 
-import { MatXTest } from './tasks/brief.test/MatX.test'
+import { MatXTest } from './tasks/MatX.test'
 
 MatXTest.xTest()

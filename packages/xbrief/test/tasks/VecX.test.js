@@ -1,4 +1,4 @@
-import { StrX, ArrX } from '../../../index'
+import { StrX, ArrX } from '../../index'
 import { GP } from 'elprimero'
 
 const superlativeTrees = {

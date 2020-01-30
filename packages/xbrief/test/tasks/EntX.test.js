@@ -1,4 +1,4 @@
-import { EntX } from '../../../src/brief/EntX'
+import { EntX } from '../../src/brief/EntX'
 import { Chrono } from 'elprimero'
 
 export class EntXTest {

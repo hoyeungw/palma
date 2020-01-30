@@ -1,17 +1,7 @@
 import { Callable } from 'kalorie'
 import { deNaTab, tabify, totx } from '../../utils/str'
 import { render } from './render'
-import { Hatsu } from 'hatsu'
-import { Palett } from 'palett'
-// import { deco } from '../deco/deco'
-
-const { hex } = Hatsu
-const InkTheme = {
-  pr: hex(Palett.orange.lighten_1),
-  br: hex(Palett.blue.accent_2),
-}
-const pr = tx => InkTheme.pr('(') + tx + InkTheme.pr(')')
-const br = tx => InkTheme.br('[') + tx + InkTheme.br(']')
+import { bracket, bracketMain, parenthesis } from './theme'
 
 const inkPreset = (label, ...items) => {
   let stream = [], indent, len
@@ -20,10 +10,10 @@ const inkPreset = (label, ...items) => {
     (len = label.length) &&
     (indent = label |> deNaTab) < len
   ) {
-    stream.push(label.slice(indent) |> br)
+    stream.push(label.slice(indent) |> bracketMain)
   }
   if (items.length) {
-    stream.push(items.map(totx).join(',') |> pr)
+    stream.push(items.map(totx).join(',') |> parenthesis)
   }
   return { indent, stream }
 }
@@ -41,9 +31,9 @@ export class Ink extends Callable {
       /** @returns {Ink|function(...string):Ink} */
       get (target, p, receiver) {
         if (p in target) return target[p]
-        target.stream.push(String(p) |> br)
+        target.stream.push(String(p) |> bracket)
         return (...items) => {
-          target.stream.push(items.map(totx).join(',') |> pr)
+          target.stream.push(items.map(totx).join(',') |> parenthesis)
           return receiver
         }
       },
@@ -74,12 +64,12 @@ export class Ink extends Callable {
 
   tag (key, ...items) {
     this.stream.push(key |> totx |> tabify)
-    if (items.length) this.stream.push(items.map(totx).join(',') |> pr)
+    if (items.length) this.stream.push(items.map(totx).join(',') |> parenthesis)
     return this
   }
 
   br (...items) {
-    this.stream.push(items.map(pr).join(','))
+    this.stream.push(items.map(parenthesis).join(','))
     return this
   }
 

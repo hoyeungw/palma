@@ -14,16 +14,16 @@ class ArrX {
    * @param {*[]} arr
    * @param {string} [delimiter]
    * @param {function(*):string} [abstract]
-   * @param {number} [head]
-   * @param {number} [tail]
+   * @param {number} [h]
+   * @param {number} [t]
    * @param {{[max]:string|number[],[min]:string|number[],[na]:string|number[]}} [Palett]
    * @return {string}
    */
   static hBrief (arr, {
       delimiter = ', ',
       abstract,
-      head,
-      tail,
+      head: h,
+      tail: t,
       visual = {
         on: true,
         mark: {
@@ -34,13 +34,16 @@ class ArrX {
       }
     } = {}
   ) {
-    const preci = Preci.fromArr(arr, head, tail)
-      .map(abstract)
-      .stringify()
-    let elements = preci.toList('...')
-    if (visual.on !== false)
-      elements = Visual.vector(elements, visual)
-    return elements.length ? elements.join(delimiter) : aeu
+    if (!arr?.length) return aeu
+    let
+      preci = Preci.fromArr(arr, h, t),
+      words = preci.stringify(abstract),
+      list = words.toList('...')
+    if (visual |> isVisual) {
+      const pals = Visual.vector(preci.toList('...'), { ...visual, retFn: true })
+      list = list.map((x, i) => x |> pals[i])
+    }
+    return list.length ? list.join(delimiter) : aeu
   }
 
   /**
@@ -68,22 +71,19 @@ class ArrX {
     } = {}
   ) {
     if (!arr?.length) return aeu
-    const visualOn = visual |> isVisual
     let
       preci = Preci.fromArr(arr, h, t),
-      pals = visualOn
-        ? Visual.vector(preci.toList('...'), { ...visual, retFn: true })
-        : null,
       words = preci.stringify(abstract),
       pad = words |> indexPad,
       base = 1
-    let list = showIndex
-      ? words
-        .map((x, i) => `[${String(i + base).padStart(pad)}] ${x}`)
-        .toList('...')
-      : words
-        .toList('...')
-    if (visualOn) list = list.map((x, i) => x |> pals[i])
+    let list = (showIndex
+        ? words.map((x, i) => `[${String(i + base).padStart(pad)}] ${x}`)
+        : words
+    ).toList('...')
+    if (visual |> isVisual) {
+      const pals = Visual.vector(preci.toList('...'), { ...visual, retFn: true })
+      list = list.map((x, i) => x |> pals[i])
+    }
     return list.length ? list.join(rn) : aeu
   }
 

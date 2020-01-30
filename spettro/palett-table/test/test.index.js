@@ -14,8 +14,8 @@ PalettTable.meta() |> deco |> console.log
 
 PalettTableTest.showCrosTab({
   space: 'hex',
-  degrees: Degrees.accents,
-  colors: [...ColorGroups.yellowGreen, ...ColorGroups.orange],
+  degrees: Degrees.readable,
+  colors: [...ColorGroups.grey],
   average: false,
   cellColor: true
 })

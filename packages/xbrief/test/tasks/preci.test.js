@@ -1,5 +1,5 @@
-import { superlativeTrees } from '../../asset/superlativTrees.json'
-import { PreciStable } from '../../../utils/Preci/Preci'
+import { superlativeTrees } from '../asset/superlativTrees.json.js'
+import { PreciStable } from '../../utils/Preci/Preci'
 
 export class PreciTest {
   static test () {

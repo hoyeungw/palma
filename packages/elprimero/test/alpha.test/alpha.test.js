@@ -6,7 +6,7 @@ export class DateSubtract {
 
     d.setDate(d.getDate() - 90)
 
-    console.log('<br>5 days ago was: ' + d.toLocaleString())
+    console.log('<bracket>5 days ago was: ' + d.toLocaleString())
   }
 }
 
