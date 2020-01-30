@@ -1,6 +1,6 @@
 {
   "name": "crostab",
-  "version": "0.2.29",
+  "version": "0.2.30",
   "description": "An light, simple and easy-to-use commonjs library of a class \"Cax\" to handle 2d-table with side and banner.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -14,11 +14,11 @@
     "mocha": "mocha -r @babel/register"
   },
   "dependencies": {
-    "borel": "^0.1.34",
-    "palett": "^0.0.9",
+    "borel": "^0.1.35",
+    "palett": "^0.0.10",
     "typen": "^0.1.6",
-    "veho": "^0.2.11",
-    "xbrief": "^0.3.2"
+    "veho": "^0.2.12",
+    "xbrief": "^0.3.3"
   },
   "devDependencies": {
     "axios": "^0.19.1"

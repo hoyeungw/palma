@@ -1,6 +1,6 @@
 {
   "name": "spettro",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "A color converter",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -13,16 +13,16 @@
     "test-jest": "jest"
   },
   "dependencies": {
-    "borel": "^0.1.34",
-    "farbe": "^0.0.8",
-    "hatsu": "^0.0.8",
-    "palett": "^0.0.9",
+    "borel": "^0.1.35",
+    "farbe": "^0.0.9",
+    "hatsu": "^0.0.9",
+    "palett": "^0.0.10",
     "typen": "^0.1.6",
-    "veho": "^0.2.11"
+    "veho": "^0.2.12"
   },
   "devDependencies": {
-    "elprimero": "^0.1.33",
-    "xbrief": "^0.3.2"
+    "elprimero": "^0.1.34",
+    "xbrief": "^0.3.3"
   },
   "repository": {
     "type": "git",
