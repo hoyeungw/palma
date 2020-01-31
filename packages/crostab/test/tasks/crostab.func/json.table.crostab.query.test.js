@@ -1,8 +1,8 @@
 import { GP } from 'elprimero'
 import { Stat } from 'borel'
-import { Table, TableSpec, TabX, CrosX } from '../../../index'
+import { Table, TableSpec } from '../../../index'
 import { Samples } from 'veho'
-import { ArrX, deco } from 'xbrief'
+import { ArrX, deco, TableX, CrosTabX } from 'xbrief'
 import rawData from '../../asset/json/gdp.rows.json'
 
 class JsonTableCrostabQueryTest {
@@ -33,16 +33,16 @@ class JsonTableCrostabQueryTest {
     '' |> console.log
 
     GP.now().tag(`List<Samples> to Table`) |> console.log
-    const table = Table.fromSamples(rawData, 'gdp')
+    const table = Table.fromSamples(rawData, { title: 'gdp' })
     'table.types'.tag(table.types |> deco) |> console.log
-    // TabX.brief(table, { matrix: { head: 6, tail: 2 } }) |> console.log
+    // TableX.brief(table, { matrix: { head: 6, tail: 2 } }) |> console.log
     table
-      |>(_ => TabX.brief(_, { rows: { head: 6, tail: 2 } }))
+      |>(_ => TableX.brief(_, { rows: { head: 6, tail: 2 } }))
       |> console.log
     '' |> console.log
 
     GP.now().tag('Table to toSamples') |> console.log
-    table.toSamples('year', 'gdp', 'pop')
+    table.toSamples(['year', 'gdp', 'pop'])
       |> (_ => ArrX.vBrief(_, { abstract: JSON.stringify, head: 5, tail: 2 }))
       |> console.log
     '' |> console.log
@@ -67,7 +67,7 @@ class JsonTableCrostabQueryTest {
       .unshiftRow('stDevP', crosTab.columns.map(col => col |> Stat.stDevP))
       .map(n => n.toFixed())
     crosTab
-      |> (_ => CrosX.brief(_, {}))
+      |> (_ => CrosTabX.brief(_, {}))
       |> console.log
     '' |> console.log
 
@@ -80,7 +80,7 @@ class JsonTableCrostabQueryTest {
 
   static async testToSamples () {
 
-    const table = Table.fromSamples(rawData, 'gdp')
+    const table = Table.fromSamples(rawData, { title: 'gdp' })
     GP.now().tag(`Table to CrosTab`) |> console.log
     const spec = TableSpec.from({
         side: 'country',
@@ -93,7 +93,7 @@ class JsonTableCrostabQueryTest {
       }
     )
     const crosTab = table.crosTab(spec)
-    crosTab |> CrosX.brief |> console.log
+    crosTab |> CrosTabX.brief |> console.log
 
     GP.now().tag(`CrosTab to toSamples banner`) |> console.log
     crosTab.toSamples({ banner: [2017, 1992] }) |> console.log
@@ -102,6 +102,8 @@ class JsonTableCrostabQueryTest {
     crosTab.toSamples({ side: ['USA', 'DEU'] }) |> console.log
   }
 }
+
+JsonTableCrostabQueryTest.testCrosTab()
 
 export {
   JsonTableCrostabQueryTest

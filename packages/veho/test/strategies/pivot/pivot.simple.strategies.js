@@ -1,6 +1,6 @@
 import { Chrono } from 'elprimero'
 import { deco, MatX, Xr } from 'xbrief'
-import { CrosTab, CrosX, Table } from 'crostab'
+import { CrosTab, CrosTabX, Table } from 'crostab'
 import { nba_players_performance } from '../../asset/cax/nba.players.perfrormance'
 import { Ar } from '../../../index'
 
@@ -63,7 +63,7 @@ class PivotSimpleStrategies {
       paramsList: {
         simple: [samples],
         nba: [samples2]
-        // misc: [[[]], { x: 3, y: 2 }],
+        // utils: [[[]], { x: 3, y: 2 }],
       },
       funcList: {
         stable: (samples) => {
@@ -109,17 +109,17 @@ class PivotSimpleStrategies {
 
     'stable' |> console.log
     const ct = result.queryCell('simple', 'stable')
-    ct|> CrosX.brief |> console.log
+    ct|> CrosTabX.brief |> console.log
     ct.matrix|> MatX.xBrief |> console.log
 
     'dev ' |> console.log
     const ct2 = result.queryCell('simple', 'dev')
-    ct2|> CrosX.brief |> console.log
+    ct2|> CrosTabX.brief |> console.log
     ct2.matrix|> MatX.xBrief |> console.log
 
     'edge ' |> console.log
     const ct3 = result.queryCell('simple', 'edge')
-    ct3|> CrosX.brief |> console.log
+    ct3|> CrosTabX.brief |> console.log
     ct3.matrix|> MatX.xBrief |> console.log
   }
 }

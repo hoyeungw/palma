@@ -1,4 +1,4 @@
-import { CrosTab, CrosX } from 'crostab'
+import { CrosTab, CrosTabX } from 'crostab'
 import { Hatsu } from 'hatsu'
 import { Palett } from 'palett'
 import { Mx } from 'veho'
@@ -23,7 +23,7 @@ export class PaletteCrosTabTest {
         )
         |> Mx.transpose
     })
-    CrosX.brief(crosTab, { ansi: true })  |> console.log
+    CrosTabX.brief(crosTab, { ansi: true })  |> console.log
     '' |> console.log
   }
 }

@@ -1,6 +1,5 @@
-import { Table, TabX } from '../../../index'
-import { JoinT } from '../../../index'
-import { TabQ } from '../../../src/table/TabQ'
+import { Table, JoinT, TableJoin } from '../../../index'
+import { TableX } from 'xbrief'
 
 export class TableJoinTest {
   static test () {
@@ -28,11 +27,11 @@ export class TableJoinTest {
       ],
       title: 'income'
     })
-    TabQ.join(balance, income, ['date'], JoinT.intersect) |> TabX.brief |> console.log
+    TableJoin.join(balance, income, ['date'], JoinT.intersect) |> TableX.brief |> console.log
 
     '' |> console.log
     // 'Original balance table' |> console.log
-    // balance |> TabX.brief |> console.log
+    // balance |> TableX.brief |> console.log
   }
 }
 

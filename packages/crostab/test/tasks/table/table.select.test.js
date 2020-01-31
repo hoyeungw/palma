@@ -1,10 +1,10 @@
 import { boxOfficeTopList } from '../../asset/table/boxOfficeTopList'
 import { Table } from '../../../src/table/Table'
-import { TabX } from '../../../src/table/Table.brief'
+import { TableX } from '../../../src/table/Table.brief'
 
 class TableSelectTest {
   static test () {
-    const brief = (_ => TabX.brief(_, { rows: { head: 5, tail: 2 } }))
+    const brief = (_ => TableX.brief(_, { rows: { head: 5, tail: 2 } }))
     const table = Table.from(boxOfficeTopList)
     'Original' |> console.log
     table |> brief |> console.log

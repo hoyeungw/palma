@@ -1,6 +1,6 @@
 import { Chrono } from 'elprimero'
 import { Ob } from '../../../src/Ob'
-import { CrosX } from 'crostab'
+import { CrosTabX} from 'xbrief'
 
 class CreateObjectStrategies {
   static test () {
@@ -27,7 +27,7 @@ class CreateObjectStrategies {
       repeat: 2E+6,
       paramsList: {
         simple: [[['foo', []], ['bar', []], ['baz', []]]],
-        // misc: [['']],
+        // utils: [['']],
       },
       funcList
     })

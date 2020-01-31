@@ -1,5 +1,5 @@
 import { CrosTab, Table } from '..'
-import { toCell } from '../misc/toCell'
+import { toCell } from '../utils/toCell'
 import { fusionAr, fusionOb, restoreCell, restoreFilters } from './helper'
 
 /**
@@ -32,7 +32,7 @@ Table.prototype.samples = function (side, banner, fields) {
  * @param {function({}):number} spec.calc - ({col1,col2,...})=>number
  * @returns {CrosTab}
  */
-export const _crosTabShort = (table, spec) => {
+export const crosTabStable = (table, spec) => {
   const cellSet = restoreCell(spec.cell)
   const filterSet = restoreFilters(spec.filter)
   table = table.filter(filterSet, { mutate: false })

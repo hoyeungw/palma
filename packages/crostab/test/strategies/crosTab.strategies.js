@@ -2,13 +2,13 @@ import rawData from '../asset/json/gdp.rows.json'
 import { nba_players_performance } from '../asset/json/nba.players.performance'
 import { Table, TableSpec } from '../../index'
 import { Chrono } from 'elprimero'
-import { CrosTabX as CrosX } from 'xbrief'
-import { _crosTabShort } from '../../src/temp/_crosTabShort'
-import { _crosTabDev } from '../../src/temp/_crosTabDev'
-import { _crosTabEdge } from '../../src/temp/_crosTabEdge'
-import { _crosTabFut } from '../../src/temp/_crosTabFut'
+import { CrosTabX as CrosTabX } from 'xbrief'
+import { crosTabStable } from '../../src/archive/crosTabStable'
+import { crosTabDev } from '../../src/archive/crosTabDev'
+import { crosTabEdge } from '../../src/archive/crosTabEdge'
+import { crosTabFut } from '../../src/archive/crosTabFut'
 
-const gdpTable = Table.fromSamples(rawData, 'gdp')
+const gdpTable = Table.fromSamples(rawData, { title: 'gdp' })
 
 class CrosTabStrategies {
   static test () {
@@ -43,10 +43,10 @@ class CrosTabStrategies {
       repeat: 1E+4,
       paramsList,
       funcList: {
-        fut: _crosTabFut,
-        short: _crosTabShort,
-        edge: _crosTabEdge,
-        dev: _crosTabDev
+        fut: crosTabFut,
+        short: crosTabStable,
+        edge: crosTabEdge,
+        dev: crosTabDev
       }
     })
     'lapse' |> console.log
@@ -60,7 +60,7 @@ class CrosTabStrategies {
     for (let paramsName of Object.keys(paramsList)) {
       paramsName |> console.log
       result.queryCell(paramsName, funcName)
-        |> (_ => CrosX.brief(_, { abstract: JSON.stringify }))
+        |> (_ => CrosTabX.brief(_, { abstract: JSON.stringify }))
         |> console.log
       '' |> console.log
     }

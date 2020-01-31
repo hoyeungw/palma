@@ -1,5 +1,5 @@
 import { CrosTab } from '../crostab/CrosTab'
-import { toCell } from '../misc/toCell'
+import { toCell } from '../utils/toCell'
 import { fusionAr, fusionOb, restoreCell, restoreFilters } from './helper'
 
 const _getSideBanner = (rows, x, y) => {
@@ -25,7 +25,7 @@ const _getSideBanner = (rows, x, y) => {
  * @param {function({}):number} spec.calc - ({col1,col2,...})=>number
  * @returns {CrosTab}
  */
-export const _crosTabEdge = (table, spec) => {
+export const crosTabEdge = (table, spec) => {
   const cellSet = restoreCell(spec.cell)
   const filterSet = restoreFilters(spec.filter)
   table = table.filter(filterSet, { mutate: false })

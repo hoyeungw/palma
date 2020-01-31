@@ -1,7 +1,7 @@
 import { CrosTab } from '../crostab/CrosTab'
 import { Table } from '../table/Table'
 import { fusionAr, fusionOb, restoreCell, restoreFilters } from './helper'
-import { Er } from '../misc/Er'
+import { Er } from '../utils/Er'
 
 const crAr = () => []
 const accumLauncher = (ks, l) => {
@@ -88,7 +88,7 @@ Table.prototype.coordinate = function (side, banner, fields) {
  * @param {function({}):number} spec.calc - ({col1,col2,...})=>number
  * @returns {CrosTab}
  */
-export const _crosTabDev = (table, spec) => {
+export const crosTabDev = (table, spec) => {
   const cellSet = restoreCell(spec.cell)
   const filterSet = restoreFilters(spec.filter)
   table = table.filter(filterSet, { mutate: false })

@@ -1,12 +1,12 @@
 import { Ar, Mx, Ob, Samples } from 'veho'
-import { CrosTab } from '../crostab/CrosTab'
-import { ArrTyp } from '../misc/ArrTyp'
-import { _crosTabFut } from '../temp/_crosTabFut'
 import { Comparer, StatMx } from 'borel'
 import { totx } from 'xbrief'
-import { sortAlong } from '../misc/sortAlong'
-import { TabQ } from './TabQ'
-import { JoinT } from '../misc/MxJoin/JoinT'
+import { CrosTab } from '../crostab/CrosTab'
+import { ArrTyp } from '../utils/ArrTyp'
+import { sortAlong } from '../utils/sortAlong'
+import { joiner } from '../utils/MxJoin/MxJoin'
+import { JoinT } from '../utils/MxJoin/JoinT'
+import { crosTabFut } from '../archive/crosTabFut'
 
 export class Table {
   /**
@@ -53,11 +53,11 @@ export class Table {
 
   /**
    *
-   * @param {...string|number|[*,*]} fields
+   * @param {string|number|[*,*]} fields
    * @returns {Object<*, *>[]}
    */
-  toSamples (...fields) {
-    if (fields.length) {
+  toSamples (fields) {
+    if (fields?.length) {
       const entries = fields.map(x =>
         Array.isArray(x)
           ? [[x[1]], this.coin(x[0])]
@@ -85,12 +85,12 @@ export class Table {
   /**
    *
    * @param {{}[]} samples
-   * @param {?string} [title]
-   * @param {?*[]} [types]
    * @param {*[]|[*,*][]} [fields]
+   * @param {string} [title]
+   * @param {*[]} [types]
    * @return {Table}
    */
-  static fromSamples (samples, title, types, { fields } = {}) {
+  static fromSamples (samples, { fields, title, types } = {}) {
     const { head, rows } = Samples.toTable(samples, { fields })
     return new Table(head, rows, title, types)
   }
@@ -197,7 +197,7 @@ export class Table {
    * @returns {Table}
    */
   join (another, indexFields, joinType = JoinT.intersect, fillEmpty = null) {
-    return TabQ.join(this, another, indexFields, joinType, fillEmpty)
+    return TableJoin.join(this, another, indexFields, joinType, fillEmpty)
   }
 
   get size () {
@@ -205,11 +205,11 @@ export class Table {
   }
 
   get ht () {
-    return !this.matrix ? 0 : this.matrix.length
+    return this.matrix?.length
   }
 
   get wd () {
-    return !this.banner ? 0 : this.banner.length
+    return this.banner?.length
   }
 
   get columns () {
@@ -422,7 +422,7 @@ export class Table {
    * @returns {CrosTab}
    */
   crosTab (spec) {
-    return _crosTabFut(this, spec)
+    return crosTabFut(this, spec)
   }
 
   /**
@@ -436,6 +436,30 @@ export class Table {
    * @returns {CrosTab}
    */
   figure (spec) {
-    return _crosTabFut(this, spec)
+    return crosTabFut(this, spec)
+  }
+}
+
+export class TableJoin {
+  /**
+   *
+   * @param {Table} table
+   * @param {Table} another
+   * @param {string[]|number[]} indexFields
+   * @param {number} [joinType=-1] - union:0,left:1,right:2,intersect:-1
+   * @param {*} [fillEmpty]
+   * @returns {Table}
+   */
+  static join (table, another, indexFields, joinType = JoinT.intersect, fillEmpty = null) {
+    const
+      ysL = indexFields.map(x => table.coin(x)),
+      ysR = indexFields.map(x => another.coin(x)),
+      joinFn = joiner(joinType),
+      matrix = joinFn({ mx: table.matrix, ys: ysL }, { mx: another.matrix, ys: ysR }, fillEmpty),
+      banner = Ar.select(table.banner, ysL).concat(
+        Ar.splices(table.banner.slice(), ysL.slice().sort(Comparer.numberAscending)),
+        Ar.splices(another.banner.slice(), ysL.slice().sort(Comparer.numberAscending))
+      )
+    return new Table(banner, matrix, `${table.title} ${another.title}`)
   }
 }

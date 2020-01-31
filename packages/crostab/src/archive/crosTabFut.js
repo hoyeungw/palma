@@ -42,7 +42,7 @@ Pivot.prototype.pivotMatrices = function ([x, y], fields) {
  * @param {function():number} spec.calc - (field1,field2,...)=>number
  * @returns {CrosTab}
  */
-export const _crosTabFut = (table, spec) => {
+export const crosTabFut = (table, spec) => {
   // spec |> console.log
   table = table.filter(spec.filter, { mutate: false })
   const

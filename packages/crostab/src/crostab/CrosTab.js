@@ -1,5 +1,5 @@
 import { Ar, clone, Mx, Ob, Samples } from 'veho'
-import { sortAlong } from '../misc/sortAlong'
+import { sortAlong } from '../utils/sortAlong'
 
 export class CrosTab {
   side

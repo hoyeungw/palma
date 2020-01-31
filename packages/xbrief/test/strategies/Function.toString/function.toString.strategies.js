@@ -12,7 +12,7 @@ export class FunctionToStringStrategies {
       repeat: 1E+6,
       paramsList: {
         simple: [() => {}],
-        // misc: [],
+        // utils: [],
       },
       funcList: {
         classic: x => x,

@@ -1,6 +1,6 @@
 import { Stat, Zu } from 'borel'
 import { Chrono } from '../../../src/Chrono'
-import { CrosX } from 'crostab'
+import { CrosTabX} from 'xbrief'
 
 class PadZeroPerf {
 
@@ -51,12 +51,12 @@ class PadZeroPerf {
     })
     lapse
       .unshiftRow('[avg]', lapse.columns.map(Stat.avg).map(n => n.toFixed()))
-      |> CrosX.brief
+      |> CrosTabX.brief
       |> console.log
     '' |> console.log
     result
       .unshiftCol('[val]', Object.values(paramsList))
-      |> CrosX.brief
+      |> CrosTabX.brief
       |> console.log
 
   }

@@ -1,6 +1,6 @@
 import { Chrono } from 'elprimero'
 import { CrosTabX } from 'xbrief'
-import { CrosTab, CrosX } from 'crostab'
+import { CrosTab, CrosTabX } from 'crostab'
 import { nba_players_performance } from '../../asset/cax/nba.players.perfrormance'
 import { pivotAmp } from './resources/pivotAmp'
 import { Pivot } from '../../../src/utils/Pivot'

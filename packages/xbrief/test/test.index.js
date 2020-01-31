@@ -18,7 +18,7 @@ DecoTest.decoTest()
 //
 // TestMapX.hBriefTest()
 
-// import { TabXTest } from './tasks/brief.test/TabX.test'
+// import { TabXTest } from './tasks/brief.test/TableX.test'
 
 // TabXTest.testSimpleCrosTab()
 // TabXTest.testSimpleTable()

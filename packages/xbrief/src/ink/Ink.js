@@ -18,6 +18,9 @@ const inkPreset = (label, ...items) => {
   return { indent, stream }
 }
 
+/**
+ * @type {object<string,string>}
+ */
 export class Ink extends Callable {
   /** @type {number} */ indent
   /** @type {string[]} */ stream

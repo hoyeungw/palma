@@ -21,7 +21,7 @@ class BelongToTest {
         dayB: [cur, addD(cur, -2), addD(cur, -1)],
         some: [[2020, 5, 1], [2019, 12, 31], [2021, 1, 1]],
         misc: [[2020, 6, 16], [2020, 5, 17], [2020, 7, 14]]
-        // misc: [],
+        // utils: [],
       },
       funcList: {
         stable: (dt, lo, hi) => {

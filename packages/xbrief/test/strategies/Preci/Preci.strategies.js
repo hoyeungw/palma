@@ -20,7 +20,7 @@ export class PreciStrategies {
         simple7: [[1, 2, 3, 4, 5, 6], 5, 7],
         simple8: [[1, 2, 3, 4, 5, 6], 5, undefined],
         simple9: [[1, 2, 3, 4, 5, 6], undefined, undefined],
-        // misc: [],
+        // utils: [],
       },
       funcList
     })

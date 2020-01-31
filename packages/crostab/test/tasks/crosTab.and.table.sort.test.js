@@ -1,4 +1,5 @@
-import { CrosTab, Table, TabX, CrosX } from '../../index'
+import { CrosTab, Table } from '../../index'
+import { TableX, CrosTabX } from 'xbrief'
 import { Comparer } from 'borel'
 
 const table = Table.from({
@@ -38,29 +39,29 @@ const crosTab = CrosTab.from({
 export class SortTest {
   static testTable () {
     'table sortLabel via Comparer.stringAscending' |> console.log
-    table.sortLabel(Comparer.stringAscending) |> TabX.brief |> console.log
+    table.sortLabel(Comparer.stringAscending) |> TableX.brief |> console.log
     '' |> console.log
 
     'table sort on field [sold] via Comparer.numberDescending' |> console.log
-    table.sort('day', Comparer.numberDescending) |> TabX.brief |> console.log
+    table.sort('day', Comparer.numberDescending) |> TableX.brief |> console.log
     '' |> console.log
   }
 
   static testCrosTab () {
     'crosTab sortLabel by rows via Comparer.stringAscending' |> console.log
-    crosTab.sortLabel('rows', Comparer.stringAscending) |> CrosX.brief |> console.log
+    crosTab.sortLabel('rows', Comparer.stringAscending) |> CrosTabX.brief |> console.log
     '' |> console.log
 
     'crosTab sortLabel by columns via Comparer.stringDescending' |> console.log
-    crosTab.sortLabel('columns', Comparer.stringDescending) |> CrosX.brief |> console.log
+    crosTab.sortLabel('columns', Comparer.stringDescending) |> CrosTabX.brief |> console.log
     '' |> console.log
 
     'crosTab sort by rows on field [Media] via Comparer.numberAscending' |> console.log
-    crosTab.sort('rows', 'Media', Comparer.numberAscending) |> CrosX.brief |> console.log
+    crosTab.sort('rows', 'Media', Comparer.numberAscending) |> CrosTabX.brief |> console.log
     '' |> console.log
 
     'crosTab sort by columns on field [Shanghai] via Comparer.numberDescending' |> console.log
-    crosTab.sort('columns', 'Shanghai', Comparer.numberDescending) |> CrosX.brief |> console.log
+    crosTab.sort('columns', 'Shanghai', Comparer.numberDescending) |> CrosTabX.brief |> console.log
     '' |> console.log
   }
 

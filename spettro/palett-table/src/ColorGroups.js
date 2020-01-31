@@ -1,5 +1,3 @@
-
-
 const red = ['red', 'pink',]
 const purple = ['purple', 'deepPurple',]
 const blue = ['indigo', 'blue', 'lightBlue', 'cyan',]

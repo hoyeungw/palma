@@ -1,4 +1,4 @@
-import { Er } from '../misc/Er'
+import { Er } from '../utils/Er'
 import { Ob } from 'veho'
 import { Typ } from 'typen'
 
@@ -33,7 +33,7 @@ const createCell = (cell) => {
  * @property {Object<string|number,function(*[]):number>} [cell] - cell definition
  * @property {function():number} [calc] - calc definition: function<field1,field2,...,number>
  */
-class TableSpec {
+export class TableSpec {
   constructor (side, banner, cell, filter, calc) {
     if (typeof side !== 'string') throw Er.r({ message: 'Side is not string' })
     if (typeof banner !== 'string') throw Er.r({ message: 'Banner is not string' })
@@ -70,8 +70,4 @@ class TableSpec {
     const { side, banner, cell, filter, calc } = this
     return { side, banner, cell, filter, calc }
   }
-}
-
-export {
-  TableSpec
 }

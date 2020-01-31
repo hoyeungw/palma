@@ -12,7 +12,7 @@ class Dc {
     // const lex = keys.map((k, i) => [k, values[i]])
     // return new Map(lex)
     if (!keys || !values || !Array.isArray(keys) || !Array.isArray(values))
-      throw Er('The input contains invalid array.')
+      throw new Er('The input contains invalid array.')
     const
       { length } = keys,
       map = new Map()

@@ -1,4 +1,4 @@
-import { joinIntersect, joinLeft, joinRight, joinUnion } from '../../../src/misc/MxJoin/mxJoin'
+import { joinIntersect, joinLeft, joinRight, joinUnion } from '../../../src/utils/MxJoin/mxJoin'
 import { MatX } from 'xbrief'
 
 export class MxJoinTest {

@@ -1,6 +1,6 @@
 import { Chrono } from 'elprimero'
 import { deco, MatX } from 'xbrief'
-import { CrosTab, CrosX } from 'crostab'
+import { CrosTab, CrosTabX } from 'crostab'
 import { nba_players_performance } from '../../asset/cax/nba.players.perfrormance'
 import { Ar } from '../../../src/Ar'
 
@@ -167,7 +167,7 @@ class PivotBatchStrategies {
     for (let key of Object.keys(funcList)) {
       key |> console.log
       const ct = result.queryCell('nba', 'future')
-      CrosX.brief(ct, { abstract: JSON.stringify })|> console.log
+      CrosTabX.brief(ct, { abstract: JSON.stringify })|> console.log
       ct.matrix|> MatX.xBrief  |> console.log
     }
 

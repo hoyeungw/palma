@@ -1,5 +1,5 @@
 import { toraja } from 'funfact'
-import { Table, TabX } from 'crostab'
+import { Table, TableX } from 'crostab'
 import { ArrX } from '../../../src/brief/ArrX'
 
 export class VecXHeadTailTest {
@@ -14,7 +14,7 @@ export class VecXHeadTailTest {
       crit: array => array.includes('National Basketball Assn')
     }]);
     `Found ${table.ht} pieces of news concerning [${keyWord}]` |> console.log
-    TabX.brief(table,
+    TableX.brief(table,
       // { matrix: { head: 10, tail: 3 } }
     ) |> console.log
     const arr = table.column('title')
