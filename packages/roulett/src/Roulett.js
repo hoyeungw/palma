@@ -3,22 +3,22 @@ import { randIdx, randSel, random } from './helper'
 
 export class Roulett {
   /**
-   * Generate a random integer between [min, max].
-   * Both min & max are inclusive.
-   * @param {Number} min  Int
-   * @param {Number} max  Int
-   * @returns {Number}  Int
+   * From [min, max] return a random integer.
+   * Of [min, max], both min and max are inclusive.
+   * @param {number} min(inclusive) - int
+   * @param {number} max(inclusive) - int
+   * @returns {number} int
    */
   static between (min, max) {
     return ~~(random() * (max - min + 1)) + min
   }
 
   /**
-   * Generate a random integer between [min, max).
-   * Notice: min is inclusive & max is exclusive.
-   * @param {Number} min  Int
-   * @param {Number} max(exclusive)  Int
-   * @returns {Number}  Int
+   * From [min, max) return a random integer.
+   * Of [min, max), min is inclusive but max is exclusive.
+   * @param {number} min(inclusive) - int
+   * @param {number} max(exclusive) - int
+   * @returns {number} int
    */
   static rand (min, max) {
     return ~~(random() * (max - min)) + min
@@ -48,6 +48,13 @@ export class Roulett {
     return randSel(Object.entries(obj))
   }
 
+  /**
+   * Return an array of random number that follows gaussian distribution(normal distribution).
+   * @param {number} len - length of the returned array
+   * @param {number} mean - mean
+   * @param {number} stdev - standard deviation
+   * @returns {number[]}
+   */
   static gaussSamples (len, mean = 0, stdev = 1) {
     const z = new Ziggurat(mean, stdev), arr = Array(len)
     for (let i = 0; i < len; i++) arr[i] = z.next()
