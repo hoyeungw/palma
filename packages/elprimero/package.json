@@ -1,6 +1,6 @@
 {
   "name": "elprimero",
-  "version": "0.1.34",
+  "version": "0.1.35",
   "description": "A light and simple chronograph tool for test with countdown in js development.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -13,10 +13,10 @@
   },
   "dependencies": {
     "borel": "^0.1.35",
-    "crostab": "^0.2.30",
-    "hatsu-matrix": "^0.0.10",
-    "veho": "^0.2.12",
-    "xbrief": "^0.3.3"
+    "crostab": "^0.2.31",
+    "hatsu-matrix": "^0.0.11",
+    "veho": "^0.2.13",
+    "xbrief": "^0.3.4"
   },
   "devDependencies": {
     "cron": "^1.7.2",
