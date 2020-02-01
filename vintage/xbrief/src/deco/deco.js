@@ -16,6 +16,8 @@ const { isNumeric } = NumLoose
  */
 export const deco = (obj, { hi, vu } = {}) => deNode(obj, 0, hi, vu)
 
+export const deca = ({ hi, vu } = {}) => (_ => deco(_, { hi, vu }))
+
 /**
  *
  * @param {*} node
