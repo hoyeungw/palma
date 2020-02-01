@@ -1,6 +1,6 @@
 {
   "name": "palett-table",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "A color converter",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -13,12 +13,12 @@
   },
   "dependencies": {
     "borel": "^0.1.35",
-    "crostab": "^0.3.2",
+    "crostab": "^0.3.3",
     "farbe": "^0.0.7",
     "hatsu": "^0.0.7",
     "palett": "^0.0.8",
-    "roulett": "^0.0.2",
-    "veho": "^0.2.16"
+    "roulett": "^0.0.3",
+    "veho": "^0.2.17"
   },
   "repository": {
     "type": "git",
