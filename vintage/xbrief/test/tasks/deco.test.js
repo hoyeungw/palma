@@ -12,6 +12,8 @@ class DecoTest {
       undefined: undefined,
       simple_array: simple_array,
       empty_matrix: [[]],
+      nested_matrix: [[[[[[]]]]]],
+      nested_object: { a: { b: { c: { d: { e: { f: {} } } } } } },
       one_row_matrix: [simple_array],
       simple_set: new Set([1, 1, 1, 2, 2, 3, 3, 3]),
       simple_matrix: Array.from({ length: 3 }, (_, x) => Array.from({ length: 12 }, (_, y) => x + y + 1)),
@@ -24,6 +26,8 @@ class DecoTest {
     objects |> deco |> console.log
   }
 }
+
+DecoTest.decoTest()
 
 // it('deco test', () => {
 //   DecoTest.decoTest()

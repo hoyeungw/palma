@@ -10,12 +10,12 @@ export class PalettTableTest {
   }
 }
 
-PalettTable.meta() |> deco |> console.log
+// PalettTable.meta() |> deco |> console.log
 
 PalettTableTest.showCrosTab({
-  space: 'hex',
-  degrees: Degrees.readable,
-  colors: [...ColorGroups.grey],
+  space: 'hsl',
+  degrees: Degrees.entire,
+  colors: [...ColorGroups.grey, ...ColorGroups.red],
   average: false,
   cellColor: true
 })
