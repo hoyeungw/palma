@@ -145,8 +145,7 @@ export class Table {
    * @returns {Table}
    */
   select (fields, { mutate = true } = {}) {
-    const hi = fields?.length
-    if (!hi) return mutate ? this : this.clone()
+    if (!fields?.length) return mutate ? this : this.clone()
     const { indexes, banner } = this.#fieldIndexes(fields)
     const matrix = Mx.select(this.matrix, indexes)
     return mutate

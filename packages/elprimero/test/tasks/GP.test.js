@@ -1,6 +1,6 @@
 import { GP } from '../../index'
 import { Fn, Ar } from 'veho'
-import { Dawdle } from '../../src/Dawdle'
+import { Dawdle } from '../../src/Dawdle/Dawdle'
 import { ArrX } from 'xbrief'
 
 export class GPTest {
