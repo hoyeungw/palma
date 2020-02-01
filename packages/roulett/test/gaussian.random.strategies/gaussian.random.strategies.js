@@ -4,6 +4,7 @@ import { boxMuller } from '../../src/normDistRand/box-muller'
 import { Ziggurat } from '../../src/normDistRand/ziggurat'
 import { zigguratGenerator } from '../../src/normDistRand/ziggurat-generator'
 import { zigguratGeneratorDev } from '../../src/normDistRand/ziggurat-generator-dev'
+import { CrosTabX } from 'xbrief'
 
 const z = new Ziggurat()
 const zg = zigguratGenerator()
@@ -24,14 +25,14 @@ class GaussianRandomStrategies {
         marsaglia: marsagliaPolar,
         ziggurat: z.next.bind(z),
         z_generator: () => zg.next().value,
-        zigguratGenDev: () => zgd.next().value,
+        zigguratGenDev: () => zgd.next().value
       }
     })
     'lapse' |> console.log
-    lapse.brief() |> console.log
+    lapse|> CrosTabX.brief |> console.log
     '' |> console.log
     'result' |> console.log
-    result.brief() |> console.log
+    result|> CrosTabX.brief |> console.log
   }
 }
 

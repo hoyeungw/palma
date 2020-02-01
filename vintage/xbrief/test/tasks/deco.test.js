@@ -12,7 +12,7 @@ class DecoTest {
       undefined: undefined,
       simple_array: simple_array,
       empty_matrix: [[]],
-      nested_matrix: [[[[[[]]]]]],
+      nested_matrix: [[[[[[[[[]]]]]]]]],
       nested_object: { a: { b: { c: { d: { e: { f: {} } } } } } },
       one_row_matrix: [simple_array],
       simple_set: new Set([1, 1, 1, 2, 2, 3, 3, 3]),
