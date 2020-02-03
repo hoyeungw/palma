@@ -1,5 +1,5 @@
 import { Ar } from 'veho'
-import { Zu } from '../../dist/index.esm'
+import { Zu } from '../..'
 
 const swap = (arr, i, j) => {
   const t = arr[i]

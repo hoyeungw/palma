@@ -1,6 +1,6 @@
 import newTechs from 'funfact/dist/data/tech/newTechs'
-import { Comparer } from '../../dist/index.esm'
-import { Rank } from '../../dist/index.esm'
+import { Comparer } from '../..'
+import { Rank } from '../..'
 import { Table } from 'crostab'
 import { Mx } from 'veho'
 import { Typ } from 'typen'

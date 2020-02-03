@@ -1,5 +1,5 @@
 // 判断是否数组
-import { Comparer} from '../../dist/index.esm'
+import { Comparer} from '../..'
 import { Chrono } from 'elprimero'
 import { Rank } from '../../index'
 import { Mx, Samples } from 'veho'

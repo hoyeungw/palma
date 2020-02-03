@@ -1,0 +1,41 @@
+{
+  "name": "aryth",
+  "version": "0.0.0",
+  "description": "A light and simple math library",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "pub": "npm publish",
+    "test-strategies": "node test/misc/test-strategies.js",
+    "test": "node -r @babel/register test/test-index.js",
+    "mocha": "mocha"
+  },
+  "dependencies": {
+    "typen": "^0.1.6"
+  },
+  "devDependencies": {
+    "funfact": "^0.0.3",
+    "timsort": "^0.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoyeungw/aryth.git"
+  },
+  "keywords": [
+    "insight"
+  ],
+  "author": {
+    "name": "Hoyeung Wong",
+    "email": "hoyeungw@outlook.com",
+    "url": "https://github.com/hoyeungw"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hoyeungw/aryth"
+  },
+  "homepage": "https://github.com/hoyeungw/aryth#readme",
+  "gitHead": "83ecf391bbd64c8979e08e8ba32f988aaf0d4633"
+}

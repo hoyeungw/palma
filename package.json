@@ -3,6 +3,7 @@
   "private": true,
   "workspaces": [
     "packages/*",
+    "packages.scope/*",
     "palett/*",
     "vintage/*"
   ],

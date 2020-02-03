@@ -1,5 +1,5 @@
 import { Chrono } from 'elprimero'
-import { Comparer, Zu } from '../../dist/index.esm'
+import { Comparer, Zu } from '../..'
 import { descNumArr } from '../asset/desc.num.arr'
 import { numStrArr } from '../asset/numStr.arr'
 import { randNumArr } from '../asset/rand.num.arr'

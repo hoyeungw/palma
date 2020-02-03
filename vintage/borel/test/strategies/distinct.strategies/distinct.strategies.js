@@ -1,5 +1,5 @@
 import { Chrono } from 'elprimero'
-import { Zu } from '../../../dist/index.esm'
+import { Zu } from '../../..'
 import { Ar } from 'veho'
 import { Stat } from '../../../src/borel/Stat'
 
