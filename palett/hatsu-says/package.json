@@ -12,9 +12,9 @@
     "test": "babel-node test/test.index.js"
   },
   "dependencies": {
-    "hatsu": "^0.0.3",
+    "hatsu": "^0.0.15",
     "kalorie": "^0.0.2",
-    "palett-table": "^0.0.4",
+    "palett-table": "^0.0.15",
     "roulett": "^0.0.3"
   },
   "repository": {
