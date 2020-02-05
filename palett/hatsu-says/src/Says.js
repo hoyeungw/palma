@@ -1,19 +1,20 @@
 import { Hatsu } from 'hatsu'
 import { PalettSelector } from 'palett-table'
 import { Pal } from './Pal'
+import { Ob } from 'veho'
 
 export class Says {
-  /** @type {Object<string,Pal|function>} */ #roster
-  /** @type {Set<string>} */ #colorPool
-  /** @type {Object<string,string>} */ #keywords
+  /** @type {Object<string,Pal|function>} */ #roster = {}
+  /** @type {Set<string>} */ #colorPool = new Set()
+  /** @type {Object<string,string>} */ #keywords = {}
 
   constructor (roster, keywords) {
-    this.#roster = roster || {}
-    this.#keywords = keywords || {}
-    this.#colorPool = new Set()
+    if (roster) this.#roster = roster
+    if (keywords) this.#keywords = keywords
     return new Proxy(this, {
       /** @returns {Pal|function} */
       get (target, p, receiver) {
+        if (p in target) return target[p]
         if (p in target.#roster) return target.#roster[p]
         let hex, count = 0
         do {
@@ -26,6 +27,14 @@ export class Says {
     })
   }
 
+  get roster () {
+    return Ob.mapValues(this.#roster, pal => pal.title)
+  }
+
+  get colorPool () {
+    return this.#colorPool
+  }
+
   /**
    *
    * @param roster
@@ -36,3 +45,5 @@ export class Says {
     return new Says(roster, keywords)
   }
 }
+
+export default new Says()

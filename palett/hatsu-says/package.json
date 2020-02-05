@@ -15,7 +15,8 @@
     "hatsu": "^0.0.15",
     "kalorie": "^0.0.2",
     "palett-table": "^0.0.15",
-    "roulett": "^0.0.3"
+    "roulett": "^0.0.3",
+    "veho": "^0.2.18"
   },
   "repository": {
     "type": "git",

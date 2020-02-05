@@ -1,4 +1,7 @@
 import { Says } from '../src/Says'
+import { deca, decoLog, logNeL } from 'xbrief'
+
+const { logger } = require('xbrief')
 
 export class CallableTest {
   static test () {
@@ -9,6 +12,11 @@ export class CallableTest {
     'anything i can do for you' |> says.tournant.asc.asc
     'no, but you just stand by' |> says.aboyeur
     'yes' |> says.tournant
+
+    '\nregistered roster' |> logger
+    says.roster |> deca({ vu: 1 }) |> logNeL
+    'registered color' |> logger
+    says.colorPool |> deca({ vu: 1 })|> logNeL
   }
 }
 

@@ -5,6 +5,10 @@ import { render } from './helpers'
  * @type {class|function}
  */
 export class Pal extends Callable {
+  /** @type {string} */ title = ''
+  /** @type {number} */ indent = 0
+  /** @type {*[]} */ keywords = []
+
   constructor (title, { indent = 0, keywords } = {}) {
     super(tx => render(tx, this))
     this.title = title
