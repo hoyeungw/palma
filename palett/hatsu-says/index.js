@@ -1,1 +1,5 @@
-export { Says } from './src/Says'
+import { Says } from './src/Says'
+
+const says = new Says()
+
+export { Says, says }

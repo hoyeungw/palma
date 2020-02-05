@@ -7,13 +7,13 @@ import { render } from './helpers'
 export class Pal extends Callable {
   /** @type {string} */ title = ''
   /** @type {number} */ indent = 0
-  /** @type {*[]} */ keywords = []
+  /** @type {Object<string,string>} */ keywords = {}
 
   constructor (title, { indent = 0, keywords } = {}) {
     super(tx => render(tx, this))
-    this.title = title
-    this.indent = indent
-    this.keywords = keywords
+    if (title) this.title = title
+    if (indent) this.indent = indent
+    if (keywords) this.keywords = keywords
     // if (keywords?.tmr) {
     //   keywords.tmr += 1
     // }

@@ -1,5 +1,5 @@
 import { Hatsu } from 'hatsu'
-import { PalettSelector } from 'palett-table'
+import { PalettSelector as PalSel } from 'palett-table'
 import { Pal } from './Pal'
 import { Ob } from 'veho'
 
@@ -14,17 +14,21 @@ export class Says {
     return new Proxy(this, {
       /** @returns {Pal|function} */
       get (target, p, receiver) {
-        if (p in target) return target[p]
+        if (p in target) return typeof (p = target[p]) === 'function' ? p.bind(target) : p
         if (p in target.#roster) return target.#roster[p]
-        let hex, count = 0
+        let hex, n = 0
         do {
-          ({ hex } = PalettSelector.random())
-        } while (++count <= PalettSelector.pool && target.#colorPool.has(hex))
+          ({ hex } = PalSel.random())
+        } while (++n <= PalSel.pool && target.#colorPool.has(hex))
         target.#colorPool.add(hex)
-        target.#roster[p] = Pal.build(p |> Hatsu.hex(hex), { keywords: target.#keywords })
-        return target.#roster[p]
+        return target.#roster[p] = Pal.build(p |> Hatsu.hex(hex), { keywords: target.#keywords })
       }
     })
+  }
+
+  aboard (name, hex) {
+    this.#colorPool.add(hex)
+    return this.#roster[name] = Pal.build(name |> Hatsu.hex(hex), { keywords: this.#keywords })
   }
 
   get roster () {
@@ -45,5 +49,3 @@ export class Says {
     return new Says(roster, keywords)
   }
 }
-
-export default new Says()
