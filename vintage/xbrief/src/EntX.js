@@ -1,9 +1,9 @@
-import { Preci } from '../../utils/Preci/Preci'
-import { totx, aeu, rn, lpad, numPad } from '../../utils/str'
-import { Greys, Palett } from 'palett'
+import { Preci } from '@spare/preci'
+import { lange } from '@spare/lange'
+import { isVisual } from '@spare/util'
+import { totx, AEU, RN, lpad, numPad } from '@spare/util'
 import { Visual } from 'hatsu-matrix'
-import stringLength from 'string-length'
-import { isVisual } from '../../utils/isVisual'
+import { Greys, Palett } from 'palett'
 
 class EntX {
   /***
@@ -50,7 +50,7 @@ class EntX {
       Visual.column(elements, 1, { mark: visual.mark, deep: false },)
     }
     elements = elements.map(([k, v]) => '(' + k + delimiter + v + ')')
-    return elements.length ? elements.join(',') : aeu
+    return elements.length ? elements.join(',') : AEU
   }
 
   /***
@@ -96,7 +96,7 @@ class EntX {
       abstract ? (_ => String(abstract(_))) : totx
     ]
     let
-      len = ansi ? stringLength : x => x.length,
+      len = ansi ? lange : x => x.length,
       pL = 0, pR = 0, vL, vR, wL, wR,
       preci = Preci.fromArr(entries, head, tail),
       raws = preci.toList(['..', '..']),
@@ -116,7 +116,7 @@ class EntX {
         : ents.map(([k, v], i) =>
           lpad(k, pL, ansi) + delimiter +
           numPad(v, raws[i][1], pR, ansi))
-    return list.length ? list.join(rn) : aeu
+    return list.length ? list.join(RN) : AEU
   }
 }
 

@@ -2,6 +2,7 @@ import { boxoffice } from '../asset/boxoffice.190227.json.rows'
 import { MatX } from '../../index'
 import { Chrono } from 'elprimero'
 import { Greys, Palett } from 'palett'
+import { CrosTabX } from '../../src/CrosTabX'
 
 const paramsList = {
   empty_matrix: [[[]]],
@@ -50,12 +51,12 @@ export class MatXTest {
       }
     })
     'lapse' |> console.log
-    lapse.brief() |> console.log
+    lapse |> CrosTabX.brief |> console.log
     '' |> console.log
     'result' |> console.log
     for (let key of Object.keys(paramsList)) {
       key |> console.log
-      result.queryCell(key, 'stable') |> console.log
+      result.queryCell(key, 'stable') |> CrosTabX.brief |> console.log
       '' |> console.log
     }
     // result.brief() |> console.log

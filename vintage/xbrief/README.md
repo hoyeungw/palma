@@ -1,38 +1,43 @@
 ## xbrief
-A stringify tool to javascript object
 
-[![npm version][npm-image]][npm-url]
-[![npm quality][quality-image]][quality-url]
-[![npm download][download-image]][npm-url]
-[![npm total-download][total-download-image]][npm-url]
-[![github commit activity][commit-image]][github-url]
-[![npm license][license-image]][npm-url]
+[![npm version][badge-npm-version]][url-npm]
+[![npm download monthly][badge-npm-download-monthly]][url-npm]
+[![npm download total][badge-npm-download-total]][url-npm]
+[![npm dependents][badge-npm-dependents]][url-github]
+[![npm license][badge-npm-license]][url-npm]
+[![pp install size][badge-pp-install-size]][url-pp]
+[![github commit last][badge-github-last-commit]][url-github]
+[![github commit total][badge-github-commit-count]][url-github]
 
 [//]: <> (Shields)
-[npm-image]: https://img.shields.io/npm/v/xbrief.svg?style=flat-square
-[quality-image]: http://npm.packagequality.com/shield/xbrief.svg?style=flat-square
-[download-image]: https://img.shields.io/npm/dm/xbrief.svg?style=flat-square
-[total-download-image]:https://img.shields.io/npm/dt/xbrief.svg?style=flat-square
-[license-image]: https://img.shields.io/npm/l/xbrief.svg?style=flat-square
-[commit-image]: https://img.shields.io/github/commit-activity/y/hoyeungw/xbrief?style=flat-square
+[badge-npm-version]: https://flat.badgen.net/npm/v/xbrief
+[badge-npm-download-monthly]: https://flat.badgen.net/npm/dm/xbrief
+[badge-npm-download-total]:https://flat.badgen.net/npm/dt/xbrief
+[badge-npm-dependents]: https://flat.badgen.net/npm/dependents/xbrief
+[badge-npm-license]: https://flat.badgen.net/npm/license/xbrief
+[badge-pp-install-size]: https://flat.badgen.net/packagephobia/install/xbrief
+[badge-github-last-commit]: https://flat.badgen.net/github/last-commit/hoyeungw/xbrief
+[badge-github-commit-count]: https://flat.badgen.net/github/commits/hoyeungw/xbrief
 
 [//]: <> (Link)
-[npm-url]: https://npmjs.org/package/xbrief
-[quality-url]: http://packagequality.com/#?package=xbrief
-[github-url]: https://github.com/hoyeungw/xbrief
+[url-npm]: https://npmjs.org/package/xbrief
+[url-pp]: https://packagephobia.now.sh/result?p=xbrief
+[url-github]: https://github.com/hoyeungw/xbrief
 
-## Features
+##### A stringify tool to javascript object
+
+#### Features
 
 - A substitute for JSON.stringify
 - ES2015 syntax
 
-## Install
+#### Install
 
 ```console
 $ npm install xbrief
 ```
 
-## Usage
+#### Usage
 
 ```js
 import { deco } from 'xbrief'
@@ -54,7 +59,7 @@ const objects = {
 console.log(deco(objects))
 ```
 
-## License
+#### License
 
 [MIT](http://opensource.org/licenses/MIT)
 

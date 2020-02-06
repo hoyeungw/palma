@@ -47,6 +47,8 @@ class MapXTest {
   }
 }
 
+MapXTest.vTest()
+
 export {
   MapXTest
 }

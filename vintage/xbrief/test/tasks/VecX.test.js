@@ -1,5 +1,7 @@
 import { StrX, ArrX } from '../../index'
 import { GP } from 'elprimero'
+import { logger, logNeL } from '@spare/logger'
+import { xr } from '@spare/xr'
 
 const superlativeTrees = {
   coastRedwood: 'Sequoia sempervirens',
@@ -58,7 +60,7 @@ class VecXTest {
       new Set([1, 2, 3, 2, 1]),
       { 1: 'a', 2: 'b', 3: 'c' }
     ]
-    GP.now().tag(`${VecXTest.name}.${VecXTest.determineArray.name}`)  |> console.log
+    xr(GP.now())[VecXTest.name](VecXTest.determineArray.name) |> logger
     for (let [i, candidate] of candidates.entries()) {
       `${i}`.tag('isArray and length')  |> console.log
       console.log(candidate);
@@ -80,11 +82,12 @@ class VecXTest {
   }
 
   static vBriefTest () {
-    ''.tag(`${VecXTest.name}.${VecXTest.vBriefTest.name}`)  |> console.log
+    xr(VecXTest.name, VecXTest.vBriefTest.name)  |> logger
     for (let [i, param] of paramSet.entries()) {
-      `  ${i}`.tag(JSON.stringify(param))  |> console.log
+      xr()[i](JSON.stringify(param)) |> logger
       for (let [key, arr] of Object.entries(arrSet)) {
-        `    ${key}`.tag(ArrX.vBrief.call(null, arr, param))  |> console.log
+        xr(key, 'result') |> logger
+        ArrX.vBrief.call(null, arr, param) |> logNeL
       }
       ''  |> console.log
     }
@@ -95,6 +98,8 @@ class VecXTest {
     'trees'.tag(ArrX.vBrief(trees, { abstract: it => `${it}` }))  |> console.log
   }
 }
+
+VecXTest.vBriefTest()
 
 // it('ArrayTest.vBriefTest', () => {
 //   VecXTest.vBriefTest()

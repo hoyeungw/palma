@@ -1,6 +1,5 @@
-import { afterNaTab, endsBracs, deNaTab, isTab, rn, tb } from '../../utils/str'
-import hasAnsi from 'has-ansi'
-import stringLength from 'string-length'
+import { afterNaTab, endsBracs, deNaTab, isTab, RN, TB } from '@spare/util'
+import { lange, hasAnsi } from '@spare/lange'
 
 const StrReg = {
   jv2py: /[A-Z]+|[0-9]+/g,
@@ -49,8 +48,8 @@ class StrX {
     if (text.includes('\n')) {
       const t = ' '.repeat(i)
       text = (text.endsWith('}') || text.endsWith(']')) && !text.endsWith(']]')
-        ? afterNaTab(text.split(rn).map(x => t + x).join(rn))
-        : ['', ...text.split(rn).map(x => t + tb + x), t].join(rn)
+        ? afterNaTab(text.split(RN).map(x => t + x).join(RN))
+        : ['', ...text.split(RN).map(x => t + TB + x), t].join(RN)
     }
     return `${key} (${text})`
   }
@@ -67,13 +66,13 @@ class StrX {
 
   static padStartAnsi (tx, len, fill) {
     return hasAnsi(tx)
-      ? tx.padStart(tx.length + len - stringLength(tx), fill)
+      ? tx.padStart(tx.length + len - lange(tx), fill)
       : tx.padStart(len, fill)
   }
 
   static padEndAnsi (tx, len, fill) {
     return hasAnsi(tx)
-      ? tx.padEnd(tx.length + len - stringLength(tx), fill)
+      ? tx.padEnd(tx.length + len - lange(tx), fill)
       : tx.padEnd(len, fill)
   }
 

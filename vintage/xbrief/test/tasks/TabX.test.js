@@ -1,5 +1,5 @@
 import nbaPlayers from 'funfact/dist/data/nba/players'
-import { CrosTabX, MagFm, TableX} from '../../index'
+import { CrosTabX, MagFm, TableX } from '../../index'
 import { Chrono } from 'elprimero'
 
 class TabXTest {
@@ -64,7 +64,7 @@ class TabXTest {
       funcList
     })
     'lapse' |> console.log
-    lapse.brief() |> console.log
+    lapse |> CrosTabX.brief |> console.log
     '' |> console.log
     'result' |> console.log
     for (let key of Object.keys(paramsList)) {
@@ -98,6 +98,9 @@ class TabXTest {
 //     TabXTest.testSimpleCrosTab()
 //   })
 // })
+
+// TabXTest.testSimpleTable()
+TabXTest.testSimpleCrosTab()
 
 export {
   TabXTest

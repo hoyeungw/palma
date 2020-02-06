@@ -1,8 +1,9 @@
-import { CrosTab, CrosTabX } from 'crostab'
+import { CrosTab } from 'crostab'
+import { CrosTabX } from '../../index'
+import { StrX } from '../../index'
 import { Hatsu } from 'hatsu'
 import { Palett } from 'palett'
 import { Mx } from 'veho'
-import { StrX } from '../../index'
 
 const repl = x => x.replace('light ', 'l.').replace('deep ', 'd.')
 const { jv2py: sep } = StrX
@@ -28,6 +29,7 @@ export class PaletteCrosTabTest {
   }
 }
 
+PaletteCrosTabTest.test()
 // it('Palette Cros Tab Test: test', () => {
 //   PaletteCrosTabTest.test()
 // })

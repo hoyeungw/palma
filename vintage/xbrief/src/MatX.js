@@ -1,11 +1,11 @@
-import { rn, aeu } from '../../utils/str'
+import { RN, AEU } from '@spare/util'
 import { Palett, Greys } from 'palett'
 import { Mx } from 'veho'
-import { isVisual } from '../../utils/isVisual'
-import { destructPreX } from '../../utils/Preci/functions/destructPreX'
-import { padMx } from '../../utils/Preci/functions/padMx'
-import { readCrop } from '../../utils/readCrop'
-import { maxLen } from '../../utils/arr'
+import { isVisual } from '@spare/util'
+import { destructPreX } from '@spare/preci'
+import { padMx } from '@spare/preci'
+import { readCrop } from '@spare/util'
+import { maxLen } from '@spare/util'
 
 class MatX {
   /**
@@ -47,7 +47,7 @@ class MatX {
     } = {},
   ) {
     const [h, w] = Mx.size(matrix)
-    if (!h || !w) return aeu
+    if (!h || !w) return AEU
     ansi = (visual |> isVisual) ? true : ansi
     const { rawx, palx, wordx } = destructPreX(
       matrix,
@@ -56,7 +56,7 @@ class MatX {
       [h, w]),
       pads = Mx.columns(wordx, col => maxLen(col, ansi)),
       lines = padMx(wordx, rawx, palx, pads, ansi).map(line => `[${line}]`)
-    return '[' + lines.join(`,${rn} `) + ']'
+    return '[' + lines.join(`,${RN} `) + ']'
   }
 }
 

@@ -1,6 +1,6 @@
 import { Chrono } from 'elprimero'
-import { ArrX } from '../../src/brief/ArrX'
-import { CrosTabX } from '../../src/brief/CrosTabX'
+import { ArrX } from '../../src/ArrX'
+import { CrosTabX } from '../../src/CrosTabX'
 
 export class ArrXTest {
   static test () {

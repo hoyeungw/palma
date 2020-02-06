@@ -41,7 +41,7 @@ export class DecoStrategies {
       funcList
     })
     'lapse' |> console.log
-    lapse.brief() |> console.log
+    lapse |> CrosTabX.brief |> console.log
     '' |> console.log
 
     const fn = 'dev';

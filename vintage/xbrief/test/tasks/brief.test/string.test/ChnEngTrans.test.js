@@ -1,6 +1,6 @@
-import { StrX } from '../../../../src/brief/StrX'
+import { StrX } from '../../../../src/StrX'
 import { Dic } from 'veho'
-import { TableX } from '../../../../src/brief/TableX'
+import { TableX } from '../../../../src/TableX'
 import { transpose } from '../../../../utils/algebra'
 
 class ChnEngTransTest {

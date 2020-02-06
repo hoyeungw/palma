@@ -55,7 +55,7 @@ class MapX {
     //   .toList('...')
     // return elements.length > 0
     //   ? elements.join(delimiter)
-    //   : aeu
+    //   : AEU
   }
 
   /***
@@ -114,8 +114,8 @@ class MapX {
     //   .map(it => EntX.briefPadded(it, pad))
     //   .toList('...'.padStart(pad))
     // return elements.length > 0
-    //   ? elements.join(rn)
-    //   : aeu
+    //   ? elements.join(RN)
+    //   : AEU
   }
 }
 

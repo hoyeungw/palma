@@ -1,5 +1,5 @@
 import { superlativeTrees } from '../../asset/superlativTrees.json.js'
-import { ArrX } from '../../../src/brief/ArrX'
+import { ArrX } from '../../../src/ArrX'
 
 const trees = Object.keys(superlativeTrees)
 

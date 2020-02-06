@@ -1,6 +1,6 @@
-import { ArrX } from '../../src/brief/ArrX'
+import { ArrX } from '../../src/ArrX'
 import { logger, logNeL } from 'palma'
-import { Xr } from '../../src/ink/Xr'
+import { xr } from '@spare/xr'
 
 export class ArrXTest {
   static test () {
@@ -12,8 +12,8 @@ export class ArrXTest {
       misc: [null, undefined, NaN, 'Infinity', '+', 1.2E+1, 1.2E+2, 1.2E+3, 1.2E+4]
     }
     for (let k in paramsList) {
-      Xr(k) |> logger
-      Xr(' ').array(paramsList[k] |> ArrX.hBrief) |> logger
+      xr(k) |> logger
+      xr(' ').array(paramsList[k] |> ArrX.hBrief) |> logger
     }
   }
 }

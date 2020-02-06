@@ -1,9 +1,7 @@
-import { rn, aeu, rpad, lpad } from '../../utils/str'
-import { Preci } from '../../utils/Preci/Preci'
+import { RN, AEU, rpad, lpad, isVisual, maxLen } from '@spare/util'
+import { Preci } from '@spare/preci'
 import { Palett, Greys } from 'palett'
 import { Visual } from 'hatsu-matrix'
-import { isVisual } from '../../utils/isVisual'
-import { maxLen } from '../../utils/arr'
 
 export const indexPad = (arr, base = 0) => ~~(Math.log10(arr.length + base)) + 1
 
@@ -34,7 +32,7 @@ class ArrX {
       }
     } = {}
   ) {
-    if (!arr?.length) return aeu
+    if (!arr?.length) return AEU
     let
       preci = Preci.fromArr(arr, h, t),
       words = preci.stringify(abstract),
@@ -43,7 +41,7 @@ class ArrX {
       const pals = Visual.vector(preci.toList('...'), { ...visual, retFn: true })
       list = list.map((x, i) => x |> pals[i])
     }
-    return list.length ? list.join(delimiter) : aeu
+    return list.length ? list.join(delimiter) : AEU
   }
 
   /**
@@ -70,7 +68,7 @@ class ArrX {
       }
     } = {}
   ) {
-    if (!arr?.length) return aeu
+    if (!arr?.length) return AEU
     let
       preci = Preci.fromArr(arr, h, t),
       words = preci.stringify(abstract),
@@ -84,7 +82,7 @@ class ArrX {
       const pals = Visual.vector(preci.toList('...'), { ...visual, retFn: true })
       list = list.map((x, i) => x |> pals[i])
     }
-    return list.length ? list.join(rn) : aeu
+    return list.length ? list.join(RN) : AEU
   }
 
   /**

@@ -1,7 +1,7 @@
 import { Hatsu } from 'hatsu'
 import stringLength from 'string-length'
-import { ArrX } from '../../../src/brief/ArrX'
-import { StrX } from '../../../src/brief/StrX'
+import { ArrX } from '../../../src/ArrX'
+import { StrX } from '../../../src/StrX'
 
 describe('Test padStart concerning Ansi', function () {
   it('pad Start Ansi: test', () => {

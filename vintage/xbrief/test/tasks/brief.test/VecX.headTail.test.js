@@ -1,6 +1,6 @@
 import { toraja } from 'funfact'
 import { Table, TableX } from 'crostab'
-import { ArrX } from '../../../src/brief/ArrX'
+import { ArrX } from '../../../src/ArrX'
 
 export class VecXHeadTailTest {
   static test () {

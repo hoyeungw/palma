@@ -1,11 +1,10 @@
-import { Preci } from '../../utils/Preci/Preci'
-import { aeu, rn } from '../../utils/str'
+import { Preci } from '@spare/preci'
+import { AEU, RN } from '@spare/util'
+import { isVisual } from '@spare/util'
+import { destructPreX, padTable } from '@spare/preci'
+import { readCrop } from '@spare/util'
 import { Greys, Palett } from 'palett'
 import { Mx } from 'veho'
-import { isVisual } from '../../utils/isVisual'
-import { destructPreX } from '../../utils/Preci/functions/destructPreX'
-import { readCrop } from '../../utils/readCrop'
-import { padTable } from '../../utils/Preci/functions/padTable'
 
 class TableX {
   /**
@@ -60,7 +59,7 @@ class TableX {
       rows = table.rows || table.matrix || table.rowSet,
       blanc
     const [ht, wd] = Mx.size(rows)
-    if (!ht || !wd) return aeu
+    if (!ht || !wd) return AEU
     const visualOn = visual |> isVisual
     ansi = visualOn ? true : ansi
     const
@@ -71,7 +70,7 @@ class TableX {
     ({ head, blanc, rows } = padTable(hs, wordx, rawx, palx, ansi, chinese))
     return [head.join(' | '), blanc.join('-+-')].concat(
       rows.map(row => row.join(' | '))
-    ).join(rn)
+    ).join(RN)
   }
 }
 
