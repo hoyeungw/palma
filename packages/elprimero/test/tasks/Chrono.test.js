@@ -1,4 +1,5 @@
 import { Chrono } from '../../index'
+import { CrosTabX } from 'xbrief'
 
 class ChronoTest {
   static testCrossFuncsAndRepeats () {
@@ -58,8 +59,8 @@ class ChronoTest {
         }
       },
     })
-    lapse.brief() |> console.log
-    result.brief() |> console.log
+    lapse |> CrosTabX.brief |> console.log
+    result |> CrosTabX.brief |> console.log
   }
 }
 
@@ -69,6 +70,8 @@ class ChronoTest {
 //     ChronoTest.testStrategies()
 //   })
 // })
+
+ChronoTest.testStrategies()
 
 export {
   ChronoTest

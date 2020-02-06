@@ -65,7 +65,7 @@ class RankStrategies {
     })
 
     'lapse' |> console.log
-    lapse.brief()|> console.log
+    lapse |> CrosTabX.brief|> console.log
     '' |> console.log
     'result' |> console.log
     for (let { label, rankNative, rankShell, rankDivide, rankEntry, rankBubble, sort } of

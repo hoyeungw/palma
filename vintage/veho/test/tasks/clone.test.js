@@ -36,7 +36,7 @@ class CloneTest {
         clone_2d: it => Mx.clone(it)
       }
     })
-    lapse.brief() |> console.log
+    lapse |> CrosTabX.brief |> console.log
     const lex = Dc.ini(result.side, result.column('clone_beta'))
     for (let [k, obj] of lex.entries()) {
       k |> console.log

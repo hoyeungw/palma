@@ -29,7 +29,7 @@ export class DatavizTest {
       }
     })
     'lapse' |> console.log
-    lapse.brief() |> console.log
+    lapse |> CrosTabX.brief |> console.log
     '' |> console.log
     'result' |> console.log
     result.brief({ ansi: true }) |> console.log
@@ -82,7 +82,7 @@ export class DatavizTest {
       }
     })
     'lapse' |> console.log
-    lapse.brief() |> console.log
+    lapse |> CrosTabX.brief |> console.log
     '' |> console.log
     'result' |> console.log
     // result.brief() |> console.log
@@ -136,7 +136,7 @@ export class DatavizTest {
       }
     })
     'lapse' |> console.log
-    lapse.brief() |> console.log
+    lapse |> CrosTabX.brief |> console.log
     '' |> console.log
     'result' |> console.log
     // result.brief() |> console.log

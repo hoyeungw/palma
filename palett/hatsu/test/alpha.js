@@ -1,10 +1,10 @@
 const Escapes = {
   simple: '\e',
-  utf8oct: '\033',
+  utf8oct: '\\033',
   utf8hex: '\x1b',
   unicode: '\u001b' //C/C++/Java/Python
 }
-const main = (esc = Escapes.utf8hex) => {
+const main = (esc = Escapes.unicode) => {
   let n
   for (let i = 0; i < 11; i++) {
     let arr = ''

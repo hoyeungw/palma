@@ -1,19 +1,38 @@
-## naivecsv
-### A light and simple csv parser.
+# naivecsv
 
-<p align="center">
-  <a href="https://npmcharts.com/compare/naivecsv?minimal=true"><img src="https://img.shields.io/npm/dm/naivecsv.svg" alt="Downloads"></a>
-  <a href="https://www.npmjs.com/package/naivecsv"><img src="https://img.shields.io/npm/v/naivecsv.svg" alt="Version"></a>
-  <a href="https://www.npmjs.com/package/naivecsv"><img src="https://img.shields.io/npm/l/naivecsv.svg" alt="License"></a>
-</p>
+[![npm version][badge-npm-version]][url-npm]
+[![npm download monthly][badge-npm-download-monthly]][url-npm]
+[![npm download total][badge-npm-download-total]][url-npm]
+[![npm dependents][badge-npm-dependents]][url-github]
+[![npm license][badge-npm-license]][url-npm]
+[![pp install size][badge-pp-install-size]][url-pp]
+[![github commit last][badge-github-last-commit]][url-github]
+[![github commit total][badge-github-commit-count]][url-github]
+
+[//]: <> (Shields)
+[badge-npm-version]: https://flat.badgen.net/npm/v/naivecsv
+[badge-npm-download-monthly]: https://flat.badgen.net/npm/dm/naivecsv
+[badge-npm-download-total]:https://flat.badgen.net/npm/dt/naivecsv
+[badge-npm-dependents]: https://flat.badgen.net/npm/dependents/naivecsv
+[badge-npm-license]: https://flat.badgen.net/npm/license/naivecsv
+[badge-pp-install-size]: https://flat.badgen.net/packagephobia/install/naivecsv
+[badge-github-last-commit]: https://flat.badgen.net/github/last-commit/hoyeungw/naivecsv
+[badge-github-commit-count]: https://flat.badgen.net/github/commits/hoyeungw/naivecsv
+
+[//]: <> (Link)
+[url-npm]: https://npmjs.org/package/naivecsv
+[url-pp]: https://packagephobia.now.sh/result?p=naivecsv
+[url-github]: https://github.com/hoyeungw/naivecsv
+
+### A light and simple csv parser.
 
 ## Highlights
 
-- ES6 syntax, static method under class NaiveCsv
 - Customizable delimiter(default: ','), line-feed(default: '\r\n') and quote-mark(default: '\"')
 - Decoding configurable
 - Transpose available
 - Can delete blank trailing row
+- Static method under class NaiveCsv
 
 ## Install
 

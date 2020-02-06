@@ -59,7 +59,7 @@ class SumStableStrategies {
       }
     })
     'lapse' |> console.log
-    lapse.brief() |> console.log
+    lapse |> CrosTabX.brief |> console.log
     '' |> console.log
     'result' |> console.log
     result.brief() |> console.log

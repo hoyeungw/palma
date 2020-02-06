@@ -1,13 +1,32 @@
 ## typen
-### A color converter.
 
-<p align="center">
-  <a href="https://npmcharts.com/compare/typen?minimal=true"><img src="https://img.shields.io/npm/dm/typen.svg" alt="Downloads"></a>
-  <a href="https://www.npmjs.com/package/typen"><img src="https://img.shields.io/npm/v/typen.svg" alt="Version"></a>
-  <a href="https://www.npmjs.com/package/typen"><img src="https://img.shields.io/npm/l/typen.svg" alt="License"></a>
-</p>
+[![npm version][badge-npm-version]][url-npm]
+[![npm download monthly][badge-npm-download-monthly]][url-npm]
+[![npm download total][badge-npm-download-total]][url-npm]
+[![npm dependents][badge-npm-dependents]][url-github]
+[![npm license][badge-npm-license]][url-npm]
+[![pp install size][badge-pp-install-size]][url-pp]
+[![github commit last][badge-github-last-commit]][url-github]
+[![github commit total][badge-github-commit-count]][url-github]
 
-## Usage
+[//]: <> (Shields)
+[badge-npm-version]: https://flat.badgen.net/npm/v/typen
+[badge-npm-download-monthly]: https://flat.badgen.net/npm/dm/typen
+[badge-npm-download-total]:https://flat.badgen.net/npm/dt/typen
+[badge-npm-dependents]: https://flat.badgen.net/npm/dependents/typen
+[badge-npm-license]: https://flat.badgen.net/npm/license/typen
+[badge-pp-install-size]: https://flat.badgen.net/packagephobia/install/typen
+[badge-github-last-commit]: https://flat.badgen.net/github/last-commit/hoyeungw/typen
+[badge-github-commit-count]: https://flat.badgen.net/github/commits/hoyeungw/typen
+
+[//]: <> (Link)
+[url-npm]: https://npmjs.org/package/typen
+[url-pp]: https://packagephobia.now.sh/result?p=typen
+[url-github]: https://github.com/hoyeungw/typen
+
+#### A type helper
+
+### Usage
     
 ### ES6
     import { Rgb, Hsl } from 'typen'
@@ -16,7 +35,7 @@
 
 ### Browser
     
-## License
+### License
 
 [MIT](http://opensource.org/licenses/MIT)
 

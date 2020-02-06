@@ -89,7 +89,7 @@ class ShellSortTest {
       }
     })
     'lapse' |> console.log
-    lapse.brief() |> console.log
+    lapse |> CrosTabX.brief |> console.log
     '' |> console.log
     'result' |> console.log
     result.brief({ abstract: x => ArrX.hBrief(x, { head: 5, tail: 3, delimiter: ',' }) }) |> console.log

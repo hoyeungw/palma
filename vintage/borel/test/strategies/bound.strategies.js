@@ -38,7 +38,7 @@ export class BoundStrategies {
       }
     })
     'lapse' |> console.log
-    lapse.brief() |> console.log
+    lapse |> CrosTabX.brief |> console.log
     '' |> console.log
     'result' |> console.log
     result.brief({ abstract: x => JSON.stringify(x) }) |> console.log

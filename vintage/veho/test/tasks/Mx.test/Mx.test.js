@@ -34,7 +34,7 @@ export class MxTest {
       funcList
     })
     'lapse' |> console.log
-    lapse.brief() |> console.log
+    lapse |> CrosTabX.brief |> console.log
     '' |> console.log
     'result' |> console.log
     for (let key of Object.keys(funcList)) {
@@ -63,7 +63,7 @@ export class MxTest {
       funcList
     })
     'lapse' |> console.log
-    lapse.brief() |> console.log
+    lapse |> CrosTabX.brief |> console.log
     '' |> console.log
     'result' |> console.log
     for (let key of Object.keys(funcList)) {

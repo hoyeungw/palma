@@ -1,4 +1,4 @@
-import { ArrX} from 'xbrief'
+import { ArrX } from 'xbrief'
 import { Mx, Ar } from 'veho'
 import { ETA } from './ETA'
 import { GP } from './GP'
@@ -59,9 +59,7 @@ class Chrono {
     ]
     eta.ini()
     for (let [x, repeat] of Object.entries(repeatList)) {
-      GP.now().tag(
-        `[${x}] (${repeat}): repeat for each of [${Object.keys(funcList) |> ArrX.hBrief}]`
-      ) |> console.log
+      `[${GP.now()}] [${x}] (${repeat}): repeat for each of [${Object.keys(funcList) |> ArrX.hBrief}]` |> console.log
       eta.split()
       for (let [y, func] of Object.values(funcList).entries()) {
         valueRow[y] = _reh(repeat, func, params)
@@ -97,9 +95,7 @@ class Chrono {
       ]
     eta.ini()
     for (let [x, [label, params]] of Object.entries(paramsList).entries()) {
-      GP.now().tag(
-        `[${x}] (${label}) tested by each of funcs [${banner}], each repeated * ${repeat}.`
-      ) |> console.log
+      `[${GP.now()}] [${x}] (${label}) tested by each of funcs [${banner}], each repeated * ${repeat}.` |> console.log
       eta.split()
       for (let [y, func] of Object.values(funcList).entries()) {
         valueX[x][y] = _reh(repeat, func, params)
@@ -109,11 +105,11 @@ class Chrono {
     let [lapse, result] = [
       CrosTab.from({ side, banner, matrix: lapseX, title: 'parameter' }).clone(),
       CrosTab.from({ side, banner, matrix: valueX, title: 'parameter' }).clone()
-    ];
+    ]
     if (config.showAverage) lapse.unshiftRow(
       'avg',
       lapse.columns.map(Stat.avg).map(it => it.toFixed()
-      )|> Visual.vector )
+      )|> Visual.vector)
     if (config.showParamsValues) result.unshiftCol(
       'input',
       Object.values(paramsList)
