@@ -1,6 +1,6 @@
 {
   "name": "hatsu-says",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "A debug tool",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -12,11 +12,11 @@
     "test": "babel-node test/test.index.js"
   },
   "dependencies": {
-    "hatsu": "^0.0.16",
+    "hatsu": "^0.0.17",
     "kalorie": "^0.0.3",
-    "palett-table": "^0.0.16",
+    "palett-table": "^0.0.17",
     "roulett": "^0.0.4",
-    "veho": "^0.2.19"
+    "veho": "^0.2.20"
   },
   "repository": {
     "type": "git",

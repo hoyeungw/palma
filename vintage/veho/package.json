@@ -1,6 +1,6 @@
 {
   "name": "veho",
-  "version": "0.2.19",
+  "version": "0.2.20",
   "description": "An array extension (grammatical sugar) to create, iterate and query 1d, 2d array and JSON object.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -21,10 +21,10 @@
     "axios": "^0.19.1",
     "borel": "^0.1.37",
     "crawler": "^1.2.1",
-    "elprimero": "^0.1.41",
+    "elprimero": "^0.1.42",
     "funfact": "^0.0.3",
     "stocks.js": "^0.0.17",
-    "xbrief": "^1.0.0"
+    "xbrief": "^1.0.1"
   },
   "repository": {
     "type": "git",
