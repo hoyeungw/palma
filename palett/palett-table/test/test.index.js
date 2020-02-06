@@ -1,8 +1,7 @@
 import { PalettTable } from '../index'
-import { CrosTabX } from 'xbrief/src/brief/CrosTabX'
+import { CrosTabX } from 'xbrief'
 import { Degrees } from '../src/Degrees'
 import { ColorGroups } from '../src/ColorGroups'
-import { deco } from 'xbrief'
 
 export class PalettTableTest {
   static showCrosTab ({ space, degrees, colors, average, cellColor } = {}) {
@@ -15,7 +14,7 @@ export class PalettTableTest {
 PalettTableTest.showCrosTab({
   space: 'hsl',
   degrees: Degrees.entire,
-  colors: [...ColorGroups.grey, ...ColorGroups.red],
+  colors: [...ColorGroups.grey, ...ColorGroups.rainbow],
   average: false,
   cellColor: true
 })

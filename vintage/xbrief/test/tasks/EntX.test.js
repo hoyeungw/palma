@@ -28,4 +28,4 @@ export class EntXTest {
   }
 }
 
-EntXTest.test()
+EntXTest.testStrategies()

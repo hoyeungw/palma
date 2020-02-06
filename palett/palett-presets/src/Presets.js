@@ -1,14 +1,11 @@
-import { Greys, Palett } from 'palett'
+import { FRESH } from './themes/fresh'
+import { SUBTLE } from './themes/subtle'
+import { FOREST } from './themes/forest'
+import { METRO } from './themes/metro'
 
 export const Presets = {
-  fresh: {
-    max: Palett.lightGreen.accent_3,
-    min: Palett.red.accent_2,
-    na: Greys.brown.base
-  },
-  subtle: {
-    max: Greys.grey.lighten_5,
-    min: Greys.grey.darken_1,
-    na: Palett.indigo.lighten_2,
-  }
+  forest: FOREST,
+  fresh: FRESH,
+  metro: METRO,
+  subtle: SUBTLE,
 }

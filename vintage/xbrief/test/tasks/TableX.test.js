@@ -2,7 +2,7 @@ import nbaPlayers from 'funfact/dist/data/nba/players'
 import { CrosTabX, MagFm, TableX } from '../../index'
 import { Chrono } from 'elprimero'
 
-class TabXTest {
+class TableXTest {
 
   static testSimpleCrosTab () {
     // const { head, rows } = nbaPlayers
@@ -99,9 +99,10 @@ class TabXTest {
 //   })
 // })
 
-// TabXTest.testSimpleTable()
-TabXTest.testSimpleCrosTab()
+TableXTest.testSimpleChineseTable()
+TableXTest.testSimpleTable()
+TableXTest.testSimpleCrosTab()
 
 export {
-  TabXTest
+  TableXTest
 }
