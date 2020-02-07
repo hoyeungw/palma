@@ -1,4 +1,5 @@
 import { otype } from '../utils/typen'
+import { NUM, OBJ, STR } from './enums'
 
 /**
  * validate
@@ -16,13 +17,9 @@ export class Num {
 
   static inferData (x) {
     const t = typeof x
-    return t === 'string'
-      ? isNaN(x - parseFloat(x))
-        ? 'string'
-        : 'numstr'
-      : t === 'object'
-        ? otype(x).toLowerCase()
-        : t
+    return t === STR
+      ? isNaN(x - parseFloat(x)) ? STR : NUM
+      : t === OBJ ? otype(x).toLowerCase() : t
   }
 }
 

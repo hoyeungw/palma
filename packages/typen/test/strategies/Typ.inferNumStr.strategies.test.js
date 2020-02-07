@@ -1,8 +1,9 @@
 import { Chrono } from 'elprimero'
 import { Ob } from 'veho'
 import { Typ } from '../../index'
-import { printChronoCross } from '../util/printChronoCross'
 import { otype, oc } from '../../utils/typen'
+import { CrosTabX } from 'xbrief'
+import { OBJ } from '../../src/enums'
 
 const _entries = [
   ['foo', 12],
@@ -10,7 +11,7 @@ const _entries = [
   ['fiz', 12 * 4],
   ['baz', 12 * 8],
 ]
-const { protoType, initial, infer, inferData } = Typ
+const { protoType, initial, infer } = Typ
 const
   _isStrNum = x => !!(+x) || parseFloat(x) === 0,
   _isNumeric = v => !isNaN(v - parseFloat(v)),
@@ -20,7 +21,7 @@ const
 
 export class TypInferNumStrStrategiesTest {
   static test () {
-    const { lapse, result } = Chrono.crossByParamsAndFuncs(
+    const { lapse, result } = Chrono.strategies(
       {
         repeat: 800000,
         paramsList: {
@@ -40,24 +41,31 @@ export class TypInferNumStrStrategiesTest {
           function: [(x) => console.log(x)],
         },
         funcList: {
+          bench: x => x,
+          typeof: x => typeof x,
           protoType,
           initial,
           infer,
           infer_dev: (o) => {
             const raw = typeof o
-            return raw !== 'object' ? raw : toLower(otype(o))
-          },
-          inferData,
+            return raw !== OBJ ? raw : toLower(otype(o))
+          }
         }
       }
     )
-    printChronoCross({ lapse, result })
+    'lapse' |> console.log
+    lapse |> CrosTabX.brief |> console.log
+    '' |> console.log
+    'result' |> console.log
+    result |> CrosTabX.brief |> console.log
   }
 }
 
-describe('Typ Infer Num Str Strategies Test', function () {
-  this.timeout(1000 * 60)
-  it('Typ Infer Num Str Strategies Test: test ', () => {
-    TypInferNumStrStrategiesTest.test()
-  })
-})
+TypInferNumStrStrategiesTest.test()
+
+// describe('Typ Infer Num Str Strategies Test', function () {
+//   this.timeout(1000 * 60)
+//   it('Typ Infer Num Str Strategies Test: test ', () => {
+//     TypInferNumStrStrategiesTest.test()
+//   })
+// })

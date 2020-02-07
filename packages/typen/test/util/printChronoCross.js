@@ -1,4 +1,6 @@
 import { Stat } from 'borel'
+import { CrosTabX } from 'xbrief'
+import { logNeL } from 'palma'
 
 /**
  *
@@ -8,10 +10,7 @@ import { Stat } from 'borel'
  */
 export const printChronoCross = ({ lapse, result, pipeline }) => {
   'lapse' |> console.log
-  lapse
-    .brief()
-    |> console.log
-  '' |> console.log
+  lapse |> CrosTabX.brief |> logNeL
   'result' |> console.log
   if (!!pipeline) result = result |> pipeline
   result

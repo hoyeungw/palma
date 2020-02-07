@@ -17,11 +17,12 @@ const range = (min, max, len) => {
 }
 
 const toHsl = hex => Rgb.fromHex(hex) |> Rgb.toHsl
-
+const toHex = hsl => Hsl.toRgb(hsl) |> Rgb.toHex
 for (let theme in Presets) {
   const effects = Ob.mapValues(Presets[theme], hex => hex|> toHsl |> Hatsu.hex(hex))
   const { max, min } = Presets[theme]
   xr(theme, effects |> deco) |> logger
   const ranges = Mx.mapColumns([min |> toHsl, max |> toHsl], ([min, max]) => range(min, max, 7))
-  ranges.map((hsl, i) => i << 4 |> Hatsu.hsl(hsl)) |> logger
+  ranges.unshift(Presets[theme].na |> toHsl)
+  ranges.map((hsl, i) => hsl |> toHex |> Hatsu.hsl(hsl)) |> logger
 }

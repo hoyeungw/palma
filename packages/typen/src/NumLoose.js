@@ -1,4 +1,5 @@
 import { otype } from '../utils/typen'
+import { NUM, OBJ, STR } from './enums'
 
 const check = x => !!x || x === 0
 
@@ -17,12 +18,8 @@ export class NumLoose {
    */
   static inferData (x) {
     const t = typeof x
-    return t === 'string'
-      ? check(+x)
-        ? 'numstr'
-        : 'string'
-      : t === 'object'
-        ? otype(x).toLowerCase()
-        : t
+    return t === STR
+      ? check(+x) ? NUM : STR
+      : t === OBJ ? otype(x).toLowerCase() : t
   }
 }

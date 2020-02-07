@@ -1,4 +1,5 @@
 import { otype, oc } from '../utils/typen'
+import { OBJ } from './enums'
 
 class Typ {
   static protoType (o) { return oc.call(o) }
@@ -7,7 +8,7 @@ class Typ {
 
   static infer (o) {
     const t = typeof o
-    return t !== 'object'
+    return t !== OBJ
       ? t
       : otype(o).toLowerCase()
   }

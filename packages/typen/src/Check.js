@@ -10,6 +10,7 @@ import { oc } from '../utils/typen'
  * }}
  */
 export let check = x => ({
+  value: x,
   typeOf: typeof x,
   protoType: oc.call(x),
   stringify: `${x}`,
