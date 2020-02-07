@@ -1,5 +1,5 @@
 import { otype, oc } from '../utils/typen'
-import { OBJ } from './enums'
+import { OBJ } from './enums.brief'
 
 class Typ {
   static protoType (o) { return oc.call(o) }

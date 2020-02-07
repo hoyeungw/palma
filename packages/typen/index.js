@@ -1,7 +1,7 @@
-import { ARR, BIG, BOO, FUN, MAP, NUM, OBJ, SET, STR, UND } from './src/enums'
-
 export { Typ } from './src/Typ'
 export { Num } from './src/Num'
 export { NumLoose } from './src/NumLoose'
 export { check } from './src/Check'
-export { T, UND, BOO, NUM, BIG, STR, OBJ, FUN, ARR, MAP, SET } from './src/enums'
+export { T } from './src/T'
+export { UND, BOO, NUM, BIG, STR, OBJ, FUN, ARR, MAP, SET } from './src/enums.brief'
+export { UNDEFINED, BOOLEAN, NUMBER, BIGINT, STRING, OBJECT, FUNCTION, ARRAY, NULL, } from './src/enums.full'

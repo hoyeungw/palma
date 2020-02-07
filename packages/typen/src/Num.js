@@ -1,5 +1,5 @@
 import { otype } from '../utils/typen'
-import { NUM, OBJ, STR } from './enums'
+import { NUM, OBJ, STR } from './enums.brief'
 
 /**
  * validate

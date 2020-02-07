@@ -9,6 +9,7 @@ export const FUN = 'function'
 export const ARR = 'array'
 export const MAP = 'map'
 export const SET = 'set'
+export const NUL = 'null'
 
-export const T = { UND, BOO, NUM, BIG, STR, OBJ, FUN, ARR, MAP, SET, }
+
 

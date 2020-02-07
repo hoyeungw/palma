@@ -3,7 +3,7 @@ import { Ob } from 'veho'
 import { Typ } from '../../index'
 import { otype, oc } from '../../utils/typen'
 import { CrosTabX } from 'xbrief'
-import { OBJ } from '../../src/enums'
+import { OBJ } from '../../src/enums.brief'
 
 const _entries = [
   ['foo', 12],
