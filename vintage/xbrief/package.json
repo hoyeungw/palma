@@ -1,6 +1,6 @@
 {
   "name": "xbrief",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A light and simple console debug tool.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -22,17 +22,17 @@
     "@spare/preci": "^0.0.4",
     "@spare/util": "^0.0.4",
     "@spare/xr": "^0.0.4",
-    "borel": "^0.1.37",
-    "hatsu": "^0.0.17",
-    "hatsu-matrix": "^0.0.18",
-    "palett": "^0.0.18",
-    "typen": "^0.1.7",
-    "veho": "^0.2.20"
+    "borel": "^0.1.38",
+    "hatsu": "^0.0.18",
+    "hatsu-matrix": "^0.0.19",
+    "palett": "^0.0.19",
+    "typen": "^0.1.8",
+    "veho": "^0.2.21"
   },
   "devDependencies": {
     "axios": "^0.19.0",
-    "crostab": "^0.3.6",
-    "elprimero": "^0.1.42",
+    "crostab": "^0.3.7",
+    "elprimero": "^0.1.43",
     "funfact": "^0.0.3"
   },
   "repository": {
