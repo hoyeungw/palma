@@ -2,8 +2,8 @@ import { Chrono } from 'elprimero'
 import { printChronoCross } from '../util/printChronoCross'
 import { Hatsu } from 'hatsu'
 import { Palett } from 'palett'
-import { Num } from '../../src/Num'
-import { NumLoose } from '../../src/NumLoose'
+import { Num } from '../../src/num'
+import { NumLoose } from '../../src/numLoose'
 import { arrays, miscs, numerics, strings } from '../assets/samples.list'
 
 const

@@ -1,5 +1,5 @@
 import { Num } from '../../dist/index.esm'
-import { NumLoose } from '../../src/NumLoose'
+import { NumLoose } from '../../src/numLoose'
 import { Chrono } from 'elprimero'
 import { arrays, miscs, numerics, strings } from '../assets/samples.list'
 
