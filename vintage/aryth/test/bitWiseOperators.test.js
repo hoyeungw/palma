@@ -2,7 +2,7 @@ import { decoLog, TableX } from 'xbrief'
 import { Samples } from 'veho/src/Samples'
 
 const beta = 255
-const candidates = [-65535, -255, -16, -Math.PI, 0, Math.Pi, 16, 255, 65535]
+const candidates = [-65535, -255, -16, -4, -Math.PI, 0, Math.Pi, 4, 16, 255, 65535]
 const samples = candidates.map(x => ({
   value: x,
   and: x & beta,

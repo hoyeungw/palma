@@ -1,5 +1,5 @@
 export { Presets } from './src/Presets'
-export { FOREST } from './src/themes/forest'
+export { GLACIAL } from './src/themes/glacial'
 export { FRESH } from './src/themes/fresh'
 export { METRO } from './src/themes/metro'
 export { SUBTLE } from './src/themes/subtle'

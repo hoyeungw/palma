@@ -1,7 +1,7 @@
-import {  Palett } from 'palett'
+import { Palett } from 'palett'
 
 export const METRO = {
-  max: Palett.blueGrey.accent_3,
-  min: Palett.pink.darken_1,
+  max: Palett.pink.darken_1,
+  min: Palett.blueGrey.accent_3,
   na: Palett.teal.darken_4
 }
