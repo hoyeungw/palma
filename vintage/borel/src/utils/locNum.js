@@ -1,27 +1,23 @@
-import { isNumLcher } from './isNumLcher'
+import { toNumChecker } from './toNumChecker'
 
-export const locNumInAr = (arr, sta, end, { level = 0 } = {}) => {
-  for (let el, isNum = isNumLcher(level); sta < end; sta++) {
-    el = arr[sta]
-    if (isNum(el)) return [sta, el]
-  }
-  return [end, NaN]
+export const firstNumInArray = (ar, lo, hi, { level = 0 } = {}) => {
+  for (let el, isNum = toNumChecker(level); lo < hi; lo++)
+    if (isNum(el = ar[lo]))
+      return [lo, el]
+  return [hi, NaN]
 }
 
-export const locNumInMx = (mx, ri, re, ci, ce, { level = 0 } = {}) => {
-  for (let el, isNum = isNumLcher(level); ri < re; ri++) {
-    for (ci = 0; ci < ce; ci++) {
-      el = mx[ri][ci]
-      if (isNum(el)) return [ri, ci, el]
-    }
-  }
-  return [re, ce, NaN]
+export const firstNumInMatrix = (mx, t, b, l, r, { level = 0 } = {}) => {
+  for (let el, isNum = toNumChecker(level); t < b; t++)
+    for (l = 0; l < r; l++)
+      if (isNum(el = mx[t][l]))
+        return [t, l, el]
+  return [b, r, NaN]
 }
 
-export const locNumInCol = (mx, ri, re, c, { level = 0 } = {}) => {
-  for (let el, isNum = isNumLcher(level); ri < re; ri++) {
-    el = mx[ri][c]
-    if (isNum(el)) return [ri, el]
-  }
-  return [re, NaN]
+export const firstNumInColumn = (mx, t, b, c, { level = 0 } = {}) => {
+  for (let el, isNum = toNumChecker(level); t < b; t++)
+    if (isNum(el = mx[t][c]))
+      return [t, el]
+  return [b, NaN]
 }

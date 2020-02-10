@@ -1,7 +1,7 @@
-import { locNumInCol, locNumInMx } from '../utils/locNum'
+import { firstNumInColumn, firstNumInMatrix } from '../utils/locNum'
 import { toBound } from '../utils/toBound'
 import { Stat } from './Stat'
-import { toNumLcher } from '../utils/isNumLcher'
+import { toNumerify } from '../utils/toNumChecker'
 import { size } from '../utils/size'
 import { sortEntries } from '../utils/sortEntries'
 import { sortRows } from '../utils/sortRows'
@@ -50,13 +50,13 @@ export class StatMx {
   static bound (mx, { dif = false, level = 0 } = {}) {
     let [h, w] = size(mx)
     if (!h || !w) return toBound(NaN, NaN, dif)
-    const t = toNumLcher(level)
+    const t = level |> toNumerify
     let
-      [i, , el] = locNumInMx(mx, 0, h, 0, w, { level }),
-      max = t(el), min = max, _a, _i
-    for (--h; h > i; --h) {
-      ({ max: _a, min: _i } = Stat.bound(mx[h], { level }))
-      if (_i < min) {min = _i} else if (_a > max) {max = _a}
+      [i, , el] = firstNumInMatrix(mx, 0, h, 0, w, { level }),
+      max = t(el), min = max, rowMax, rowMin
+    for (--h; h >= i; h--) {
+      ({ max: rowMax, min: rowMin } = Stat.bound(mx[h], { level }))
+      if (rowMin < min) { min = rowMin } else if (rowMax > max) { max = rowMax }
     }
     return toBound(max, min, dif)
   }
@@ -72,11 +72,11 @@ export class StatMx {
   static boundCol (mx, y, { dif = false, level = 0 } = {}) {
     let [h, w] = size(mx)
     if (!h || !w || y >= w) return toBound(NaN, NaN, dif)
-    const t = toNumLcher(level)
+    const t = toNumerify(level)
     let
-      [i, el] = locNumInCol(mx, 0, h, y, { level }),
+      [i, el] = firstNumInColumn(mx, 0, h, y, { level }),
       max = t(el), min = max
-    for (--h; h > i; --h) {
+    for (--h; h >= i; h--) {
       el = t(mx[h][y])
       if (el < min) {min = el} else if (el > max) {max = el}
     }

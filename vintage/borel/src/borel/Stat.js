@@ -1,6 +1,6 @@
-import { locNumInAr } from '../utils/locNum'
+import { firstNumInArray } from '../utils/locNum'
 import { toBound } from '../utils/toBound'
-import { toNumLcher } from '../utils/isNumLcher'
+import { toNumerify } from '../utils/toNumChecker'
 import { sortEntries } from '../utils/sortEntries'
 
 const plusOrZero = x => x ? (x + 1) : 1
@@ -18,7 +18,7 @@ class Stat {
    */
   static sum (arr, { level = 0 } = {}) {
     if (!arr) return 0
-    const tr = toNumLcher(level)
+    const tr = toNumerify(level)
     let { length: l } = arr
     switch (l) {
       case 0:
@@ -107,12 +107,12 @@ class Stat {
   static bound (arr, { dif = false, level = 0 } = {}) {
     let l = arr?.length
     if (!l) return toBound(NaN, NaN, dif)
-    const t = toNumLcher(level)
-    let [i, el] = locNumInAr(arr, 0, l, { level })
-    let max = t(el), min = max
-    for (--l; l > i; --l) {
-      el = t(arr[l])
-      if (el < min) {min = el} else if (el > max) {max = el}
+    const t = toNumerify(level)
+    let [i, x] = firstNumInArray(arr, 0, l, { level })
+    let min, max = min = t(x)
+    for (--l; l > i; l--) {
+      x = t(arr[l])
+      if (x < min) { min = x } else if (x > max) { max = x }
     }
     return toBound(max, min, dif)
   }

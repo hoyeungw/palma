@@ -1,4 +1,4 @@
-import { ConsoleColors, Effects } from '../assets/codes'
+import { ConsoleColors, Effects } from '../../assets/codes'
 
 export class ProxyFactory {
   static build (hatsuInstance) {
@@ -20,7 +20,6 @@ export class ProxyFactory {
           target.color = p
           return receiver
         }
-        // Reflect.defineProperty(target, 'spec', { value: p })
         return receiver
       },
     })

@@ -3,12 +3,15 @@ import { StatMx } from '../../src/borel/StatMx'
 import { Mx } from 'veho'
 import { Stat } from '../../src/borel/Stat'
 import { boundColDev } from '../strategies/bound.funcs/boundColDev'
+import { CrosTabX } from 'xbrief'
 
 class StatMxBoundTest {
   static testBoundMx () {
     const { lapse, result } = Chrono.strategies({
       repeat: 1E+6,
       paramsList: {
+        row: [[[5, 7, 9, 10, 6]]],
+        column: [[[5], [7], [9], [10], [6]]],
         simple: [[[1, 2, 3], [4, 5, 6], [7, 8, 9]]],
         tx_mx: [[['1', '2', '3'], ['4', '5', '6'], ['7', '8', '9']]],
         w_NaN: [[[NaN, NaN, NaN], [4, NaN, 6], [7, 8, 9]]],
@@ -22,14 +25,14 @@ class StatMxBoundTest {
         }),
         combo: mx => StatMx.bound(Mx.map(mx, x => +x), { dif: true }),
         stable: mx => StatMx.bound(mx, { dif: true }),
-        col: mx => StatMx.boundCol(mx, 2, { dif: true }),
+        col: mx => StatMx.boundCol(mx, 0, { dif: true }),
       }
     })
     'lapse' |> console.log
     lapse |> CrosTabX.brief |> console.log
     '' |> console.log
     'result' |> console.log
-    result.brief({ abstract: JSON.stringify }) |> console.log
+    result|> (_ => CrosTabX.brief(_, { abstract: JSON.stringify })) |> console.log
   }
 
   static testBoundCol () {
@@ -60,12 +63,13 @@ class StatMxBoundTest {
   }
 }
 
-describe('Stat Mx Bound Test', function () {
-  this.timeout(1000 * 60)
-  it('Stat Mx Bound Test: test Bound Col ', () => {
-    StatMxBoundTest.testBoundCol()
-  })
-  it('Stat Mx Bound Test: test Bound Mx ', () => {
-    StatMxBoundTest.testBoundMx()
-  })
-})
+StatMxBoundTest.testBoundMx()
+// describe('Stat Mx Bound Test', function () {
+//   this.timeout(1000 * 60)
+//   it('Stat Mx Bound Test: test Bound Col ', () => {
+//     StatMxBoundTest.testBoundCol()
+//   })
+//   it('Stat Mx Bound Test: test Bound Mx ', () => {
+//     StatMxBoundTest.testBoundMx()
+//   })
+// })

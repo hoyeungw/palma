@@ -12,10 +12,10 @@
     "test": "node -r @babel/register test/test.index.js"
   },
   "dependencies": {
-    "@cliche/fin": "^0.0.1",
-    "@cliche/mag": "^0.0.1",
-    "@cliche/ratio": "^0.0.1",
-    "@cliche/to-percent": "^0.0.1",
+    "@cliche/fin": "^0.0.3",
+    "@cliche/mag": "^0.0.3",
+    "@cliche/ratio": "^0.0.3",
+    "@cliche/to-percent": "^0.0.3",
     "@spare/deco": "^0.0.4",
     "@spare/lange": "^0.0.4",
     "@spare/logger": "^0.0.4",
@@ -30,9 +30,6 @@
     "veho": "^0.2.22"
   },
   "devDependencies": {
-    "axios": "^0.19.0",
-    "crostab": "^0.3.8",
-    "elprimero": "^0.1.44",
     "funfact": "^0.0.3"
   },
   "repository": {

@@ -1,6 +1,6 @@
 import { toBound } from '../../../src/utils/toBound'
-import { toNumLcher } from '../../../src/utils/isNumLcher'
-import { locNumInCol } from '../../../src/utils/locNum'
+import { toNumerify } from '../../../src/utils/toNumChecker'
+import { firstNumInColumn } from '../../../src/utils/locNum'
 import { size } from '../../../src/utils/size'
 
 // const size = (mx) => {
@@ -24,8 +24,8 @@ import { size } from '../../../src/utils/size'
 export const boundColDev = (mx, y, { dif = false, level = 0 } = {}) => {
   let [h, w] = size(mx)
   if (!h || !w) return toBound(NaN, NaN, dif)
-  const t = toNumLcher(level)
-  let [i, el] = locNumInCol(mx, 0, h, y, { level })
+  const t = toNumerify(level)
+  let [i, el] = firstNumInColumn(mx, 0, h, y, { level })
   let max = t(el), min = max
   for (--h; h > i; --h) {
     el = t(mx[h][y])

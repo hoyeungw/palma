@@ -1,5 +1,5 @@
 import { toBound } from '../../../../src/utils/bound'
-import { locNumInMx } from '../../../../src/utils/locNum'
+import { firstNumInMatrix } from '../../../../src/utils/locNum'
 import { boundVec } from './vecBoundNum'
 
 export const boundMx = (mx, { dif = false } = {}) => {
@@ -15,7 +15,7 @@ export const boundMx = (mx, { dif = false } = {}) => {
       let [row] = mx
       let { length: wd } = row
       if (!row || !wd) return toBound(NaN, NaN, dif)
-      let [i, j, el] = locNumInMx(mx, 0, ht, 0, wd)
+      let [i, j, el] = firstNumInMatrix(mx, 0, ht, 0, wd)
       if (i < 0 || j < 0) return toBound(NaN, NaN, dif)
       let max = el, min = max
       for (--ht; ht > i; --ht) {

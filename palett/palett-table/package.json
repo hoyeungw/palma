@@ -14,9 +14,9 @@
   "dependencies": {
     "borel": "^0.1.39",
     "crostab": "^0.3.8",
-    "farbe": "^0.0.7",
-    "hatsu": "^0.0.7",
-    "palett": "^0.0.8",
+    "farbe": "^0.0.19",
+    "hatsu": "^0.0.19",
+    "palett": "^0.0.20",
     "roulett": "^0.0.4",
     "veho": "^0.2.22"
   },

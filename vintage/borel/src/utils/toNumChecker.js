@@ -1,6 +1,6 @@
 import { Num, NumLoose } from 'typen'
 
-export const isNumLcher = (level = 0) => {
+export const toNumChecker = (level = 0) => {
   switch (level) {
     case 0:
       return x => !isNaN(x)
@@ -12,7 +12,7 @@ export const isNumLcher = (level = 0) => {
   }
 }
 
-export const toNumLcher = (level = 0) => {
+export const toNumerify = (level = 0) => {
   switch (level) {
     case 0:
       return x => x
