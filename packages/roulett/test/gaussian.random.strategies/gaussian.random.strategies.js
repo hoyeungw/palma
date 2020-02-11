@@ -13,7 +13,7 @@ const zgd = zigguratGeneratorDev()
 class GaussianRandomStrategies {
   static test () {
     const { lapse, result } = Chrono.strategies({
-      repeat: 1E+6,
+      repeat: 2E+6,
       paramsList: {
         simple: [],
         misc: [],
@@ -23,7 +23,7 @@ class GaussianRandomStrategies {
         bench: x => x,
         boxMuller: boxMuller,
         marsaglia: marsagliaPolar,
-        ziggurat: z.next.bind(z),
+        ziggurat: z.nextInt.bind(z),
         z_generator: () => zg.next().value,
         zigguratGenDev: () => zgd.next().value
       }

@@ -1,4 +1,4 @@
-import { abs, exp, log, sqrt, pow } from '../helper'
+import { abs, exp, log, pow, sqrt } from '../helper'
 
 const R0 = 3.442619855899
 const R1 = 1.0 / R0
@@ -42,48 +42,51 @@ export class Ziggurat {
   }
 
   next () {
-    return this._randSample() * this.stdev + this.mean
+    return this.randSample() * this.stdev + this.mean
   }
 
-  _randSample () {
+  nextInt () {
+    return Math.round(this.next())
+  }
+
+  randSample () {
     let
-      hz = this._xorshift(),
+      hz = this.xorshift(),
       iz = hz & 127
     return abs(hz) < this.kn[iz]
       ? hz * this.wn[iz]
-      : this._nFix(hz, iz)
+      : this.nfix(hz, iz)
   }
 
-  _nFix (hz, iz) {
+  nfix (hz, iz) {
     let
       r = R0,
-      r1 = R1,
       x,
       y
     while (true) {
       x = hz * this.wn[iz]
       if (iz === 0) {
         do {
-          x = -log(this._uni()) * r1
-          y = -log(this._uni())
+          x = -log(this.uni()) * R1
+          y = -log(this.uni())
         } while (y + y < x * x)
         // {
-        //   x = -log(this._uni()) * r1
-        //   y = -log(this._uni())
+        //   x = -log(this.uni()) * r1
+        //   y = -log(this.uni())
         // }
         return hz > 0
           ? r + x
           : -r - x
       }
-      if (this.fn[iz] + this._uni() * (this.fn[iz - 1] - this.fn[iz]) < exp(-0.5 * x * x))
+      if (this.fn[iz] + this.uni() * (this.fn[iz - 1] - this.fn[iz]) < exp(-0.5 * x * x))
         return x
-      hz = this._xorshift()
+      hz = this.xorshift()
       iz = hz & 127
       if (abs(hz) < this.kn[iz]) return hz * this.wn[iz]
     }
   }
 
-  _xorshift () {
+  xorshift () {
     let m = this.jsr, n = m
     n ^= n << 13
     n ^= n >>> 17
@@ -92,7 +95,7 @@ export class Ziggurat {
     return (m + n) | 0
   }
 
-  _uni () {
-    return 0.5 + this._xorshift() / N2P32
+  uni () {
+    return 0.5 + this.xorshift() / N2P32
   }
 }
