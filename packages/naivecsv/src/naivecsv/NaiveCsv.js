@@ -27,8 +27,8 @@ export class NaiveCsv {
   } = {}) {
     if (decode) csvText = iconv.decode(csvText, decode)
     let mx = qt
-      ? parseCsvReg(csvText, { de, qt })
-      : parseCsvMap(csvText, { de, lf })
+      ? parseCsvReg(csvText, de, qt)
+      : parseCsvMap(csvText, de, lf)
     if (transpose) mx = popBlank
       ? mx|> rowsPopBlank |> tr
       : mx|> tr

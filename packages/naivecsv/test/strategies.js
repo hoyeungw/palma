@@ -6,6 +6,7 @@ import { parseCsvIter } from './archive/parseCsvIter'
 import { parseCsvMap } from '../src/parser/parseCsvMap'
 import { Coordinate, parseCsvEdge } from './archive/parseCsvEdge'
 import { CrosTab } from '@analys/crostab'
+import { NaiveCsv } from '../src/naivecsv/NaiveCsv'
 
 const { lapse, result } = strategies({
   repeat: 1E+4,
@@ -19,7 +20,7 @@ const { lapse, result } = strategies({
     iter: parseCsvIter,
     edge: tx => parseCsvEdge.call(Coordinate(), tx),
     map: parseCsvMap,
-    reg: parseCsvReg,
+    reg: NaiveCsv.toRows,
   }
 })
 lapse |> decoCrostab |> says['lapse']
