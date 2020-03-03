@@ -1,6 +1,6 @@
 {
   "name": "farbe",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "description": "A color converter among RGB, HEX and HSL.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -15,7 +15,7 @@
     "borel": "^0.1.40"
   },
   "devDependencies": {
-    "elprimero": "^0.1.46",
+    "elprimero": "^0.1.47",
     "xbrief": "^1.0.4"
   },
   "repository": {

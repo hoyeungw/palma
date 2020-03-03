@@ -1,6 +1,6 @@
 {
   "name": "naivecsv",
-  "version": "0.0.38",
+  "version": "0.0.39",
   "description": "A light & simple parser of csv text",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
