@@ -16,7 +16,7 @@ const _getRanks = (sorted) => {
     { length } = sorted,
     arr = Array(sorted.length)
   let r
-  // for (let [i, r] of sortedIndexes.entries()) arr[r] = i
+  // for (let [i, x] of sortedIndexes.entries()) arr[x] = i
   for (let i = length; !!i;) {
     [, r] = sorted[--i]
     arr[r] = i

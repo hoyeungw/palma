@@ -9,8 +9,8 @@ const len = ArrX.maxLength(Object.keys(normal))
 export class RgbTransHslTest {
   static testRgbToHsl () {
     for (let [name, { hex, rgb, hsl }] of Object.entries(normal)) {
-      // const [r] = rgb
-      // if (Math.max(...rgb) !== r) continue
+      // const [x] = rgb
+      // if (Math.max(...rgb) !== x) continue
       `${Hatsu.hex(hex).underline(name.padStart(len))}`
         .tag('rgb').tag(rgb)
         .tag('hsl0').tag(hsl)

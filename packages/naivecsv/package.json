@@ -13,9 +13,9 @@
     "mocha": "mocha"
   },
   "dependencies": {
-    "crostab": "^0.3.9",
     "iconv-lite": "^0.5.1",
-    "veho": "^0.2.23"
+    "@analys/convert": "^0.0.9",
+    "@vect/matrix-transpose": "^0.1.2"
   },
   "devDependencies": {
     "borel": "^0.1.40",

@@ -67,10 +67,10 @@ class PreciXStrategies {
           ini(yh + yt + 1, '.'),
           ...zip(sw, se, (l, r) => [...l, '..', ...r])
         ]
-        // return zip(nw, ne, (l, r) => l.concat(['.'], r))
+        // return zip(nw, ne, (l, x) => l.concat(['.'], x))
         //   .concat(
         //     [ini(yh + yt + 1, '.')],
-        //     zip(sw, se, (l, r) => l.concat(['.'], r))
+        //     zip(sw, se, (l, x) => l.concat(['.'], x))
         //   )
       },
     }

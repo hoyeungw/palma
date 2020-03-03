@@ -1,4 +1,4 @@
-export const parseCsv = (tx, { de = ',', qt = '"' } = {}) => {
+export const parseCsvIter = (tx, { de = ',', qt = '"' } = {}) => {
   let q = false, r = -1, c = -1, row = [] // q: true -> inside a quoted field
   const
     mx = [],

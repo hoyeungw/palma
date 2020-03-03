@@ -7,6 +7,7 @@ import { sortAlong } from '../utils/sortAlong'
 import { joiner } from '../utils/MxJoin/MxJoin'
 import { JoinT } from '../utils/MxJoin/JoinT'
 import { crosTabFut } from '../archive/crosTabFut'
+import { logger } from 'palma'
 
 export class Table {
   /**

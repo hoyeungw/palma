@@ -1,8 +1,7 @@
 {
   "packages": [
     "packages/*",
-    "palett/*",
-    "vintage/*"
+    "palett/*"
   ],
   "version": "independent",
   "useWorkspaces": true,

@@ -34,7 +34,7 @@ export class Rgb {
    * @returns {string}
    */
   static toHex ([r, g, b]) {
-    // [r, g, b] = [Math.round(r), Math.round(g), Math.round(b)]
+    // [x, g, b] = [Math.round(x), Math.round(g), Math.round(b)]
     return '#' + (((r & 0xFF) << 16) + ((g & 0xFF) << 8) + (b & 0xFF)).toString(16).toUpperCase().padStart(6, '0')
   }
 

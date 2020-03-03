@@ -17,8 +17,7 @@
     "borel": "^0.1.40",
     "palett": "^0.0.21",
     "typen": "^0.1.9",
-    "veho": "^0.2.23",
-    "xbrief": "^1.0.4"
+    "veho": "^0.2.23"
   },
   "devDependencies": {
     "axios": "^0.19.1"

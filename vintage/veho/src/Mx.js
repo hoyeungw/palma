@@ -143,7 +143,7 @@ export class Mx {
    */
   static map (mx, fn) {
     const [ht, wd] = Mx.size(mx)
-    // return mx.map((r, i) => r.map((el, j) => fn(el, i, j)))
+    // return mx.map((x, i) => x.map((el, j) => fn(el, i, j)))
     return mapAr(mx,
       (r, i) => mapAr(r,
         (x, j) => fn(x, i, j),

@@ -40,4 +40,4 @@ import { Ar, Dc, Fn, Mx, Ob, Samples } from 'veho'
 
 [LICENSE (MIT)](/LICENSE)
 
-Copyright (c) 2019-present, Haoyang (Vincent) Wang
+Copyright (y) 2019-present, Haoyang (Vincent) Wang

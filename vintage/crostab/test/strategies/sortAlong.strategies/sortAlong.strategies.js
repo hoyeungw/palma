@@ -1,7 +1,7 @@
 import { Chrono } from 'elprimero'
 import { Comparer } from 'borel'
-import { table } from '../../asset/json/simple.headers.and.rowset'
-import { nba_players_performance } from '../../asset/json/nba.players.performance'
+import { table } from '../../asset/json/archive/simple.headers.and.rowset'
+import { nba_players_performance } from '../../asset/json/archive/nba.players.performance'
 import { deco } from 'xbrief'
 
 const { rowSet: countryRows } = table

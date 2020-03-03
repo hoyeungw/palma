@@ -1,6 +1,6 @@
 import { firstNumInArray } from '../utils/locNum'
-import { toBound } from '../utils/toBound'
-import { toNumerify } from '../utils/toNumChecker'
+import { Bound, bound } from '../utils/Bound'
+import { ToNum } from '../utils/ToNum'
 import { sortEntries } from '../utils/sortEntries'
 
 const plusOrZero = x => x ? (x + 1) : 1
@@ -18,17 +18,17 @@ class Stat {
    */
   static sum (arr, { level = 0 } = {}) {
     if (!arr) return 0
-    const tr = toNumerify(level)
+    const toNum = ToNum(level)
     let { length: l } = arr
     switch (l) {
       case 0:
         return NaN
       case 1:
-        return level ? tr(arr[0]) : arr[0]
+        return level ? toNum(arr[0]) : arr[0]
       default:
         let sum = 0
         if (level) {
-          for (--l; l >= 0; l--) sum += tr(arr[l])
+          for (--l; l >= 0; l--) sum += toNum(arr[l])
         } else {
           for (--l; l >= 0; l--) sum += arr[l]
         }
@@ -105,16 +105,17 @@ class Stat {
    * @returns {{min: *, max: *}|{min: *, dif: *}}}
    */
   static bound (arr, { dif = false, level = 0 } = {}) {
-    let l = arr?.length
-    if (!l) return toBound(NaN, NaN, dif)
-    const t = toNumerify(level)
+    let l = arr && arr.length
+    const bound = Bound(dif)
+    if (!l) return bound(NaN, NaN)
+    const toNum = ToNum(level)
     let [i, x] = firstNumInArray(arr, 0, l, { level })
-    let min, max = min = t(x)
+    let min, max = min = toNum(x)
     for (--l; l > i; l--) {
-      x = t(arr[l])
+      x = toNum(arr[l])
       if (x < min) { min = x } else if (x > max) { max = x }
     }
-    return toBound(max, min, dif)
+    return bound(max, min)
   }
 
   // Population standard deviation

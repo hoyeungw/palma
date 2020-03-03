@@ -1,10 +1,9 @@
 import { firstNumInColumn, firstNumInMatrix } from '../utils/locNum'
-import { toBound } from '../utils/toBound'
+import { bound } from '../utils/Bound'
 import { Stat } from './Stat'
-import { toNumerify } from '../utils/toNumChecker'
+import { ToNum } from '../utils/ToNum'
 import { size } from '../utils/size'
 import { sortEntries } from '../utils/sortEntries'
-import { sortRows } from '../utils/sortRows'
 
 export class StatMx {
   static cnt (mx) {
@@ -15,31 +14,6 @@ export class StatMx {
     return 0
   }
 
-  // /**
-  //  *
-  //  * @param {number[] }mx
-  //  * @returns {number}
-  //  */
-  // static sum (mx) {
-  //   if (!mx) return 0
-  //   let { length: l } = mx
-  //   switch (l) {
-  //     case 0:
-  //       return NaN
-  //     case 1:
-  //       return mx[0]
-  //     default:
-  //       let sum = 0
-  //       for (--l; l >= 0; l--) sum += mx[l]
-  //       return sum
-  //   }
-  // }
-  //
-  // static avg (mx) {
-  //   const cnt = StatMx.cnt(mx)
-  //   return cnt ? StatMx.sum(mx) / cnt : 0
-  // }
-
   /**
    *
    * @param {*[]} mx
@@ -49,8 +23,8 @@ export class StatMx {
    */
   static bound (mx, { dif = false, level = 0 } = {}) {
     let [h, w] = size(mx)
-    if (!h || !w) return toBound(NaN, NaN, dif)
-    const t = level |> toNumerify
+    if (!h || !w) return bound(NaN, NaN, dif)
+    const t = ToNum(level)
     let
       [i, , el] = firstNumInMatrix(mx, 0, h, 0, w, { level }),
       max = t(el), min = max, rowMax, rowMin
@@ -58,7 +32,7 @@ export class StatMx {
       ({ max: rowMax, min: rowMin } = Stat.bound(mx[h], { level }))
       if (rowMin < min) { min = rowMin } else if (rowMax > max) { max = rowMax }
     }
-    return toBound(max, min, dif)
+    return bound(max, min, dif)
   }
 
   /**
@@ -71,8 +45,8 @@ export class StatMx {
    */
   static boundCol (mx, y, { dif = false, level = 0 } = {}) {
     let [h, w] = size(mx)
-    if (!h || !w || y >= w) return toBound(NaN, NaN, dif)
-    const t = toNumerify(level)
+    if (!h || !w || y >= w) return bound(NaN, NaN, dif)
+    const t = ToNum(level)
     let
       [i, el] = firstNumInColumn(mx, 0, h, y, { level }),
       max = t(el), min = max
@@ -80,7 +54,7 @@ export class StatMx {
       el = t(mx[h][y])
       if (el < min) {min = el} else if (el > max) {max = el}
     }
-    return toBound(max, min, dif)
+    return bound(max, min, dif)
   }
 
   static distinct (mx, y) {

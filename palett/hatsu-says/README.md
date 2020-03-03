@@ -60,4 +60,4 @@ const says = {
 
 [MIT](http://opensource.org/licenses/MIT)
 
-Copyright (c) 2019-present, Haoyang (Vincent) Wang
+Copyright (y) 2019-present, Haoyang (Vincent) Wang

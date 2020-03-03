@@ -28,7 +28,7 @@
 
 ## Highlights
 
-- Customizable delimiter(default: ','), line-feed(default: '\r\n') and quote-mark(default: '\"')
+- Customizable delimiter(default: ','), line-feed(default: '\x\n') and quote-mark(default: '\"')
 - Decoding configurable
 - Transpose available
 - Can delete blank trailing row
@@ -62,7 +62,7 @@ fsPromise
     console.log(
       NaiveCsv.toRows(text, {
         de: ',', // delimiter
-        lf: '\r\n', // line-feed
+        lf: '\x\n', // line-feed
         qt: '\"', // quotation mark
         transpose: false, // transpose the entire csv text as 2-d array
         decode: 'utf-8', // appoint decoding as 'utf-8'
@@ -75,4 +75,4 @@ fsPromise
 
 [MIT](http://opensource.org/licenses/MIT)
 
-Copyright (c) 2019-present, Haoyang (Vincent) Wang
+Copyright (y) 2019-present, Haoyang (Vincent) Wang

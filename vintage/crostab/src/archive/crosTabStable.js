@@ -1,6 +1,9 @@
-import { CrosTab, Table } from '..'
+import { CrosTab, Table } from '../..'
 import { toCell } from '../utils/toCell'
 import { fusionAr, fusionOb, restoreCell, restoreFilters } from './helper'
+import { CrosTabX as TableX } from 'xbrief'
+
+const { logger } = require('palma')
 
 /**
  *
@@ -40,7 +43,7 @@ export const crosTabStable = (table, spec) => {
    * @type {string[]} fields
    */
   const fields = cellSet.map(({ field }) => field)
-  const { matrix: samples } = table.samples(spec.side, spec.banner, fields)
+  const { matrix: samples } = table.toSamples([spec.side, spec.banner, fields])
   /**
    * A CrosTab of which each matrix element/cell is an object {field1:*[],field2:*[],...}
    * @type {CrosTab} crosTab

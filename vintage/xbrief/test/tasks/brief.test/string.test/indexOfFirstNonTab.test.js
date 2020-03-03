@@ -14,8 +14,8 @@ const indexOfFirstNonTab_1 = tx => {
 }
 
 const indexOfFirstNonTab_2 = tx => {
-  let i = 0 //, c = tx.charAt(i)
-  while (_isTab(tx[i])) i++ //c = tx.charAt(++i)
+  let i = 0 //, y = tx.charAt(i)
+  while (_isTab(tx[i])) i++ //y = tx.charAt(++i)
   return i
 }
 

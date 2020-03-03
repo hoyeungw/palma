@@ -3,7 +3,7 @@ import { Stat } from 'borel'
 import { Table, TableSpec } from '../../../index'
 import { Samples } from 'veho'
 import { ArrX, deco, TableX, CrosTabX } from 'xbrief'
-import rawData from '../../asset/json/gdp.rows.json'
+import rawData from '../../asset/json/archive/gdp.rows.json'
 
 class JsonTableCrostabQueryTest {
 

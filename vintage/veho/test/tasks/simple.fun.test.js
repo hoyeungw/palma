@@ -48,7 +48,7 @@ export class SimpleFunTest {
     // const funcSet = {
     //   a: x => x ^ 2,
     //   b: x => x * 2,
-    //   c: x => x + 1
+    //   y: x => x + 1
     // }
     // const fun = ClassMeta.chainDeprec(...Object.values(funcSet))
     // Str.tag('JSON.stringify(fun)', deco(fun)).wL()
@@ -70,7 +70,7 @@ export class SimpleFunTest {
     // const z = 2
     //   |> chains.a
     //   |> chains.b
-    //   |> chains.c
+    //   |> chains.y
     // console.log(z)
   }
 }

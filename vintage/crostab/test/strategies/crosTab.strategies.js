@@ -1,5 +1,5 @@
-import rawData from '../asset/json/gdp.rows.json'
-import { nba_players_performance } from '../asset/json/nba.players.performance'
+import rawData from '../asset/json/archive/gdp.rows.json'
+import { nba_players_performance } from '../asset/json/archive/nba.players.performance'
 import { Table, TableSpec } from '../../index'
 import { Chrono } from 'elprimero'
 import { CrosTabX as CrosTabX } from 'xbrief'
@@ -43,17 +43,17 @@ class CrosTabStrategies {
       repeat: 1E+4,
       paramsList,
       funcList: {
-        fut: crosTabFut,
-        short: crosTabStable,
+        // short: crosTabStable,
         edge: crosTabEdge,
-        dev: crosTabDev
+        dev: crosTabDev,
+        fut: crosTabFut
       }
     })
     'lapse' |> console.log
     lapse |> CrosTabX.brief |> console.log
     '' |> console.log
     'result' |> console.log
-    result.brief() |> console.log
+    result |> CrosTabX.brief |> console.log
     '' |> console.log
     const funcName = 'fut';
     `Printing func: [${funcName}] in the funcList` |> console.log
@@ -67,9 +67,10 @@ class CrosTabStrategies {
   }
 }
 
-describe('Cros Tab Strategies', function () {
-  this.timeout(1000 * 60)
-  it('Cros Tab Strategies: test ', () => {
-    CrosTabStrategies.test()
-  })
-})
+CrosTabStrategies.test()
+// describe('Cros Tab Strategies', function () {
+//   this.timeout(1000 * 60)
+//   it('Cros Tab Strategies: test ', () => {
+//     CrosTabStrategies.test()
+//   })
+// })

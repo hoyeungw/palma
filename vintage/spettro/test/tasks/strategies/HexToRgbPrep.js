@@ -65,9 +65,9 @@ export class HexToRgbPrep {
       bv = parseInt(b + _b, 16)
     return [rv, gv, bv]
     // } else {
-    //   const [, r, g, b] = hex
+    //   const [, x, g, b] = hex
     //   const
-    //     rv = parseInt(r + r, 16),
+    //     rv = parseInt(x + x, 16),
     //     gv = parseInt(g + g, 16),
     //     bv = parseInt(b + b, 16)
     //   return [rv, gv, bv]
@@ -87,7 +87,7 @@ export class RgbToHexPrep {
   }
 
   static toHex2 ([r, g, b]) {
-    // [r, g, b] = [round(r), round(g), round(b)]
+    // [x, g, b] = [round(x), round(g), round(b)]
     return '#' + (((r & 0xFF) << 16) + ((g & 0xFF) << 8) + (b & 0xFF))
       .toString(16).toUpperCase().padStart(6, '0')
   }

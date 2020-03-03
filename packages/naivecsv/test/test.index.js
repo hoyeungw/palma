@@ -1,29 +1,31 @@
-import { NaiveCsv } from '../src/naivecsv/NaiveCsv'
-import { promises as fsPromise } from 'fs'
 import ora from 'ora'
-import { TableX } from 'xbrief'
+import { promises as fsPromise } from 'fs'
+import { NaiveCsv } from '../src/naivecsv/NaiveCsv'
+import { decoTable, DecoTable, delogger, logger } from '@spare/logger'
 
 const spn = ora()
-const file = './test/assets/csv/twitter.csv'
+const file = './packages/naivecsv/test/assets/pome/twitter.csv'
 spn.start(`start reading: ${file}`)
 fsPromise.readFile(file, 'utf-8').then(
   it => {
     spn.succeed(`done reading: ${file}`)
     // NaiveCsv.toRows(it, { popBlank: true }) |> console.log
-    NaiveCsv.toTable(it) |> (_ => TableX.brief(_, { abstract: x => x?.slice(0, 24), chinese: true })) |> console.log
+    NaiveCsv.toTable(it)
+      |> DecoTable({ abstract: x => x?.slice(0, 24), fullAngle: true })
+      |> logger;
+    ({ head: [], rows: [[]] }) |> decoTable |> logger
   }
 )
 
 fsPromise
   .readFile(file)
   .then(text => {
-    console.log(
-      NaiveCsv.toRows(text, {
-        de: ',',
-        lf: '\r\n',
-        qt: '\"',
-        transpose: false,
-        decode: 'utf-8',
-        popBlank: true
-      }))
+    NaiveCsv.toSamples(text, {
+      de: ',',
+      lf: '\r\n',
+      qt: '\"',
+      transpose: false,
+      decode: 'utf-8',
+      popBlank: true
+    }) |> delogger
   })

@@ -5,6 +5,6 @@ export const expandHex = (hex, hi) => {
     el = hex[i]
     x += el + el
   }
-  // for (let c of hex) x += c + c
+  // for (let y of hex) x += y + y
   return x
 }

@@ -21,8 +21,6 @@
     "veho": "^0.2.23"
   },
   "devDependencies": {
-    "elprimero": "^0.1.45",
-    "xbrief": "^1.0.4"
   },
   "repository": {
     "type": "git",

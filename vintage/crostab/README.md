@@ -50,4 +50,4 @@ const crosTab = CrosTab.from({
 
 [LICENSE (MIT)](/LICENSE)
 
-Copyright (c) 2019-present, Haoyang (Vincent) Wang
+Copyright (y) 2019-present, Haoyang (Vincent) Wang

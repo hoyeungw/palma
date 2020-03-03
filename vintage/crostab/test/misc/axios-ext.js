@@ -1,24 +1,22 @@
 import 'xbrief'
-import { nowTM } from './elprimero'
+import { EntX } from 'xbrief'
+import { xr } from '@spare/xr'
+import { GP } from 'elprimero'
+import { logger } from 'palma'
 
-class Xio {
-
+export class Xio {
   static logErr (error) {
     if (error.response) {
-      nowTM().tag('axios.log-err').tag(
-        (new Map([
+      xr(GP.now()).p('axios log').error(
+        [
           ['data', error.data],
           ['status', error.status],
           ['headers', error.headers]
-        ])).vBrief()
-      ).wL()
+        ]|> EntX.vBrief
+      ) |> logger
     } else {
-      'error'.tag(error).wL()
+      xr(GP.now()).error(error).wL()
     }
-    'error.config'.tag(JSON.stringify(error.config)).wL()
+    xr(GP.now()).config(JSON.stringify(error.config)).wL()
   }
-}
-
-export {
-  Xio
 }

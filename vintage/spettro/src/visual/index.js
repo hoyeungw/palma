@@ -52,7 +52,7 @@ export class Visual {
    * @param {string|number[]} [max]
    * @param {string|number[]} [min]
    * @param {string|number[]} [na]
-   * @param {number} [direct=1] - 0:p-wise, 1:r-wise, 2:c-wise
+   * @param {number} [direct=1] - 0:p-wise, 1:x-wise, 2:y-wise
    * @param {boolean} [mutate=true]
    * @param {boolean} [retFn=false]
    * @returns {*}
