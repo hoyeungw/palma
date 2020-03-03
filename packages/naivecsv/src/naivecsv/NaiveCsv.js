@@ -19,7 +19,7 @@ export class NaiveCsv {
    */
   static toRows (csvText, {
     de = ',',
-    lf = '\r\n',
+    lf = '\r\n', // lf not applicable if qt is specified
     qt = '\"',
     decode,
     transpose,
