@@ -1,4 +1,4 @@
-import { CsvReg } from '../../utils/CsvReg'
+import { CsvReg }         from '../../utils/CsvReg'
 import { DoubleQuoteReg } from '../../utils/DoubleQuoteReg'
 
 export const parseCsvReg = (tx, de = ',', qt = '"') => {
@@ -21,7 +21,7 @@ export const parseCsvReg = (tx, de = ',', qt = '"') => {
     row.push(
       word = qv // check if the captured value is quoted.
         ? qv.replace(reqDQt, qt) // unescape any double quotes.
-        : (nq || '').trim() // found a non-quoted value.
+        : nq?.trim() ?? '' // found a non-quoted value.
     ) // add the value string to the data array.
   }
   return rows  // Return the parsed data rows in 2-d array.

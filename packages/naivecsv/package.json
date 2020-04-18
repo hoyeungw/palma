@@ -13,8 +13,9 @@
     "mocha": "mocha"
   },
   "dependencies": {
-    "@analys/convert": "^0.0.9",
-    "@vect/matrix-transpose": "^0.1.2",
+    "@analys/convert": "^0.2.7",
+    "@spare/enum-chars": "^0.4.15",
+    "@vect/matrix-transpose": "^0.2.2",
     "iconv-lite": "^0.5.1"
   },
   "devDependencies": {

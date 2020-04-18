@@ -1,9 +1,9 @@
-import iconv from 'iconv-lite'
-import { tableToSamples } from '@analys/convert'
-import { transpose as tr } from '@vect/matrix-transpose'
-import { parseCsvReg } from '../parser/parseCsvReg'
-import { parseCsvMap } from '../parser/parseCsvMap'
+import { tableToSamples }           from '@analys/convert'
+import { transpose as tr }          from '@vect/matrix-transpose'
+import iconv                        from 'iconv-lite'
 import { popBlank as rowsPopBlank } from '../../utils/popBlank'
+import { parseCsvMap }              from '../parser/parseCsvMap'
+import { parseCsvReg }              from '../parser/parseCsvReg'
 
 export class NaiveCsv {
   /**
@@ -50,17 +50,18 @@ export class NaiveCsv {
    * @returns {{head, rows, title}}
    */
   static toTable (csvText, {
-    de = ',', lf = '\r\n', qt,
-    decode, transpose, popBlank, title
+    de = ',',
+    lf = '\r\n',
+    qt,
+    decode,
+    transpose,
+    popBlank,
+    title
   } = {}) {
     const
       rows = NaiveCsv.toRows(csvText, { de, lf, qt, decode, transpose, popBlank }),
       head = rows.shift()
-    return {
-      head,
-      rows,
-      title
-    }
+    return { head, rows, title }
   }
 
   /**
