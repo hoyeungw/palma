@@ -13,10 +13,10 @@
     "mocha": "mocha"
   },
   "dependencies": {
-    "@analys/convert": "^0.2.7",
-    "@spare/enum-chars": "^0.4.15",
+    "@analys/convert": "^0.3.6",
+    "@spare/enum-chars": "^0.8.2",
     "@vect/matrix-transpose": "^0.2.2",
-    "iconv-lite": "^0.5.1"
+    "iconv-lite": "^0.6.2"
   },
   "devDependencies": {
     "borel": "^0.1.40",
