@@ -11,7 +11,7 @@ promises.readFile(SRC, 'utf-8').then(
     spn.succeed(`done reading: ${ SRC }`)
     // NaiveCsv.toRows(it, { popBlank: true }) |> console.log
     NaiveCsv.toTable(it)
-      |> DecoTable({ abstract: x => x?.slice(0, 24), fullAngle: true })
+      |> DecoTable({ read: x => x?.slice(0, 24), fullAngle: true })
       |> logger;
     ({ head: [], rows: [[]] }) |> decoTable |> logger
   }
@@ -27,5 +27,7 @@ promises
       transpose: false,
       decode: 'utf-8',
       popBlank: true
-    }) |> decoVector |> logger
+    })
+      |> decoVector
+      |> logger
   })
