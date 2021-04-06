@@ -1,5 +1,5 @@
 import { tableToSamples }           from '@analys/convert'
-import { transpose as tr }          from '@vect/matrix-transpose'
+import { transpose as _transpose }  from '@vect/matrix-transpose'
 import iconv                        from 'iconv-lite'
 import { popBlank as rowsPopBlank } from '../../utils/popBlank'
 import { parseCsvMap }              from '../parser/parseCsvMap'
@@ -17,7 +17,7 @@ export class NaiveCsv {
    * @param {boolean} [popBlank]
    * @returns {*[][]}
    */
-  static toRows (csvText, {
+  static toRows(csvText, {
     de = ',',
     lf = '\r\n', // lf not applicable if qt is specified
     qt = '\"',
@@ -30,8 +30,8 @@ export class NaiveCsv {
       ? parseCsvReg(csvText, de, qt)
       : parseCsvMap(csvText, de, lf)
     if (transpose) mx = popBlank
-      ? mx|> rowsPopBlank |> tr
-      : mx|> tr
+      ? mx|> rowsPopBlank |> _transpose
+      : mx|> _transpose
     return popBlank
       ? mx|> rowsPopBlank
       : mx
@@ -49,7 +49,7 @@ export class NaiveCsv {
    * @param {string} [title]
    * @returns {{head, rows, title}}
    */
-  static toTable (csvText, {
+  static toTable(csvText, {
     de = ',',
     lf = '\r\n',
     qt,
@@ -76,7 +76,7 @@ export class NaiveCsv {
    * @param {string} [title]
    * @returns {Object[]}
    */
-  static toSamples (csvText, {
+  static toSamples(csvText, {
     de = ',', lf = '\r\n', qt,
     transpose, decode, popBlank
   } = {}) {

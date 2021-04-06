@@ -123,6 +123,12 @@ class Pal extends Callable {
 
 }
 
+var _roster = new WeakMap();
+
+var _colorPool = new WeakMap();
+
+var _keywords = new WeakMap();
+
 class Says {
   /** @type {Object<string,Pal|function>} */
 
@@ -206,12 +212,6 @@ class Says {
   }
 
 }
-
-var _roster = new WeakMap();
-
-var _colorPool = new WeakMap();
-
-var _keywords = new WeakMap();
 
 const says = new Says();
 

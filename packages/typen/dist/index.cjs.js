@@ -84,16 +84,16 @@ class Num {
 
 }
 
-const check = x => !!x || x === 0;
+const check$1 = x => !!x || x === 0;
 
 class NumLoose {
   static isNumeric(x) {
-    return check(+x);
+    return check$1(+x);
   }
 
   static numeric(x) {
     x = +x;
-    return check(x) ? x : NaN;
+    return check$1(x) ? x : NaN;
   }
   /**
    *
@@ -104,7 +104,7 @@ class NumLoose {
 
   static inferData(x) {
     const t = typeof x;
-    return t === STR ? check(+x) ? NUM : STR : t === OBJ ? otype(x).toLowerCase() : t;
+    return t === STR ? check$1(+x) ? NUM : STR : t === OBJ ? otype(x).toLowerCase() : t;
   }
 
 }
@@ -119,7 +119,7 @@ class NumLoose {
  * }}
  */
 
-let check$1 = x => ({
+let check = x => ({
   value: x,
   typeOf: typeof x,
   protoType: oc.call(x),
@@ -172,4 +172,4 @@ exports.T = T;
 exports.Typ = Typ;
 exports.UND = UND;
 exports.UNDEFINED = UNDEFINED;
-exports.check = check$1;
+exports.check = check;
