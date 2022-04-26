@@ -2,8 +2,11 @@
   "name": "hatsu-says",
   "version": "0.1.1",
   "description": "A debug tool",
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.esm.js",
+  "main": "./dist/index.cjs",
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.cjs"
+  },
   "files": [
     "dist"
   ],

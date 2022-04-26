@@ -2,8 +2,11 @@
   "name": "typen",
   "version": "0.2.2",
   "description": "A data type checker and converter",
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.esm.js",
+  "main": "./dist/index.cjs",
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.cjs"
+  },
   "files": [
     "dist"
   ],

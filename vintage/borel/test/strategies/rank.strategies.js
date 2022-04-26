@@ -10,7 +10,7 @@ import { rankShell } from './rank.funcs/rank.shell'
 import { rankDivide } from './rank.funcs/rank.divide'
 import { rankEntry } from './rank.funcs/rankEntry'
 import { rankBubble } from './rank.funcs/rankBubble'
-import { Table } from 'crostab'
+import { Table }      from 'archive/crostab'
 
 const transNumStr = arr => arr.map(x => {
   switch (Typ.inferData(x)) {

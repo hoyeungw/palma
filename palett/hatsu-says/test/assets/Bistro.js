@@ -1,4 +1,4 @@
-import { greys, palette } from 'spettro'
+import { greys, palette } from 'archive/spettro'
 
 export const castList = {
   client: palette.red.base,

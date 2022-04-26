@@ -1,8 +1,8 @@
 import newTechs from 'funfact/dist/data/tech/newTechs'
 import { Comparer } from '../..'
-import { Rank } from '../..'
-import { Table } from 'crostab'
-import { Mx } from 'veho'
+import { Rank }  from '../..'
+import { Table } from 'archive/crostab'
+import { Mx }    from 'veho'
 import { Typ } from 'typen'
 import { deco } from 'xbrief'
 

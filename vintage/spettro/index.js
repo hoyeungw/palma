@@ -1,6 +1,0 @@
-export { Visual } from './src/visual'
-export { Pal } from './src/themes/Pal'
-export { PalettTable as ColorCards } from 'palett-table'
-export { Rgb, Hsl } from 'farbe'
-export { Palett as palette, Shades as shades, Greys as greys } from 'palett'
-export { Directs } from './utils/enums/Directs'

@@ -1,5 +1,5 @@
-import { Mx } from 'veho'
-import { Table } from 'crostab'
+import { Mx }    from 'veho'
+import { Table } from 'archive/crostab'
 
 describe('Test NaN', function () {
   const elements = [0, 1, 2, NaN, null, undefined, '0']

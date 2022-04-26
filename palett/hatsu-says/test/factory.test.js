@@ -1,6 +1,6 @@
 import { Says } from '../index'
-import { castList } from './assets/Bistro'
-import { greys, palette } from 'spettro'
+import { castList }       from './assets/Bistro'
+import { greys, palette } from 'archive/spettro'
 
 export const castList = {
   client: palette.red.base,
