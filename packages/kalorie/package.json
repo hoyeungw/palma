@@ -1,6 +1,6 @@
 {
   "name": "kalorie",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "A tool set related to function",
   "main": "./dist/index.cjs",
   "exports": {

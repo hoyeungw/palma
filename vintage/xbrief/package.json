@@ -1,6 +1,6 @@
 {
   "name": "xbrief",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A light and simple console debug tool.",
   "main": "./dist/index.cjs",
   "exports": {
@@ -15,22 +15,22 @@
     "test": "node -r @babel/register test/test.index.js"
   },
   "dependencies": {
-    "@cliche/fin": "^0.0.3",
-    "@cliche/mag": "^0.0.3",
-    "@cliche/ratio": "^0.0.3",
-    "@cliche/to-percent": "^0.0.3",
-    "@spare/deco": "^0.1.7",
-    "@spare/lange": "^0.1.5",
-    "@spare/logger": "^0.1.7",
+    "@cliche/fin": "^0.0.5",
+    "@cliche/mag": "^0.0.5",
+    "@cliche/ratio": "^0.0.5",
+    "@cliche/to-percent": "^0.0.5",
+    "@spare/deco": "^0.13.5",
+    "@spare/lange": "^0.13.5",
+    "@spare/logger": "^0.13.5",
     "@spare/preci": "^0.0.5",
-    "@spare/util": "^0.1.7",
-    "@spare/xr": "^0.1.7",
-    "borel": "^0.1.40",
-    "hatsu": "^0.0.20",
-    "hatsu-matrix": "^0.0.21",
-    "palett": "^0.0.21",
-    "typen": "^0.1.9",
-    "veho": "^0.2.23"
+    "@spare/util": "^0.13.5",
+    "@spare/xr": "^0.13.5",
+    "borel": "^0.1.41",
+    "hatsu": "^0.1.1",
+    "hatsu-matrix": "^0.1.1",
+    "palett": "^0.1.1",
+    "typen": "^0.2.3",
+    "veho": "^0.2.24"
   },
   "devDependencies": {
     "funfact": "^0.0.3"

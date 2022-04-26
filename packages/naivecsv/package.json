@@ -1,6 +1,6 @@
 {
   "name": "naivecsv",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A light & simple parser of csv text",
   "main": "./dist/index.cjs",
   "exports": {
@@ -22,10 +22,10 @@
     "iconv-lite": "^0.6.3"
   },
   "devDependencies": {
-    "borel": "^0.1.40",
+    "borel": "^0.1.41",
     "chai": "^4.3.6",
     "ora": "^6.1.0",
-    "xbrief": "^1.0.4"
+    "xbrief": "^1.0.5"
   },
   "repository": {
     "type": "git",
