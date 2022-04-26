@@ -5,5 +5,13 @@
 node_modules/
 package-lock.json
 yarn.lock
+.yarn/*
+#!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
 yarn-error.log
 lerna-debug.log
+
